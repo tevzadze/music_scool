@@ -1,0 +1,142 @@
+.registration_main, .contact_main
+	background: var(--color-black)
+	.registration
+		display: flex
+		flex-direction: column
+		width: 100%
+		&-section
+			display: flex
+			width: 100%
+			padding-top: gem(174)
+		h1
+			display: flex
+			margin-left: gem(54)
+			font-size: gem(60)
+			font-weight: 500
+			line-height: gem(78)
+			text-align: center
+			margin-bottom: gem(40)
+			// width: 100%
+		form
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin: 0 auto
+			.input
+				width: gem(600)
+				height: gem(80)
+				input
+					font-size: gem(20)
+					font-weight: 400
+					line-height: gem(24)
+			.input:nth-child(2)
+				margin: gem(20) 0
+			button
+				width: gem(374)
+				height: gem(65)
+				margin-top: gem(40)
+				p.subtitle-1
+					font-size: gem(25)
+					line-height: gem(32.6)
+					font-weight: 500
+.registration_main
+	.registration
+		h1
+			text-align: center
+			justify-content: center
+			margin-left: 0
+			font-size: gem(60)
+			line-height: gem(78)
+.contact_main
+	.registration
+		form
+			.input-short
+				display: flex
+				width: 100%
+				justify-content: space-between
+				.input, .input:nth-child(2)
+					width: gem(465)
+					height: gem(70)
+					margin: 0
+			button
+				width: gem(374)
+				height: gem(60)
+				cursor: pointer
+			.input:nth-child(2)
+				width: gem(950)
+				height: gem(70)
+			.input-big
+				width: gem(950)
+				height: gem(212)
+				textarea
+					display: flex
+					position: relative
+					resize: none
+					font-size: gem(20)
+					font-weight: 400
+					line-height: gem(24)
+					padding: gem(20) gem(24)
+@media all and (max-width: 1024px)
+	.registration_main, .contact_main
+		.registration
+			h1
+				font-size: gem(60)
+				line-height: gem(60)
+				margin-left: gem(26)
+	.contact_main
+		.registration
+			form
+				.input:nth-child(2)
+					width: gem(670)
+					height: gem(65)
+				.input-short
+					.input, .input:nth-child(2)
+						width: gem(325)
+						height: gem(65)
+				.input-big
+					width: gem(668)
+					height: gem(193)
+				button
+					width: gem(300)
+					height: gem(70)
+@media all and (max-width: 480px)
+	.registration_main, .contact_main
+		.registration
+			h1
+				font-size: gem(33)
+				line-height: gem(30)
+				margin: 0 auto
+				margin-bottom: gem(30)
+	.registration_main
+		.registration
+			form
+				.input
+					width: gem(330)
+					height: gem(60)
+					&:nth-child(2)
+						margin: gem(10) 0
+				button
+					width: gem(300)
+					height: gem(60)
+				
+	.contact_main
+		.registration
+			form
+				.input:nth-child(2)
+					width: gem(330)
+					height: gem(60)
+					margin: gem(11) 0
+				.input-short
+					flex-direction: column
+					.input, .input:nth-child(2)
+						width: gem(330)
+						height: gem(60)
+					.input:nth-child(2)
+						margin-top: gem(11)
+				.input-big
+					width: gem(330)
+					height: gem(250)
+				button
+					width: gem(300)
+					height: gem(60)
+					margin-top: gem(30)

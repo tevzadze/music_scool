@@ -1,0 +1,64 @@
+.input
+    display: flex
+    justify-content: center
+    align-items: center
+    background: linear-gradient(90.34deg,#febd2f .33%,#f95721 25.43%,#fc1370 51.09%,#ba2db2 68.14%,#8342e9 78.65%,#3f89fc 97.57%)
+    width: 100%
+    border-radius: gem(2)
+    z-index: 5
+    position: relative
+    input, textarea
+        width: calc(100% - 4px)
+        height: calc(100% - 4px)
+        background: var(--color-black)
+        border: none
+        color: var(--color-white)
+        padding: 0 gem(17)
+        border-radius: gem(2)
+        font-weight: 400
+        outline: none
+//height, font-size, line-height , width --- should be set
+
+.form-button
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    outline: 0
+    border: none
+    border-radius: gem(2)
+    position: relative
+    cursor: pointer
+    background: linear-gradient(90.34deg,#febd2f .33%,#f95721 25.43%,#fc1370 51.09%,#ba2db2 68.14%,#8342e9 78.65%,#3f89fc 97.57%)
+    &:before
+        display: block
+        content: ''
+        width: calc(100% - 4px)
+        height: calc(100% - 4px)
+        position: absolute
+        top: 2px
+        background: var(--color-black)
+        opacity: .85
+        border-radius: gem(2)
+        z-index: 1
+        transition: all 0.3s ease
+    &:hover
+        &:before
+            opacity: 0
+    p
+        font-weight: 500
+        z-index: 5
+        text-transform: unset
+//height, font-size, line-height , width --- should be set
+
+.mfp-close
+    color: var(--color-white) !important
+    opacity: 0.8
+    margin-top: 0
+    width: gem(50)
+    height: gem(50)
+    transition: opacity 0.3s ease
+    font-size: gem(40)
+    line-height: 1
+    &:hover
+        opacity: 1

@@ -1,0 +1,183 @@
+@import './variables'
+
+@mixin typography($color, $font-family, $font-size, $font-weight, $letter-spacing:0, $line-height: normal)
+	color: $color
+	font-family: $font-family
+	font-size: $font-size
+	font-weight: $font-weight
+	letter-spacing: $letter-spacing
+	line-height: $line-height
+
+@mixin mixed-lbl($args...)
+	@include typography($args...)
+
+// title h1
+@mixin title-h1
+	@include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h1), var(--fw-5), var(--letter-spacing), var(--line-height-h1))
+
+// title h2
+@mixin title-h2
+	@include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h2), var(--fw-5), var(--letter-spacing), var(--line-height-h2))
+
+// title h3
+@mixin title-h3
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h3), var(--fw-5), var(--letter-spacing), var(--line-height-h3))
+
+// title h4
+@mixin title-h4
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h4), var(--fw-5), var(--letter-spacing), var(--line-height-h4))
+
+// title h5
+@mixin title-h5
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h5), var(--fw-5), var(--letter-spacing), var(--line-height-h5))
+
+// title h6
+@mixin title-h6
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h6), var(--fw-7), var(--letter-spacing), var(--line-height-h6))
+
+// title h7
+@mixin title-h7
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h7), var(--fw-7), var(--letter-spacing), var(--line-height-h7))
+
+// title h8
+@mixin title-h8
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h8), var(--fw-7), var(--letter-spacing), var(--line-height-h8))
+
+    // title h9
+@mixin title-h9
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h9), var(--fw-7), var(--letter-spacing), var(--line-height-h9))
+
+// title h10
+@mixin title-h10
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h10), var(--fw-7), var(--letter-spacing), var(--line-height-h10))
+
+// subtitle 1
+@mixin subtitle-1
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-subtitle-1), var(--fw-5), var(--letter-spacing), var(--line-height-subtitle-1))
+
+// label1
+@mixin label-1
+	@include mixed-lbl(var(--color-white), var(--main-font), var(--font-size-label1), var(--fw-4), var(--letter-spacing), var(--line-height-label-1))
+
+// label2
+@mixin label-2
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-label2), var(--fw-5), var(--letter-spacing), var(--line-height-label-2))
+
+// label3
+@mixin label-3
+    @include mixed-lbl(var(--color-white), var(--main-font), var(--font-size-label3), var(--fw-4), var(--letter-spacing), var(--line-height-label-3))
+
+//desc-1
+@mixin desc-1
+	@include mixed-lbl(var(--color-white), var(--main-font), var(--font-size-desc1), var(--fw-4), var(--letter-spacing), var(--line-height-desc1))
+
+//desc-2
+@mixin desc-2
+    @include mixed-lbl(var(--color-white), var(--main-font), var(--font-size-desc2), var(--fw-4), var(--letter-spacing), var(--line-height-desc2))
+
+    //desc-3
+@mixin desc-3
+    @include mixed-lbl(var(--color-white), var(--main-font), var(--font-size-desc3), var(--fw-4), var(--letter-spacing), var(--line-height-desc3))
+
+//desc-1
+@mixin button
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-button), var(--fw-5), var(--letter-spacing), var(--line-height-button))
+
+//link
+@mixin link
+    @include mixed-lbl(var(--color-white), var(--main-font), var(--font-size-link), var(--fw-4), var(--letter-spacing-1), var(--line-height-link))
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote,
+a, small, strong, ul, li, form, label,
+article, footer, header, nav, section, input, textarea, button
+    &.center-text
+        text-align: center
+
+    &.left-text
+        text-align: left
+
+    &.right-text
+        text-align: right
+
+    &.cap-text
+        text-transform: capitalize
+
+    &.up-text
+        text-transform: uppercase
+
+    &.low-text
+        text-transform: lowercase
+
+    &.title-h1
+        @include title-h1
+        &.black
+            color: #111111
+
+    &.title-h2
+        @include title-h2
+        &.black
+            color: #111111
+
+    &.title-h3
+        @include title-h3
+
+    &.title-h4
+        @include title-h4
+
+    &.title-h5
+        @include title-h5
+
+    &.title-h6
+        @include title-h6
+
+    &.title-h7
+        @include title-h7
+        &.black
+            color: #111111
+
+    &.title-h8
+        @include title-h8
+    &.title-h9
+        @include title-h9
+        &.sub
+            font-weight: 400
+            font-family: 'proximanova-regular', sans-serif
+
+    &.title-h10
+        @include title-h10
+
+    &.subtitle-1
+        @include subtitle-1
+        &.grey
+            color: rgba(244, 245, 246, 0.3)
+
+    &.label-1
+        @include label-1
+
+    &.label-2
+        @include label-2
+
+    &.label-3
+        @include label-3
+
+    &.desc-1
+        @include desc-1
+        &.black
+            color: #111111
+
+    &.desc-2
+        @include desc-2
+        &.black
+            color: #111111
+
+    &.desc-3
+        @include desc-3
+
+    &.button
+        @include button
+
+    &.link
+        @include link
+        text-transform: uppercase
+        

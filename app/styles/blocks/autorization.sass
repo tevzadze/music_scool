@@ -1,0 +1,59 @@
+.cart-autorization
+    display: flex
+    flex-direction: column
+    align-items: center
+    background: var(--color-black)
+    width: gem(470)
+    padding: gem(70) gem(48)
+    margin: auto
+    .popup-title
+        font-family: var(--sub-font)
+        font-size: gem(45)
+        line-height: gem(58)
+        color: var(--color-white)
+    .input
+        height: gem(80)
+        margin-top: gem(32)
+        width: 100%
+        input
+            font-size: gem(20)
+            line-height: gem(24)
+    .form-button
+        margin-top: gem(40)
+        height: gem(65)
+        width: 100%
+        margin-bottom: gem(57)
+    form
+        width: 100%
+    a.desc-2
+        opacity: 0.8
+        transition: all 0.3s ease
+        &:hover
+            opacity: 1
+        &:last-child
+            margin-top: gem(9)
+@media all and (max-width: 480px)
+    .cart-autorization
+        width: 100%
+        padding: gem(70) gem(23)
+        min-height: 100vh
+        justify-content: center
+        .popup-title
+            font-size: gem(35)
+            line-height: gem(45)
+            margin-bottom: gem(45)
+        .input
+            margin-top: 0
+            height: gem(60)
+            font-size: gem(20)
+            line-height: gem(24)
+            &:nth-child(1)
+                margin-bottom: gem(22)
+        .form-button
+            margin-top: gem(34)
+            margin-bottom: gem(54)
+            height: gem(60)
+        a.desc-2
+            font-size: gem(20)
+            line-height: gem(24)
+        

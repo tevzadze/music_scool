@@ -1,0 +1,118 @@
+.trial_popup
+	width: gem(1146)
+	height: gem(634)
+	background: var(--color-black)
+	.cart-all
+		margin-top: gem(100)
+		&-trial
+			display: flex
+			flex-direction: column
+			width: 100%
+
+			h2.title-h4
+				font-size: gem(45)
+			.contact
+				display: flex
+				flex-direction: column
+				width: gem(630)
+				&-form
+					form
+						display: flex
+						flex-direction: column
+						justify-content: center
+						align-items: center
+						margin-top: gem(53)
+						.trial-form-top
+							display: flex
+							width: 100%
+							justify-content: space-between
+							margin-bottom: gem(48)
+							.input
+								width: gem(500)
+						.trial-form-bottom
+							display: flex
+							width: 100%
+							margin-bottom: gem(65)
+						.input
+							width: gem(1050)
+							height: gem(90)
+							input
+								font-size: gem(30)
+								line-height: gem(45)
+					.form-button
+						width: gem(344)
+						height: gem(80)
+						p
+							font-size: gem(30)
+							line-height: gem(45)
+@media all and (max-width: 1024px)
+	.trial_popup
+		width: gem(585)
+		.cart-all
+			&-trial
+				h2.title-h4
+					font-size: gem(33)
+					line-height: gem(33)
+					text-align: center
+				.contact
+					&-form
+						form
+							margin-top: gem(62)
+							.trial-form-top
+								flex-direction: column
+								align-items: center
+								margin-bottom: 0
+								.input
+									width: gem(500)
+									margin-bottom: gem(30)
+							.trial-form-bottom
+								justify-content: center
+								margin-bottom: gem(44)
+							.input
+								width: gem(500)
+								height: gem(70)
+								input
+									font-size: gem(25)
+									line-height: gem(35)
+						.form-button
+							width: gem(344)
+							height: gem(60)
+							p
+								font-size: gem(25)
+								line-height: gem(25)
+@media all and (max-width: 480px)
+	.trial_popup
+		width: 100%
+		height: gem(607)
+		.cart-all
+			margin-top: gem(78)
+			&-trial
+				h2.title-h4
+					font-size: gem(33)
+					line-height: gem(45)
+					text-align: left
+					max-width: gem(300)
+					margin-left: gem(15)
+				.contact
+					width: gem(375)
+					&-form
+						form
+							margin-top: gem(32)
+							.trial-form-top
+								.input
+									width: gem(320)
+									margin-bottom: gem(15)
+							.trial-form-bottom
+								margin-bottom: gem(32)
+							.input
+								width: gem(320)
+								height: gem(50)
+								input
+									font-size: gem(20)
+									line-height: gem(20)
+						.form-button
+							width: gem(250)
+							height: gem(60)
+							p
+								font-size: gem(18)
+								line-height: gem(30)

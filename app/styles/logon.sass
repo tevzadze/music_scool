@@ -1,0 +1,746 @@
+.logon_main
+	background: #FAFAFA
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	height: auto
+	min-height: 100vh
+	.header-contains
+		.logo, .right-part
+			margin: gem(30) 0
+		.course-menu
+			display: none
+	.account-courses, section
+		width: 100%
+		// min-height: 100vh
+		height: auto
+		&-inner
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			margin-top: gem(216)
+		.logon_card
+			display: flex
+			flex-direction: column
+			// margin-top: gem(216)
+			margin-left: gem(93)
+			margin-bottom: gem(93)
+			width: gem(320)
+			height: auto
+			box-shadow: 0 gem(4) gem(30) rgba(0, 0, 0, 0.25)
+			transition: all 0.3s ease
+			border-radius: gem(10)
+			&:hover
+				box-shadow: 0 gem(4) gem(30) rgba(0, 0, 0, 0.5)
+			&-pics
+				display: flex
+				width: 100%
+				height: gem(180)
+				border-radius: gem(10) gem(10) 0 0
+				img
+					width: 100%
+					height: auto
+			&-text
+				display: flex
+				flex-direction: column
+				padding: gem(10) gem(10) gem(38) gem(10)
+				
+				border-radius: 0 0 gem(10) gem(10)
+				background: var(--color-white)
+				p.title-h7
+					font-weight: 700
+					font-size: gem(20)
+					line-height: gem(24)
+					color: var(--color-black)
+					margin-bottom: gem(28)
+				&-progress
+					display: flex
+					width: gem(300)
+					height: gem(10)
+					background: #D8D8D8
+					border-radius: gem(30)
+					margin-bottom: gem(14)
+					overflow: hidden
+					&-line
+						background: #BA2DB2
+						width: 0
+						transition: all 0.3s ease
+						height: 100%
+						border-radius: gem(30)
+						
+				&-percent
+					font-size: gem(20)
+					line-height: gem(18)
+					font-weight: bold
+					color: #BA2DB2
+					text-align: right
+				&-bottom
+					display: flex
+					justify-content: space-between
+					span.desc-1:first-child
+						font-size: gem(18)
+						line-height: gem(18)
+						font-weight: normal
+						color: #979797
+					span.desc-1:last-child
+						font-size: gem(18)
+						line-height: gem(18)
+						font-weight: normal
+						color: #BA2DB2
+		.settings
+			display: flex
+			flex-direction: column
+			margin: 0 auto
+			margin-top: gem(172)
+			margin-bottom: gem(149)
+			width: gem(545)
+			align-items: center
+			p.title-h4
+				font-size: gem(45)
+				line-height: gem(59)
+				font-weight: 500
+				color: var(--color-black)
+			form
+				display: flex
+				flex-direction: column
+				align-items: center
+				input
+					width: gem(545)
+					height: gem(65)
+					padding: gem(20) gem(24)
+					font-size: gem(23)
+					line-height: gem(28)
+					font-weight: 400
+					color: var(--color-black)
+					font-family: var(--main-font)
+					background: #E9E9E9
+					margin-top: gem(20)
+					border: none
+				input::-webkit-input-placeholder, input::placeholder
+					font-size: gem(23)
+					line-height: gem(28)
+					font-weight: 400
+					color: var(--color-black)
+					font-family: var(--main-font)
+				input:focus
+					border: none
+					background: #D0D1D1
+					outline: none
+					&::-webkit-input-placeholder, &::placeholder
+						opacity: 0
+				input:first-child
+					margin-top: gem(30)
+				button
+					display: flex
+					justify-content: center
+					align-items: center
+					width: gem(374)
+					height: gem(80)
+					background: var(--color-black)
+					border: none
+					border-radius: gem(4)
+					margin-top: gem(30)
+					cursor: pointer
+					span.title-h4
+						font-size: gem(25)
+						line-height: gem(33)
+				button:focus
+					outline: none
+.course_main, .course-lesson_main, .lesson-menu_main
+	background: #FAFAFA
+	.header-contains
+		height: gem(70)
+		a
+			display: flex
+			flex-direction: row
+			align-items: center
+			// margin: gem(20) 0
+			margin-left: gem(56)
+		.course-arrow
+			width: gem(30)
+			height: gem(30)		
+		.course-prev, .course-next
+			display: flex
+			align-items: center
+			justify-content: center
+			width: gem(535)
+			height: gem(70)
+			img
+				width: gem(27)
+				height: gem(24)
+			span.desc-1
+				font-size: gem(25)
+				line-height: gem(30)
+				font-weight: 700
+				color: #F4F5F6
+			img:last-child
+				display: none
+		.course-prev
+			margin-left: gem(285)
+			img
+				margin-right: gem(40)
+		.course-next
+			background: #BA2DB2
+			img
+				margin-left: gem(40)
+				transform: rotate(180deg)
+		.logo, .right-part
+			margin: gem(30) 0
+	section
+		width: 100%
+		height: auto
+		.course
+			display: flex
+			justify-content: space-between
+			margin-top: gem(62)
+			&-left
+				display: flex
+				flex-direction: column
+				width: gem(345)
+				padding: 0 gem(12)
+				padding-top: gem(15)
+				background: #F7F7F7
+				box-shadow: 0 gem(4) gem(30) rgba(0, 0, 0, 0.25)
+				&-pics
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 100%
+					height: auto
+					margin-bottom: gem(15)
+					img
+						width: 100%
+						height: auto
+				&-text
+					display: flex
+					flex-direction: column
+					p.title-h4
+						font-weight: 700
+						font-size: gem(20)
+						line-height: gem(24)
+						margin-bottom: gem(8)
+						color: var(--color-black)
+					p.desc-1
+						font-weight: 400
+						font-size: gem(15)
+						line-height: gem(18)
+						margin-bottom: gem(18)
+						color: #979797
+					&-progress
+						display: flex
+						width: gem(300)
+						height: gem(10)
+						background: #D8D8D8
+						border-radius: gem(30)
+						margin: 0 auto
+						margin-bottom: gem(21)
+						&-line
+							background: #BA2DB2
+							width: 0
+							transition: all 0.3s ease
+							height: 100%
+							border-radius: gem(30)
+					span.desc-1
+						font-weight: 700
+						font-size: gem(20)
+						line-height: gem(18)
+						color: #BA2DB2
+						margin: 0 auto
+					span.desc-1:last-child
+						font-weight: 400
+						font-size: gem(18)
+						margin: 0 auto
+			&-right
+				display: flex
+				flex-direction: column
+				margin-top: gem(61)
+				margin-right: gem(48)
+				margin-bottom: gem(86)
+				position: relative
+				.play
+					left: calc(50% - 0.6rem)
+				&-progress
+					display: flex
+					align-items: center
+					width: gem(1000)
+					height: gem(50)
+					border-radius: gem(30)
+					background: #EDD1EC
+					margin-bottom: gem(43)
+					&-button
+						display: flex
+						align-items: center
+						width: gem(286)
+						height: gem(50)
+						background: #BA2DB2
+						border-radius: gem(30)
+						cursor: pointer
+						span.desc-1
+							font-size: gem(20)
+							line-height: gem(18)
+							font-weight: 700
+							color: #F4F5F6
+							margin-left: gem(32)
+							position: relative
+							&:before
+								content: ''
+								position: absolute
+								top: gem(2)
+								right: gem(-30)
+								transform: rotate(45deg) 
+								border-top: gem(2) solid
+								border-right: gem(2) solid
+								width: gem(10)
+								height: gem(10)
+				&-list
+					display: flex
+					flex-direction: column
+					width: gem(1000)
+					&-element
+						display: flex
+						background: #F0F0F0
+						width: 100%
+						height: gem(60)
+						align-items: center
+						padding-left: gem(21)
+						margin-bottom: gem(2)
+						&.active
+							.course-right-list-element-circle
+								background: #ba2db2
+						&:hover
+							img
+								opacity: 1
+						&-circle
+							display: flex
+							justify-content: center
+							align-items: center
+							width: gem(30)
+							height: gem(30)
+							border: gem(1) solid #BA2DB2
+							border-radius: gem(15)
+							margin-right: gem(24)
+							background: #f7f7f7
+							transition: all 0.3s ease
+							img
+								width: gem(16)
+								height: gem(16)
+								margin-left: gem(3)
+								opacity: 0
+								transition: all 0.3s ease
+						&-name
+							display: flex
+							
+							p.desc-1
+								font-weight: 700
+								font-size: gem(25)
+								line-height: gem(25)
+								color: var(--color-black)
+					&-element:first-child
+						border-radius: gem(3) gem(3) 0 0
+					&-element:last-child
+						border-radius: 0 0 gem(3) gem(3)
+	.lesson_section
+		display: flex
+		.course_lesson
+			display: flex
+			justify-content: space-between
+			width: 100%
+			.course
+				&-left
+					margin-top: gem(70)
+					padding: 0
+					padding-top: gem(44)
+					p.title-h4
+						margin-bottom: gem(21)
+						margin-left: gem(18)
+					&-progress
+						margin-bottom: gem(21)
+				&-right
+					margin-right: gem(38)
+					margin-top: gem(158)
+					width: gem(1011)
+					margin-bottom: gem(130)
+					.hero-section-video.videoWrapper
+						margin: 0
+						width: 100%
+						height: auto
+						transform: none
+						transform-style: none
+					h1.desc-1
+						font-weight: 700
+						font-size: gem(45)
+						line-height: gem(45)
+						color: var(--color-black)
+						margin-bottom: gem(26)
+					h2.desc-1
+						font-weight: 700
+						font-size: gem(45)
+						line-height: gem(45)
+						color: var(--color-black)
+						margin-top: gem(59)
+					p.desc-1
+						font-weight: 400
+						font-size: gem(20)
+						line-height: gem(28)
+						color: var(--color-black)
+						margin-top: gem(20)
+						margin-bottom: gem(30)
+					&-download
+						display: flex
+						flex-direction: column
+						width: 100%
+						&-element
+							display: flex
+							width: 100%
+							height: gem(50)
+							background: #F0F0F0
+							padding: gem(15)
+							img
+								width: gem(23)
+								height: gem(25)
+								margin-right: gem(15)
+							span.desc-1
+								font-weight: 700
+								font-size: gem(20)
+								line-height: gem(20)
+								color: var(--color-black)
+						&-element:first-child
+							border-radius: gem(3) gem(3) 0 0
+							margin-bottom: gem(3)
+						&-element:last-child
+							border-radius: 0 0 gem(3) gem(3)
+					&-list
+						width: 100%
+						margin-top: gem(15)
+						height: auto
+						&-element
+							&-circle
+								// background: #BA2DB2
+								img
+									display: none
+							&-name
+								p.desc-1
+									font-size: gem(18)
+									line-height: gem(18)
+									margin-bottom: 0
+									max-width: gem(251)
+@media all and (max-width: 1024px)
+	.course_main, .course-lesson_main, .lesson-menu_main
+		section
+			.course
+				flex-direction: column
+				width: 100%
+				align-items: center
+				margin-top: gem(100)
+				&-left
+					width: gem(653)
+					margin-top: gem(0)
+					padding: gem(19) gem(14)
+					padding-right: 0
+					flex-direction: row
+					&-pics
+						width: gem(274)
+						height: auto
+						margin-top: gem(5)				
+					&-text
+						width: gem(365)
+						padding: 0 gem(30)
+						p.title-h4
+							font-size: gem(20)
+							line-height: gem(24)
+							margin-bottom: gem(7)
+							margin-left: 0
+						p.desc-1
+							margin-bottom: gem(25)
+						&-progress
+							margin: 0
+							margin-bottom: gem(21)
+							width: gem(300)
+							height: gem(10)
+				&-right
+					margin-right: 0
+					margin-top: gem(30)
+					width: gem(653)
+					margin-bottom: gem(40)
+					&-progress
+						width: gem(653)
+						margin-bottom: gem(20)
+						&-button
+							width: gem(286)
+					.hero-section-video.videoWrapper
+						margin: 0
+						width: 100%
+						height: auto
+						transform: none
+						transform-style: none
+					h1.desc-1
+						font-weight: 700
+						font-size: gem(45)
+						line-height: gem(45)
+						color: var(--color-black)
+						margin-bottom: gem(26)
+					h2.desc-1
+						font-weight: 700
+						font-size: gem(45)
+						line-height: gem(45)
+						color: var(--color-black)
+						margin-top: gem(59)
+					p.desc-1
+						font-weight: 400
+						font-size: gem(20)
+						line-height: gem(28)
+						color: var(--color-black)
+						margin-top: gem(20)
+						margin-bottom: gem(30)
+					&-download
+						display: flex
+						flex-direction: column
+						width: 100%
+						&-element
+							display: flex
+							width: 100%
+							height: gem(50)
+							background: #F0F0F0
+							padding: gem(15)
+							img
+								width: gem(23)
+								height: gem(25)
+								margin-right: gem(15)
+							span.desc-1
+								font-weight: 700
+								font-size: gem(20)
+								line-height: gem(20)
+								color: var(--color-black)
+						&-element:first-child
+							border-radius: gem(3) gem(3) 0 0
+							margin-bottom: gem(3)
+						&-element:last-child
+							border-radius: 0 0 gem(3) gem(3)
+					&-list
+						width: 100%
+						margin: 0
+						height: auto
+						&-element
+							&-circle
+								// background: #BA2DB2
+								img
+									display: none
+							&-name
+								p.desc-1
+									font-size: gem(25)
+									line-height: gem(25)
+									font-weight: 700
+									margin: 0
+	.course-lesson_main, .lesson-menu_main
+		.header-contains
+			.course-arrow
+				margin-right: gem(70)
+			.course-menu
+				display: flex
+				width: gem(41)
+				height: gem(3)
+				background: #F4F5F6
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					width: gem(41)
+					height: gem(3)
+					background: #F4F5F6
+					top: gem(-13)
+					left: 0
+				&:after
+					content: ''
+					position: absolute
+					width: gem(41)
+					height: gem(3)
+					background: #F4F5F6
+					top: gem(13)
+					left: 0
+			.course-prev, .course-next
+				margin: 0
+				width: gem(250)
+				img, span
+					display: none
+				img:last-child
+					display: flex
+					width: gem(71)
+					height: gem(30)
+					margin: 0
+			.course-prev
+				border-left: solid gem(2) #F4F5F6
+		.lesson_section
+			.course_lesson
+				.course
+					&-left
+						display: none
+					&-right
+						margin: 0
+						margin-top: gem(128)
+						margin-bottom: gem(305)
+						padding: 0 gem(55)
+						.hero-section-video.videoWrapper
+							margin: 0
+							width: 100%
+							height: auto
+							transform: none
+							transform-style: none
+						.hero-section-video
+							.play
+								top: gem(150)
+								width: gem(80)
+						h1.desc-1
+							margin-bottom: gem(18)
+						h2.desc-1
+							margin-top: gem(35)
+						p.desc-1
+							margin-top: gem(20)
+							margin-bottom: gem(10)
+@media all and (max-width: 480px)
+	.logon_main
+		.header 
+			.right-part
+				&-element img
+					margin-right: gem(10)
+				&-element:first-child
+					margin-right: gem(20)
+			.header-contains .logo
+				width: gem(60)
+				height: gem(15)
+				margin: gem(17) 0
+		section
+			.logon_card
+				margin: gem(216) auto
+			.settings
+				width: gem(350)
+				p.title-h4
+					font-size: gem(30)
+					line-height: gem(39)
+				form
+					display: flex
+					flex-direction: column
+					align-items: center
+					input
+						width: gem(350)
+						height: gem(60)
+						padding: gem(17) gem(13)
+						font-size: gem(20)
+						line-height: gem(24)
+						margin-top: gem(10)
+					input::-webkit-input-placeholder, input::placeholder
+						font-size: gem(20)
+						line-height: gem(24)
+					input:first-child
+						margin-top: gem(21)
+					button
+						width: gem(209)
+						height: gem(60)
+						span.title-h4
+							font-size: gem(20)
+							line-height: gem(26)
+	.logon_footer
+		height: gem(61)
+	.course_main
+		section
+			.course
+				&-left
+					display: none
+			.course
+				margin: gem(100) 0
+				&-right
+					width: gem(350)
+					margin-top: 0
+					&-progress
+						width: gem(350)
+						height: gem(50)
+						&-button
+							width: gem(219)
+							height: gem(50)
+							span.desc-1
+								margin-left: gem(19)
+								&:before
+									right: gem(-20)
+					&-list
+						&-element
+							&-name
+								width: gem(270)
+								p.desc-1
+									font-size: gem(18)
+									line-height: gem(18)
+
+
+
+
+	.course-lesson_main, .lesson-menu_main
+		.header-contains
+			.course-arrow
+				margin-right: gem(52)
+				margin-left: gem(17)
+			.course-menu
+				display: flex
+				width: gem(30)
+				height: gem(2)
+				background: #F4F5F6
+				position: relative
+				margin-right: gem(26)
+				&:before
+					content: ''
+					position: absolute
+					width: gem(30)
+					height: gem(2)
+					background: #F4F5F6
+					top: gem(-10)
+					left: 0
+				&:after
+					content: ''
+					position: absolute
+					width: gem(30)
+					height: gem(2)
+					background: #F4F5F6
+					top: gem(10)
+					left: 0
+			.course-prev, .course-next
+				margin: 0
+				width: gem(110)
+				img:last-child
+					display: none
+				img
+					display: flex
+					width: gem(27)
+					height: gem(24)
+					margin: 0
+		.lesson_section
+			.course_lesson
+				.course
+					&-left
+						display: none
+					&-right
+						margin: 0
+						margin-top: gem(90)
+						margin-bottom: gem(305)
+						padding: 0 gem(12)
+						.hero-section-video.videoWrapper
+							margin: 0
+							width: 100%
+							height: auto
+							transform: none
+							transform-style: none
+						.hero-section-video
+							.play
+								top: gem(70)
+								width: gem(60)
+						h1.desc-1
+							margin-bottom: gem(18)
+							font-size: gem(30)
+							line-height: gem(30)
+						h2.desc-1
+							margin-top: gem(30)
+						p.desc-1
+							margin-top: gem(18)
+							margin-bottom: gem(20)
+							font-size: gem(20)
+							line-height: gem(28)
+
+
+
+

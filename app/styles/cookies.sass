@@ -1,0 +1,312 @@
+.cookies_main
+	.cookies
+		display: flex
+		flex-direction: column
+		align-items: center
+		&-section
+			width: 100%
+			padding-top: gem(142)
+			background: var(--color-black)
+		&-title
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 100%
+			padding-right: gem(44)
+			h1
+				font-size: gem(60)
+				line-height: gem(60)
+				font-weight: 500
+				width: 100%
+				text-align: center
+				margin-bottom: gem(20)
+			p:nth-child(2)
+				width: 100%
+				text-align: right
+				font-size: gem(20)
+				line-height: gem(60)
+				margin-bottom: gem(28)
+			p:nth-child(3)
+				width: 100%
+				font-size: gem(20)
+				line-height: gem(27)
+				margin-bottom: gem(95)
+		&-main
+			display: flex
+			flex-direction: column
+			width: gem(1114)
+			&-title
+				display: flex
+				padding: gem(29) gem(23)
+				p.desc-1
+					font-size: gem(25)
+					line-height: gem(37)
+			&-content
+				display: flex
+				flex-direction: column
+				border-top: gem(1) solid var(--color-grey)
+				padding: gem(44) gem(38)
+				p.desc-1
+					margin-bottom: gem(20)
+					font-size: gem(20)
+					line-height: gem(27)
+					span.desc-1
+						font-size: gem(25)
+						line-height: gem(27)
+						font-weight: 700
+				p.desc-2
+					margin-bottom: gem(20)
+					font-size: gem(20)
+					line-height: gem(27)
+					font-weight: 700
+				p.desc-3
+					font-size: gem(25)
+					line-height: gem(27)
+					font-weight: 700
+					margin-bottom: gem(20)
+				ul
+					display: flex
+					flex-direction: column
+					margin-bottom: gem(20)
+					p.desc-1
+						margin-bottom: 0
+					li
+						position: relative
+						margin-left: gem(14)
+						margin-top: gem(20)
+						&::before
+							content: ''
+							position: absolute
+							left: gem(-14)
+							top: gem(14)
+							width: gem(6)
+							height: gem(1)
+							border-radius: gem(2)
+							background: var(--color-grey)
+				span.desc-3
+					font-size: gem(20)
+					line-height: gem(27)
+					font-weight: 700
+				p.desc-1:last-child
+					margin-bottom: 0
+				ul:last-child
+					margin-bottom: 0
+				a.desc-1
+					color: transparent
+					background-clip: text
+					background-image: linear-gradient(90deg,#e91a82 25.6%,#e51b87 32.6%,#da2091 37.6%,#d22399 15.6%,#c727a5 64.6%,#a534c7 86.6%)
+		&-table
+			display: flex
+			flex-direction: column
+			width: gem(1342)
+			border: gem(1) solid var(--color-grey)
+			&-row
+				display: flex
+				border-bottom: gem(1) solid var(--color-grey)
+				&-left
+					display: flex
+					flex-direction: column
+					width: gem(275)
+					padding: gem(30) gem(11)
+					p.desc-2.up-text
+						font-weight: 700
+						margin-bottom: 0
+					p.desc-1
+						width: 100%
+						text-align: center
+				&-center
+					display: flex
+					flex-direction: column
+					width: gem(799)
+					padding: gem(30) gem(15)
+					border-left: gem(1) solid var(--color-grey)
+					border-right: gem(1) solid var(--color-grey)
+					p.desc-2.up-text
+						font-weight: 700
+						margin-bottom: 0
+				&-right
+					display: flex
+					flex-direction: column
+					width: gem(268)
+					padding: gem(30) gem(11)
+					p.desc-2.up-text
+						font-weight: 700
+						margin-bottom: 0
+			&-row:last-child
+				border-bottom: none
+			p.desc-1
+				margin-bottom: gem(20)
+				font-size: gem(20)
+				line-height: gem(27)
+				span.desc-1
+					font-size: gem(25)
+					line-height: gem(27)
+					font-weight: 700
+			p.desc-2
+				margin-bottom: gem(20)
+				font-size: gem(20)
+				line-height: gem(27)
+				font-weight: 700
+			p.desc-3
+				font-size: gem(25)
+				line-height: gem(27)
+				font-weight: 700
+				margin-bottom: gem(20)
+			ul
+				display: flex
+				flex-direction: column
+				margin-bottom: gem(20)
+				p.desc-1
+					margin-bottom: 0
+			span.desc-3
+				font-size: gem(20)
+				line-height: gem(27)
+				font-weight: 700
+			p.desc-1:last-child
+				margin-bottom: 0
+			ul:last-child
+				margin-bottom: 0
+			a.desc-1
+				color: transparent
+				background-clip: text
+				background-image: linear-gradient(90deg,#e91a82 25.6%,#e51b87 32.6%,#da2091 37.6%,#d22399 15.6%,#c727a5 64.6%,#a534c7 86.6%)
+@media all and (max-width: 1024px)
+	.cookies_main
+		.header
+			&-contains .logo img
+				width: gem(76)
+				height: gem(24)
+		.cookies-title h1
+			font-size: gem(45)
+			line-height: gem(60)
+			p:nth-child(2)
+				font-size: gem(20)
+				line-height: gem(20)
+			p:nth-child(3)
+				font-size: gem(18)
+				line-height: gem(24)
+		.cookies-main-title
+			padding: gem(28) gem(15)
+			p.desc-1
+				font-size: gem(25)
+				line-height: gem(25)
+		.cookies-main
+			width: gem(716)
+		.cookies-main-content p.desc-1, .cookies-main-content a.desc-1
+			font-size: gem(20)
+			line-height: gem(27)
+		.cookies-main-content
+			font-size: gem(44)
+			line-height: gem(25)
+			ul
+				span.desc-1
+					font-size: gem(25)
+					line-height: gem(27)
+					font-weight: 700
+				li
+					font-size: gem(20)
+					line-height: gem(27)
+				li::before
+					top: gem(14)
+		.cookies-table
+			width: gem(716)
+			a.desc-1
+				font-size: gem(20)
+				line-height: gem(27)
+			&-row-center
+				ul
+					span.desc-1
+						font-size: gem(20)
+						line-height: gem(27)
+					li
+						font-size: gem(20)
+						line-height: gem(27)
+@media all and (max-width: 480px)
+	.cookies_main
+		.header
+			&-contains .logo img
+				width: gem(76)
+				height: gem(24)
+		.cookies-section
+			padding-top: gem(111)
+		.cookies-title
+			padding: 0 gem(18)
+			h1
+				font-size: gem(33)
+				line-height: gem(33)
+				font-weight: 500
+			p:nth-child(2)
+				font-size: gem(13)
+				line-height: gem(20)
+				text-align: left
+			p:nth-child(3)
+				font-size: gem(15)
+				line-height: gem(20)
+		.cookies-main-title
+			padding: gem(30) gem(6)
+			padding-top: gem(15)
+			border: none
+			border-bottom: gem(1) solid var(--color-grey)
+			p.desc-1
+				font-size: gem(25)
+				line-height: gem(27)
+		.cookies-main
+			width: gem(367)
+			border: none
+		.cookies-main-content p.desc-1, .cookies-main-content a.desc-1
+			font-size: gem(20)
+			line-height: gem(27)
+		.cookies-main-content
+			font-size: gem(44)
+			line-height: gem(25)
+			border: none
+			padding: gem(20) gem(16)
+			ul
+				margin-bottom: gem(20)
+				span.desc-1
+					font-size: gem(25)
+					line-height: gem(27)
+					font-weight: 700
+				li
+					font-size: gem(20)
+					line-height: gem(27)
+				li::before
+					top: gem(12)
+		.cookies-table
+			width: 100%
+			border-left: none
+			border-right: none
+			margin-bottom: gem(20)
+			a.desc-1
+				font-size: gem(20)
+				line-height: gem(27)
+			&-row-center
+				ul
+					span.desc-1
+						font-size: gem(20)
+						line-height: gem(27)
+					li
+						font-size: gem(20)
+						line-height: gem(27)
+			.cookies-table-row-left, .cookies-table-row-center, .cookies-table-row-right
+				padding: gem(12) gem(2)
+				p.desc-2.up-text
+					font-size: gem(13)
+					line-height: gem(16)
+					font-weight: 700
+				ul
+					span, li
+						font-size: gem(13)
+						line-height: gem(16)
+						font-weight: 400
+			.cookies-table-row-left
+				width: gem(78)
+			.cookies-table-row-center
+				width: gem(217)
+			.cookies-table-row-right
+				width: gem(78)
+		.cookies-table
+			p.desc-1, a.desc-1
+				font-size: gem(13)
+				line-height: gem(16)
+				font-weight: 400
