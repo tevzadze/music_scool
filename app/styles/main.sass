@@ -82,8 +82,17 @@ button[type='submit']
 
 //start here
 .home
+	background: url(../images/dist/bgr-hero.svg) no-repeat
 	.header	
 		background: none
+@media all and (max-width: 1024px)
+	.home
+		background: url(../images/dist/bgr-hero-tb.svg) no-repeat
+		background-position: 0 gem(120)
+@media all and (max-width: 480px)
+	.home
+		background: url(../images/dist/bgr-hero-mb.svg) no-repeat
+		background-position: 0 gem(111)
 .section.spaced
 	width: 100%
 	position: absolute
@@ -1054,6 +1063,88 @@ body
 					display: inline
 			&-element:last-child
 				margin-bottom: 0
+
+// refactor
+
+.label-2.popup-with-move-anim.access_product
+	font-size: gem(15)
+	line-height: gem(16.5)
+.popup_registration
+	display: flex
+	flex-direction: column
+	width: gem(718)
+	height: gem(362)
+	padding: 0 gem(49)
+	padding-top: gem(121)
+	background: var(--color-black)
+	margin: auto
+	p.title-h1
+		font-size: gem(25)
+		line-height: gem(35)
+		font-weight: 400
+		text-align: center
+		margin-bottom: gem(25)
+		background: linear-gradient(89.99deg, #F95721 11.22%, #FC1370 36.24%, #BA2DB2 56.83%, #8342E9 74.03%, #3F89FC 97.9%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+	p.desc-1
+		font-size: gem(20)
+		line-height: gem(28)
+		font-weight: 400
+		text-align: center
+	.mfp-close
+
+@media all and (max-width: 480px)
+	.popup_registration
+		width: gem(375)
+		height: auto
+		min-height: 100vh
+		padding: gem(50) gem(8)
+		justify-content: center
+		p.title-h1
+			margin-bottom: gem(28)
+// account_dropdown
+.logon_main .header-contains 
+	.right-part
+		position: relative
+		.account_dropdown
+			display: flex
+			flex-direction: column
+			align-items: center
+			position: absolute
+			bottom: gem(-150)
+			right: 0
+			background: var(--color-white)
+			border-radius: gem(2)
+			width: gem(108)
+			height: gem(125)
+			opacity: 0
+			pointer-events: none
+			transition: all 0.3s ease
+			&.active
+				opacity: 1
+				pointer-events: unset
+			&-triangle
+				width: gem(18)
+				height: gem(18)
+				transform: rotate(45deg)
+				background: var(--color-white)
+				position: relative
+				top: gem(-9)
+			a.label-3
+				font-size: gem(20)
+				line-height: gem(24.3)
+				font-weight: 700
+				color: var(--color-black)
+				margin-bottom: gem(10)
+			a.label-3:last-child
+				margin-bottom: 0	
+// струны
+.section.spaced .item__image img
+	opacity: 1
+
+// lesson header
+
 .footer
 	display: flex
 	flex-direction: column

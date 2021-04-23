@@ -18,14 +18,16 @@
 			display: flex
 			flex-direction: row
 			flex-wrap: wrap
+			justify-content: space-between
 			margin-top: gem(216)
+			padding: 0 gem(30)
+			margin-bottom: gem(70)
 		.logon_card
 			display: flex
 			flex-direction: column
 			// margin-top: gem(216)
-			margin-left: gem(93)
-			margin-bottom: gem(93)
 			width: gem(320)
+			margin-bottom: gem(60)
 			height: auto
 			box-shadow: 0 gem(4) gem(30) rgba(0, 0, 0, 0.25)
 			transition: all 0.3s ease
@@ -150,40 +152,40 @@
 	background: #FAFAFA
 	.header-contains
 		height: gem(70)
+		padding-left: gem(56)
 		a
 			display: flex
 			flex-direction: row
 			align-items: center
-			// margin: gem(20) 0
-			margin-left: gem(56)
 		.course-arrow
 			width: gem(30)
-			height: gem(30)		
-		.course-prev, .course-next
-			display: flex
-			align-items: center
-			justify-content: center
-			width: gem(535)
-			height: gem(70)
-			img
-				width: gem(27)
-				height: gem(24)
-			span.desc-1
-				font-size: gem(25)
-				line-height: gem(30)
-				font-weight: 700
-				color: #F4F5F6
-			img:last-child
-				display: none
-		.course-prev
-			margin-left: gem(285)
-			img
-				margin-right: gem(40)
-		.course-next
-			background: #BA2DB2
-			img
-				margin-left: gem(40)
-				transform: rotate(180deg)
+			height: gem(30)
+		.course-nav
+			display: flex	
+			.course-prev, .course-next
+				display: flex
+				align-items: center
+				justify-content: center
+				width: gem(535)
+				height: gem(70)
+				img
+					width: gem(27)
+					height: gem(24)
+				span.desc-1
+					font-size: gem(25)
+					line-height: gem(30)
+					font-weight: 700
+					color: #F4F5F6
+				img:last-child
+					display: none
+			.course-prev
+				img
+					margin-right: gem(40)
+			.course-next
+				background: #BA2DB2
+				img
+					margin-left: gem(40)
+					transform: rotate(180deg)
 		.logo, .right-part
 			margin: gem(30) 0
 	section
@@ -258,7 +260,7 @@
 				margin-bottom: gem(86)
 				position: relative
 				.play
-					left: calc(50% - 0.6rem)
+					left: calc(50% - 0.4rem)
 				&-progress
 					display: flex
 					align-items: center
@@ -425,6 +427,11 @@
 									margin-bottom: 0
 									max-width: gem(251)
 @media all and (max-width: 1024px)
+	.logon_main
+		.account-courses, section
+			&-inner
+				justify-content: space-around
+				padding: 0 
 	.course_main, .course-lesson_main, .lesson-menu_main
 		section
 			.course
@@ -557,18 +564,19 @@
 					background: #F4F5F6
 					top: gem(13)
 					left: 0
-			.course-prev, .course-next
-				margin: 0
-				width: gem(250)
-				img, span
-					display: none
-				img:last-child
-					display: flex
-					width: gem(71)
-					height: gem(30)
+			.course-nav
+				.course-prev, .course-next
 					margin: 0
-			.course-prev
-				border-left: solid gem(2) #F4F5F6
+					width: gem(250)
+					img, span
+						display: none
+					img:last-child
+						display: flex
+						width: gem(71)
+						height: gem(30)
+						margin: 0
+				.course-prev
+					border-left: solid gem(2) #F4F5F6
 		.lesson_section
 			.course_lesson
 				.course
@@ -577,7 +585,7 @@
 					&-right
 						margin: 0
 						margin-top: gem(128)
-						margin-bottom: gem(305)
+						margin-bottom: gem(128)
 						padding: 0 gem(55)
 						.hero-section-video.videoWrapper
 							margin: 0
@@ -598,7 +606,17 @@
 							margin-bottom: gem(10)
 @media all and (max-width: 480px)
 	.logon_main
-		.header 
+		.account-courses, section
+			&-inner
+				margin-top: gem(89)
+				.logon_card
+					margin: 0
+					margin-bottom: gem(30)
+	.logon_main
+		.header
+			display: flex
+			align-items: center
+			height: gem(63)
 			.right-part
 				&-element img
 					margin-right: gem(10)
@@ -607,7 +625,9 @@
 			.header-contains .logo
 				width: gem(60)
 				height: gem(15)
-				margin: gem(17) 0
+			.header-contains
+				a, div
+					margin: 0
 		section
 			.logon_card
 				margin: gem(216) auto
@@ -670,6 +690,9 @@
 
 
 
+	.course-lesson_main, .lesson-menu_main .header
+		.header-contains
+			padding-left: gem(17)
 
 	.course-lesson_main, .lesson-menu_main
 		.header-contains
@@ -699,16 +722,17 @@
 					background: #F4F5F6
 					top: gem(10)
 					left: 0
-			.course-prev, .course-next
-				margin: 0
-				width: gem(110)
-				img:last-child
-					display: none
-				img
-					display: flex
-					width: gem(27)
-					height: gem(24)
+			.course-nav
+				.course-prev, .course-next
 					margin: 0
+					width: gem(110)
+					img:last-child
+						display: none
+					img
+						display: flex
+						width: gem(27)
+						height: gem(24)
+						margin: 0
 		.lesson_section
 			.course_lesson
 				.course
@@ -717,7 +741,7 @@
 					&-right
 						margin: 0
 						margin-top: gem(90)
-						margin-bottom: gem(305)
+						margin-bottom: gem(105)
 						padding: 0 gem(12)
 						.hero-section-video.videoWrapper
 							margin: 0
