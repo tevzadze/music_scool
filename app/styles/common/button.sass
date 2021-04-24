@@ -7,6 +7,7 @@
 	position: relative
 	cursor: pointer
 	background: linear-gradient(90.34deg, #FEBD2F 0.33%, #F95721 25.43%, #FC1370 51.09%, #BA2DB2 68.14%, #8342E9 78.65%, #3F89FC 97.57%)
+	overflow: hidden
 	&:before
 		display: block
 		content: ''
@@ -46,3 +47,9 @@
 		lottie-player
 			z-index: 2
 			opacity: 0.8
+@media all and (max-width: 480px)
+	.button-wrapper
+		overflow: hidden
+		lottie-player
+			height: 145% !important
+			margin-top: gem(-20)
