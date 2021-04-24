@@ -81,18 +81,49 @@ button[type='submit']
 	cursor: pointer
 
 //start here
+.desctop
+	display: flex
+.mobile
+	display: none
+.tablet
+	display: none
 .home
-	background: url(../images/dist/bgr-hero.svg) no-repeat
+	// background: url(../images/dist/bgr-hero.svg) no-repeat
+	// background-size: contain
+	// background-position: 0 gem(52)
+	.desctop-line
+		margin-left: gem(-30)
+		margin-top: gem(52)
+	.desctop-line-course
+		margin-top: gem(325)
 	.header	
 		background: none
+	.desctop, .mobile, .tablet
+		z-index: -2
+		position: absolute
+		width: 100%
 @media all and (max-width: 1024px)
 	.home
-		background: url(../images/dist/bgr-hero-tb.svg) no-repeat
-		background-position: 0 gem(120)
+		.tablet-line
+			margin-top:  gem(120)
+		.tablet-line-course
+			margin-top: gem(200)
+	.desctop
+		display: none
+	.tablet
+		display: flex
 @media all and (max-width: 480px)
 	.home
-		background: url(../images/dist/bgr-hero-mb.svg) no-repeat
-		background-position: 0 gem(111)
+		.mobile-line
+			margin-top: gem(76)
+		.mobile-line-course
+			margin-top: gem(39)
+	.desctop
+		display: none
+	.mobile
+		display: flex
+	.tablet
+		display: none
 .section.spaced
 	width: 100%
 	position: absolute
@@ -103,10 +134,6 @@ button[type='submit']
 .scroll-div
 	overflow: hidden
 
-.tablet-lines
-	display: none
-.mobile-lines
-	display: none
 body
 	background: var(--color-black)
 .play
@@ -236,6 +263,14 @@ body
 		.button-wrapper
 			width: gem(200)
 			margin-top: gem(60)
+			&::after
+				// content: '<lottie-player src="images/dist/preloader.json" background="#111111" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>'
+				display: flex
+				width: 100%
+				height: 100%
+				position: absolute
+				z-index: 2
+				opacity: 0.7
 		&-video
 			position: relative
 			margin: auto

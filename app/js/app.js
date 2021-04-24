@@ -16,6 +16,18 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
 
 	// Custom JS
+
+	//accoun dropdown
+	let accountIcon = document.querySelector('.right-part-element:nth-child(2)')
+	let dropdown = document.querySelector('.account_dropdown')
+	if (accountIcon != null ) {
+		accountIcon.addEventListener('click', function (e) {
+			e.preventDefault()
+			dropdown.classList.toggle('active')
+
+		})
+	}
+	
 	//preloader function
 	let preloader = document.querySelector('.preloader')
 

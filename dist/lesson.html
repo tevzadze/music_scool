@@ -26,17 +26,21 @@
 <main class="course-lesson_main">
     <header class="header">
         <div class="header-contains">
-            <img class="course-arrow" src="images/dist/course-arrow.svg" alt="course-arrow">
+            <a href="/course.html">
+                <img class="course-arrow" src="images/dist/course-arrow.svg" alt="course-arrow">
+            </a>
             <div class="course-menu"></div>
-            <div class="course-prev">
-                <img src="images/dist/course-prev.svg" alt="course-prev">
-                <span class="desc-1">Previous lecture</span>
-                <img src="images/dist/course-prev-long.svg" alt="course-prev-long">
-            </div>
-            <div class="course-next">
-                <span class="desc-1">Complete ane continue</span>
-                <img src="images/dist/course-prev.svg" alt="course-prev">
-                <img src="images/dist/course-prev-long.svg" alt="course-prev-long">
+            <div class="course-nav">
+                <a class="course-prev" href="/lesson.html">
+                    <img src="images/dist/course-prev.svg" alt="course-prev">
+                    <span class="desc-1">Previous lecture</span>
+                    <img src="images/dist/course-prev-long.svg" alt="course-prev-long">
+                </a>
+                <a class="course-next" href="/lesson.html">
+                    <span class="desc-1">Complete ane continue</span>
+                    <img src="images/dist/course-prev.svg" alt="course-prev">
+                    <img src="images/dist/course-prev-long.svg" alt="course-prev-long">
+                </a>
             </div>
         </div>
     </header>
@@ -45,12 +49,16 @@
             <div class="course-left">
                 <div class="course-left-text">
                     <p class="title-h4">Music Production Essentials </p>
-                    <div class="course-left-text-progress"></div>
+                    <div class="course-left-text-progress">
+                        <div class="course-left-text-progress-line">
+                            
+                        </div>
+                    </div>
                     <span class="desc-1">10%</span>
                     <span class="desc-1">complete</span>
                 </div>
                 <div class="course-right-list">
-                    <div class="course-right-list-element">
+                    <div class="course-right-list-element active">
                         <div class="course-right-list-element-circle">
                             <img src="images/dist/course-circle.svg" alt="course-circle">
                         </div>
@@ -149,7 +157,7 @@
                     <div class="course-right-download-element">
                         <span class="desc-1">Download</span>
                     </div>
-                    <a href="#" class="course-right-download-element">
+                    <a href="images/dist/author.png" download class="course-right-download-element">
                         <img src="images/dist/clip.svg" alt="clip">
                         <span class="desc-1">Lesson_1_Project_Fiels.zip</span>
                     </a>

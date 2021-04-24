@@ -83,7 +83,12 @@
 @media all and (max-width: 480px)
 	.trial_popup
 		width: 100%
-		height: gem(607)
+		min-height: 100vh
+		height: auto
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
 		.cart-all
 			margin-top: gem(78)
 			&-trial
