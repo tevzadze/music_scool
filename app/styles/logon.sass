@@ -18,20 +18,22 @@
 			display: flex
 			flex-direction: row
 			flex-wrap: wrap
-			justify-content: space-between
+			justify-content: flex-start
 			margin-top: gem(216)
 			padding: 0 gem(30)
 			margin-bottom: gem(70)
 		.logon_card
 			display: flex
 			flex-direction: column
-			// margin-top: gem(216)
 			width: gem(320)
 			margin-bottom: gem(60)
 			height: auto
+			margin-right: gem(150)
 			box-shadow: 0 gem(4) gem(30) rgba(0, 0, 0, 0.25)
 			transition: all 0.3s ease
 			border-radius: gem(10)
+			&:nth-child(3n -3)
+				margin-right: 0
 			&:hover
 				box-shadow: 0 gem(4) gem(30) rgba(0, 0, 0, 0.5)
 			&-pics
@@ -426,12 +428,37 @@
 									line-height: gem(18)
 									margin-bottom: 0
 									max-width: gem(251)
+.empty
+	// display: flex
+	flex-direction: column
+	height: 100%
+	align-items: center
+	justify-content: center	
+	display: none
+	&.active
+		display: flex
+	p
+		width: 100%
+		text-align: center
+		font-family: var(--sub-font)
+		font-size: gem(40)
+		line-height: 1.2
+		color: var(--color-black)
+	.button-wrapper
+		width: gem(320)
+		margin-top: gem(50)
 @media all and (max-width: 1024px)
 	.logon_main
 		.account-courses, section
 			&-inner
 				justify-content: space-around
 				padding: 0 
+	.logon_main .account-courses .logon_card:nth-child(3n-3), .logon_main section .logon_card:nth-child(3n-3)
+		margin: unset
+		margin-bottom: gem(30)
+	.logon_main .account-courses .logon_card, .logon_main section .logon_card
+		margin: unset
+		margin-bottom: gem(30)
 	.course_main, .course-lesson_main, .lesson-menu_main
 		section
 			.course
@@ -767,7 +794,13 @@
 							margin-bottom: gem(20)
 							font-size: gem(20)
 							line-height: gem(28)
-
-
-
+	.registration_main, .contact_main
+		.footer-main-stuff
+			display: none
+	.empty
+		p
+			font-size: gem(20)
+			margin-top: gem(30)
+		.button-wrapper
+			margin-top: gem(30)
 
