@@ -390,7 +390,7 @@ main.edm
 					a:last-child
 						margin-right: 0
 	.details
-		padding-bottom: gem(68)
+		padding-bottom: gem(150)
 	.strange
 		background: var(--color-black)
 		padding-bottom: gem(150)
@@ -788,6 +788,7 @@ main.edm
 			padding-bottom: gem(53)
 		.edm_production_little
 			padding-top: gem(42)
+			padding-bottom: gem(100)
 			&-section
 				&-title h2
 					font-size: gem(54)
@@ -795,23 +796,33 @@ main.edm
 				&-main
 					margin-top: gem(55)
 					&-text
-						max-width: gem(303)
+						max-width: unset
 						margin: 0
+						right: unset
+						align-items: flex-end
 						h3
+							max-width: gem(303)
 							font-size: gem(35)
 							line-height: gem(42)
-							margin-left: gem(-22)
+							margin-left: 0
 						p
 							font-size: gem(15)
 							line-height: gem(21)
 							margin: 0
-							margin-left: gem(-31)
+							margin-left: 0
 							margin-top: gem(19)
 							max-width: gem(303)
 						&-bottom
+							margin-top: gem(14)
+							span.title-h1
+								font-size: gem(40)
+								margin-right: gem(20)
 							.button-wrapper
-								margin-top: gem(12)
-								margin-left: gem(-33)
+								width: gem(150)
+								height: gem(50)
+								a
+									font-size: gem(18)
+									line-height: gem(20)
 							
 					&-pics
 						width: gem(368)
@@ -1127,6 +1138,7 @@ main.edm
 			padding-bottom: gem(61)
 		.edm_production_little
 			padding-top: 0
+			padding-bottom: gem(46)
 			&-section
 				&-title h2
 					font-size: gem(35)
@@ -1134,7 +1146,7 @@ main.edm
 				&-main
 					flex-direction: column-reverse
 					align-items: center
-					margin-top: gem(43)
+					margin-top: 0
 					&-pics
 						width: gem(303)
 						height: gem(237)
@@ -1145,21 +1157,27 @@ main.edm
 					&-text
 						max-width: unset
 						right: unset
-						top: gem(-49)
+						top: gem(-32)
+						align-items: center
 						h3
 							margin-left: 0
-							font-size: gem(40)
-							line-height: gem(48)
+							font-size: gem(45)
+							line-height: gem(54)
+							max-width: unset
 						p
-							margin-left: gem(1)
-							margin-top: gem(32)
+							margin-top: gem(15)
 							max-width: unset
 							font-size: gem(18)
 							line-height: gem(25)
 						&-bottom
+							margin-top: gem(38)
+							span.title-h1
+								font-size: gem(35)
+								line-height: gem(42)
 							.button-wrapper
-								margin: 0 auto
-								margin-top: gem(47)
+								width: gem(170)
+								height: gem(50)
+								margin: 0
 		.free
 			padding-bottom: gem(81)
 			h2
@@ -1178,29 +1196,38 @@ main.edm
 				margin-bottom: gem(7)
 			&-right
 				width: 100%
-				margin-top: 0
-				margin-right: 0
+				margin-top: gem(-25)
+				margin-right: gem(16)
+				h4
+					font-size: gem(30)
+					line-height: gem(42)
+					margin-bottom: gem(22)
+				p
+					margin-bottom: gem(52)
+					font-size: gem(18)
+					line-height: gem(25)
 				.button-wrapper
 					width: gem(200)
 					height: gem(40)
-					margin-right: gem(13)
-				p
-					margin-bottom: gem(35)
-
 			&-left
-				width: 100%
+				width: gem(300)
+				height: gem(222)
 				margin: 0
-				padding-left: gem(30)
+				padding-left: 0
+				align-self: unset
+				margin-top: gem(30)
+				margin-left: gem(-16)
 				img
 					margin: 0
 					right: unset
 					width: gem(300)
-					height: gem(203)
+					height: gem(222)
 					margin-top: gem(7)
 			&-mark
-				top: gem(19)
-				left: gem(-10)
+				top: gem(-20)
+				left: gem(-23)
 		.questions
+			display: none
 			padding-top: gem(24)
 			.questions-section-title
 				margin-bottom: gem(48)
