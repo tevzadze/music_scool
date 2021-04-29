@@ -151,6 +151,14 @@ body
 		justify-content: center
 		align-items: center
 		margin-top: gem(50)
+		&-contact
+			display: flex
+			margin-right: gem(30)
+			font-size: gem(20)
+			line-height: gem(20)
+			letter-spacing: gem(1)
+			color: var(--color-white)
+			font-weight: 400
 		// span
 		// 	display: flex
 		// 	justify-content: center
@@ -187,8 +195,6 @@ body
 				line-height: gem(12)
 		&-element:first-child
 			margin-right: gem(50)
-			
-
 	&-contains
 		display: flex
 		flex-direction: row
@@ -1182,40 +1188,43 @@ body
 	padding: gem(60) 0
 	overflow-x: hidden
 	padding-bottom: gem(60)
-	&-logo
-		display: flex
-		width: gem(107)
-		margin-bottom: gem(100)
-		&-mob
-			display: none
-	&-main
+	&-top
 		display: flex
 		justify-content: space-between
+		margin-bottom: gem(38)
+		img
+			width: gem(200)
+			height: gem(44)
+		form
+			display: flex
+			.input
+				width: gem(400)
+				height: gem(54)
+				border-radius: gem(2) gem(0) gem(0) gem(2)
+			button
+				width: gem(144)
+				height: gem(54)
+				border-radius: gem(0) gem(2) gem(2) gem(0)
 		&-stuff
 			display: flex
 			flex-direction: column
+			width: gem(393)
 			.title-h10
-				margin-bottom: gem(22)
-				font-weight: 500
-				letter-spacing: 1px
+				margin-bottom: gem(4)
+				font-size: gem(20)
+				line-height: gem(48)
+				font-weight: 700
 			.desc-3
-				margin-top: gem(14)
-				max-width: gem(393)
-			form
-				display: flex
-				.input
-					width: gem(266)
-					height: gem(54)
-					border-radius: gem(2) gem(0) gem(0) gem(2)
-				button
-					width: gem(144)
-					height: gem(54)
-					border-radius: gem(0) gem(2) gem(2) gem(0)
+				font-size: gem(13)
+				line-height: gem(16)
+		
+	&-bottom
+		display: flex
 		&-policies
 			display: flex
 			flex-direction: column
 			width: gem(185)
-			margin-right: gem(47)
+			margin-right: gem(102)
 			p
 				margin-bottom: gem(10)
 				font-weight: 500
@@ -1223,23 +1232,26 @@ body
 				margin-bottom: gem(20)
 			a:last-child
 				margin-right: 0
-	&-bottom
-		display: flex
-		margin-top: gem(80)
-		justify-content: space-between
-		&-socials
+		&-contacts
 			display: flex
-			justify-content: center
-			align-items: flex-end	
-			a
-				margin-right: gem(30)
+			flex-direction: column
+			&-socials
 				display: flex
-				img
+				justify-content: center
+				margin-top: gem(7)
+				a
+					margin-right: gem(30)
 					display: flex
-			a:last-child
-				margin-right: 0
+					img
+						display: flex
+				a:last-child
+					margin-right: 0
 		&-copyright
 			display: flex
+	&-logo-mob
+			display: none
+	span:last-child
+		text-align: right
 .logon_footer
 	display: flex
 	align-items: center
