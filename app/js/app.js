@@ -72,6 +72,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	}
 
+	//footer open function
+	let footerOpen = document.querySelectorAll('.openFooter')
+	let footerClose = document.querySelectorAll('.contentFooter')
+
+	for (let i = 0; i < footerOpen.length; i++) {
+		footerOpen[i].addEventListener('click', function () {
+			footerClose[i].classList.toggle('active')
+			footerOpen[i].classList.toggle('active')
+		})
+	}
+
 	//open chars
 	function openOsChars() {
 		let osButtons = document.querySelectorAll('.os span')

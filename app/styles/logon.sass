@@ -5,6 +5,8 @@
 	justify-content: space-between
 	height: auto
 	min-height: 100vh
+	.header
+		padding-top: 0
 	.header-contains
 		.logo, .right-part
 			margin: gem(30) 0
@@ -145,51 +147,55 @@
 					border-radius: gem(4)
 					margin-top: gem(30)
 					cursor: pointer
+					transition: all ease 0.3s
 					span.title-h4
 						font-size: gem(25)
 						line-height: gem(33)
-				button:focus
-					outline: none
+					&:hover, &:focus
+						background: #979797
+						outline: none
 .course_main, .course-lesson_main, .lesson-menu_main
 	background: #FAFAFA
-	.header-contains
-		height: gem(70)
-		padding-left: gem(56)
-		a
-			display: flex
-			flex-direction: row
-			align-items: center
-		.course-arrow
-			width: gem(30)
-			height: gem(30)
-		.course-nav
-			display: flex	
-			.course-prev, .course-next
+	.header
+		padding-top: 0
+		&-contains
+			height: gem(70)
+			padding-left: gem(56)
+			a
 				display: flex
+				flex-direction: row
 				align-items: center
-				justify-content: center
-				width: gem(535)
-				height: gem(70)
-				img
-					width: gem(27)
-					height: gem(24)
-				span.desc-1
-					font-size: gem(25)
-					line-height: gem(30)
-					font-weight: 700
-					color: #F4F5F6
-				img:last-child
-					display: none
-			.course-prev
-				img
-					margin-right: gem(40)
-			.course-next
-				background: #BA2DB2
-				img
-					margin-left: gem(40)
-					transform: rotate(180deg)
-		.logo, .right-part
-			margin: gem(30) 0
+			.course-arrow
+				width: gem(30)
+				height: gem(30)
+			.course-nav
+				display: flex	
+				.course-prev, .course-next
+					display: flex
+					align-items: center
+					justify-content: center
+					width: gem(535)
+					height: gem(70)
+					img
+						width: gem(27)
+						height: gem(24)
+					span.desc-1
+						font-size: gem(25)
+						line-height: gem(30)
+						font-weight: 700
+						color: #F4F5F6
+					img:last-child
+						display: none
+				.course-prev
+					img
+						margin-right: gem(40)
+				.course-next
+					background: #BA2DB2
+					img
+						margin-left: gem(40)
+						transform: rotate(180deg)
+			.logo, .right-part
+				margin: gem(30) 0
 	section
 		width: 100%
 		height: auto
@@ -408,6 +414,8 @@
 								font-size: gem(20)
 								line-height: gem(20)
 								color: var(--color-black)
+								&:hover, &:focus
+									border-bottom: gem(1) solid var(--color-black)
 						&-element:first-child
 							border-radius: gem(3) gem(3) 0 0
 							margin-bottom: gem(3)
@@ -449,6 +457,8 @@
 		margin-top: gem(50)
 @media all and (max-width: 1024px)
 	.logon_main
+		.header
+			padding-top: 0
 		.account-courses, section
 			&-inner
 				justify-content: space-around
@@ -460,6 +470,8 @@
 		margin: unset
 		margin-bottom: gem(30)
 	.course_main, .course-lesson_main, .lesson-menu_main
+		.header
+			padding-top: 0
 		section
 			.course
 				flex-direction: column
@@ -632,6 +644,9 @@
 							margin-top: gem(20)
 							margin-bottom: gem(10)
 @media all and (max-width: 480px)
+	.course_main, .course-lesson_main, .lesson-menu_main
+		.header
+			padding-top: 0
 	.course-lesson_main .header-contains, .course_main .header-contains, .lesson-menu_main .header-contains
 		padding-left: gem(17)
 	.logon_main
@@ -646,6 +661,7 @@
 			display: flex
 			align-items: center
 			height: gem(63)
+			padding-top: 0
 			.right-part
 				&-element img
 					margin-right: gem(10)

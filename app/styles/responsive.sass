@@ -16,6 +16,7 @@
 		font-size: gem(25)
 		line-height: 110%
 	.header
+		padding-top: gem(30)
 		&-contains
 			.logo
 				width: gem(76)
@@ -483,37 +484,35 @@
 		margin-top: 0
 		margin-bottom: 0
 		padding: gem(40) 0
-		&-logo
-			&-mob
-				display: flex
-				width: gem(95)
-				height: gem(25)
-				margin-top: gem(55)
-				img
-					width: 100%
-					height: 100%
-		&-main
+		&-top
+			img
+				width: gem(90)
+				height: gem(20)
 			&-stuff
+				width: gem(203)
 				.title-h10
-					margin-bottom: gem(40)
-			&-policies
-				margin-right: gem(-33)
-				p
+					margin-bottom: gem(4)
 					font-size: gem(17)
-					line-height: gem(21)
-					text-transform: none
-					margin-top: gem(12)
-					margin-bottom: gem(19)
+					line-height: gem(24)
+				.desc-3
+					font-size: gem(11)
+					line-height: gem(16)
+			form .input
+				width: gem(228)
+			
 		&-bottom
-			flex-direction: column
 			margin-top: gem(50)
-			&-copyright
-				margin-top: 0
-				display: flex
-				align-items: flex-end
-				span.label-3
-					color: #B3B3B3
-					margin-right: gem(67)
+			&-policies, &-contacts
+				width: unset
+				margin-right: gem(50)
+				a
+					font-size: gem(15)
+					line-height: gem(21)
+			&-contacts
+				margin-right: 0
+		span:last-child
+			font-size: gem(15)
+			line-height: gem(15)
 	.advantages-section-main-monitor .monitor-div .youtube-icon
 		width: gem(48)
 		top: gem(24)
@@ -555,7 +554,12 @@
 			span
 				font-size: gem(13)
 				line-height: gem(16)
-
+.empty_page
+	p.desc-1
+		font-size: gem(30)
+		line-height: gem(42)
+		color: var(--color-black)
+		max-width: gem(700)	
 @media all and (max-width: 480px)
 	.label-2.popup-with-move-anim.access_product
 		font-size: gem(10) !important
@@ -569,8 +573,6 @@
 		display: none
 	.header
 		&-contains
-			.logo
-				margin-top: gem(38)
 			.link
 				margin-top: gem(0)
 		.right-part-contact
@@ -1079,47 +1081,95 @@
 	.footer
 		margin-top: gem(0)
 		padding-top: gem(40)
-		margin-bottom: gem(20)
-		padding-bottom: 0
-		&-main
+		padding-bottom: gem(20)
+		&-top
 			flex-direction: column
-			align-items: center
+			margin-bottom: gem(32)
+			img
+				width: gem(68)
+				height: gem(15)
+				margin-bottom: gem(32)
 			&-stuff
+				width: unset
+				margin-bottom: gem(20)
 				.title-h10
 					font-size: gem(15)
 					line-height: gem(21)
 					// margin-left: gem(-5)
-					margin-bottom: gem(34)
-				form
-					display: flex
-					flex-direction: column
-					align-items: center
-					.input
-						width: 100%
-						margin-bottom: gem(28)
-					button
-						width: gem(246)
-						p
-							font-size: gem(15)
-							line-height: gem(21)
+					margin-bottom: gem(8)
 				.desc-3
-					margin-top: gem(51)
-			&-policies
-				margin: 0
-				align-self: flex-start
-				margin-top: gem(33)
-				p
-					margin-top: 0
+					font-size: gem(12)
+					line-height: gem(17)
+			form
+				display: flex
+				flex-direction: column
+				align-items: center
+				.input
+					width: 100%
+					margin-bottom: gem(11)
+				button
+					width: 100%
+					p
+						font-size: gem(15)
+						line-height: gem(21)
+			
 		&-logo
 			width: gem(68)
 			margin-bottom: gem(33)
 		&-bottom
-			margin-top: gem(37)
-			&-copyright
-				margin-top: gem(38)
-				span
-					font-size: gem(12)
-					line-height: gem(14.6)
+			flex-direction: column
+			margin-top: 0
+			&-policies
+				margin: 0
+				p
+					line-height: gem(21)
+					margin-bottom: gem(21)
+				.contentFooter
+					display: none
+				.contentFooter.active
+					display: flex
+				.openFooter
+					cursor: pointer
+					position: relative
+					&::before
+						content: ""
+						position: absolute
+						right: 0
+						top: gem(10.5)
+						width: gem(14)
+						height: gem(2)
+						background: var(--color-white)
+						transition: 0.3s all ease
+					&::after
+						content: ""
+						position: absolute
+						right: 0
+						top: gem(10.5)
+						width: gem(14)
+						height: gem(2)
+						background: var(--color-white)
+						transform: rotate(90deg)
+						transition: 0.3s all ease
+				.openFooter.active
+					&::after
+						transform: rotate(180deg)
+						transition: 0.3s all ease
+					&::before
+						transform: rotate(180deg)
+						transition: 0.3s all ease
+			&-contacts
+				p
+					line-height: gem(21)
+					margin-bottom: gem(21)
+				&-socials
+					justify-content: unset
+					margin-top: gem(15)
+	.empty_page
+		p.desc-1
+			font-size: gem(30)
+			line-height: gem(42)
+			color: var(--color-black)
+			max-width: gem(325)	
 	.price-section-main-element:nth-child(3) .price-section-main-element-content-list
 		margin-left: gem(23)
 		margin-right: gem(22)

@@ -146,11 +146,11 @@ body
 	top: 0
 	width: 100%
 	z-index: 9
+	padding-top: gem(50)
 	.right-part
 		display: flex
 		justify-content: center
 		align-items: center
-		margin-top: gem(50)
 		&-contact
 			display: flex
 			margin-right: gem(30)
@@ -202,7 +202,6 @@ body
 		align-items: center
 		.logo
 			display: flex
-			margin-top: gem(50)
 			img
 				width: gem(150)
 		.link
@@ -1162,6 +1161,7 @@ body
 			opacity: 0
 			pointer-events: none
 			transition: all 0.3s ease
+			box-shadow: gem(6) gem(6) gem(20) rgba(35, 35, 35, 0.2)
 			&.active
 				opacity: 1
 				pointer-events: unset
@@ -1178,6 +1178,8 @@ body
 				font-weight: 700
 				color: var(--color-black)
 				margin-bottom: gem(10)
+				&:hover, &-focus
+					border-bottom: gem(1) solid var(--color-black)
 			a.label-3:last-child
 				margin-bottom: 0
 
@@ -1197,6 +1199,7 @@ body
 			height: gem(44)
 		form
 			display: flex
+			align-items: center
 			.input
 				width: gem(400)
 				height: gem(54)
@@ -1210,16 +1213,27 @@ body
 			flex-direction: column
 			width: gem(393)
 			.title-h10
-				margin-bottom: gem(4)
+				margin-bottom: gem(8)
 				font-size: gem(20)
-				line-height: gem(48)
+				line-height: gem(24)
 				font-weight: 700
 			.desc-3
 				font-size: gem(13)
 				line-height: gem(16)
-		
+			a.desc-3
+				position: relative
+				border-bottom: gem(1) solid #F4F5F6
+				&:hover, &:focus
+					border-bottom: none
+				// &::before
+				// 	content: ''
+				// 	width: 100%
+				// 	position: absolute
+				// 	bottom: gem(1)
+				// 	border-bottom: gem(1) solid #F4F5F6	
 	&-bottom
 		display: flex
+		margin-bottom: gem(38)
 		&-policies
 			display: flex
 			flex-direction: column
@@ -1227,31 +1241,44 @@ body
 			margin-right: gem(102)
 			p
 				margin-bottom: gem(10)
-				font-weight: 500
-			a
-				margin-bottom: gem(20)
-			a:last-child
-				margin-right: 0
+				font-weight: 700
+			.contentFooter
+				display: flex
+				flex-direction: column
+				a
+					margin-bottom: gem(20)
+				a:last-child
+					margin-right: 0
 		&-contacts
 			display: flex
 			flex-direction: column
+			p
+				font-weight: 700
 			&-socials
 				display: flex
 				justify-content: center
-				margin-top: gem(7)
+				margin-top: gem(13)
 				a
-					margin-right: gem(30)
+					margin-right: gem(13)
 					display: flex
 					img
 						display: flex
 				a:last-child
 					margin-right: 0
-		&-copyright
-			display: flex
-	&-logo-mob
-			display: none
 	span:last-child
 		text-align: right
+		color: #B2B2B2
+.empty_page
+	display: flex
+	width: 100% !important
+	height: 100vh !important
+	align-items: center
+	justify-content: center
+	p.desc-1
+		font-size: gem(30)
+		line-height: gem(42)
+		color: var(--color-black)
+		max-width: gem(900)		
 .logon_footer
 	display: flex
 	align-items: center
