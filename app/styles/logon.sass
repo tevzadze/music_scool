@@ -54,7 +54,7 @@
 				border-radius: 0 0 gem(10) gem(10)
 				background: var(--color-white)
 				p.title-h7
-					font-weight: 700
+					font-weight: 500
 					font-size: gem(20)
 					line-height: gem(24)
 					color: var(--color-black)
@@ -182,7 +182,7 @@
 					span.desc-1
 						font-size: gem(25)
 						line-height: gem(30)
-						font-weight: 700
+						font-weight: 500
 						color: #F4F5F6
 					img:last-child
 						display: none
@@ -225,7 +225,7 @@
 					display: flex
 					flex-direction: column
 					p.title-h4
-						font-weight: 700
+						font-weight: 500
 						font-size: gem(20)
 						line-height: gem(24)
 						margin-bottom: gem(8)
@@ -251,7 +251,7 @@
 							height: 100%
 							border-radius: gem(30)
 					span.desc-1
-						font-weight: 700
+						font-weight: 500
 						font-size: gem(20)
 						line-height: gem(18)
 						color: #BA2DB2
@@ -288,7 +288,7 @@
 						span.desc-1
 							font-size: gem(20)
 							line-height: gem(18)
-							font-weight: 700
+							font-weight: 500
 							color: #F4F5F6
 							margin-left: gem(32)
 							position: relative
@@ -341,7 +341,7 @@
 							display: flex
 							
 							p.desc-1
-								font-weight: 700
+								font-weight: 500
 								font-size: gem(25)
 								line-height: gem(25)
 								color: var(--color-black)
@@ -377,13 +377,13 @@
 						transform: none
 						transform-style: none
 					h1.desc-1
-						font-weight: 700
+						font-weight: 500
 						font-size: gem(45)
 						line-height: gem(45)
 						color: var(--color-black)
 						margin-bottom: gem(26)
 					h2.desc-1
-						font-weight: 700
+						font-weight: 500
 						font-size: gem(45)
 						line-height: gem(45)
 						color: var(--color-black)
@@ -410,10 +410,12 @@
 								height: gem(25)
 								margin-right: gem(15)
 							span.desc-1
-								font-weight: 700
+								font-weight: 500
 								font-size: gem(20)
 								line-height: gem(20)
 								color: var(--color-black)
+								border-bottom: gem(1) solid var(--color-white)
+								transition: all 0.3s ease
 								&:hover, &:focus
 									border-bottom: gem(1) solid var(--color-black)
 						&-element:first-child
@@ -442,19 +444,20 @@
 	height: 100%
 	align-items: center
 	justify-content: center	
+	width: 100%
 	display: none
 	&.active
 		display: flex
 	p
 		width: 100%
 		text-align: center
-		font-family: var(--sub-font)
-		font-size: gem(40)
+		font-family: var(--main-font)
+		font-size: gem(30)
 		line-height: 1.2
-		color: var(--color-black)
-	.button-wrapper
-		width: gem(320)
-		margin-top: gem(50)
+		color: #454547
+		max-width: gem(900)
+		align-self: center
+		margin-top: gem(100)
 @media all and (max-width: 1024px)
 	.logon_main
 		.header
@@ -520,13 +523,13 @@
 						transform: none
 						transform-style: none
 					h1.desc-1
-						font-weight: 700
+						font-weight: 500
 						font-size: gem(45)
 						line-height: gem(45)
 						color: var(--color-black)
 						margin-bottom: gem(26)
 					h2.desc-1
-						font-weight: 700
+						font-weight: 500
 						font-size: gem(45)
 						line-height: gem(45)
 						color: var(--color-black)
@@ -553,7 +556,7 @@
 								height: gem(25)
 								margin-right: gem(15)
 							span.desc-1
-								font-weight: 700
+								font-weight: 500
 								font-size: gem(20)
 								line-height: gem(20)
 								color: var(--color-black)
@@ -575,7 +578,7 @@
 								p.desc-1
 									font-size: gem(25)
 									line-height: gem(25)
-									font-weight: 700
+									font-weight: 500
 									margin: 0
 	.course-lesson_main, .lesson-menu_main
 		.header-contains
@@ -816,7 +819,4 @@
 	.empty
 		p
 			font-size: gem(20)
-			margin-top: gem(30)
-		.button-wrapper
-			margin-top: gem(30)
 

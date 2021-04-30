@@ -159,22 +159,6 @@ body
 			letter-spacing: gem(1)
 			color: var(--color-white)
 			font-weight: 400
-		// span
-		// 	display: flex
-		// 	justify-content: center
-		// 	align-items: center
-		// 	width: gem(25)
-		// 	height: gem(25)
-		// 	font-size: gem(15)
-		// 	line-height: gem(20)
-		// 	font-family: var(--accent-font)
-		// 	font-weight: 600
-		// 	color: #fff
-		// 	position: absolute
-		// 	top: gem(-10)
-		// 	right: gem(-15)
-		// 	border-radius: 100%
-		// 	background: linear-gradient(46.23deg, #FEBD2F 0%, #F95721 27.38%, #FC1370 55.36%, #BA2DB2 73.95%, #8342E9 85.42%, #3F89FC 106.06%)
 		img
 			position: relative
 			z-index: 2
@@ -240,6 +224,10 @@ body
 			&:hover
 				&:before
 					opacity: 0
+			&:nth-child(1)
+				margin-right: gem(10)
+				&:after
+					content: 'CONTACT US'
 .hero
 	margin-bottom: gem(150)
 
@@ -681,8 +669,8 @@ body
 					position: relative
 					flex-direction: column
 					background: var(--color-black)
-					width: gem(396)
-					height: gem(692)
+					width: calc(100% - 4px)
+					height: calc(100% - 4px)
 					border-radius: gem(10)
 					transition: 0.3s all ease
 					.popular
@@ -747,8 +735,8 @@ body
 				height: gem(625)
 				background: linear-gradient(90deg, #febd2f .33%,#f95721 25.43%,#fc1370 51.09%,#ba2db2 68.14%,#8342e9 78.65%,#3f89fc 97.57%)
 				.price-section-main-element-content
-					height: gem(621)
-					width: gem(430)
+					width: calc(100% - 4px)
+					height: calc(100% - 4px)
 					.title-h7
 						margin-top: gem(-10)
 					&-bottom
@@ -833,7 +821,7 @@ body
 							border-bottom: gem(1) #111111 solid			  
 						&.active
 							border-bottom: gem(1) #111111 solid
-							font-weight: 700
+							font-weight: 500
 
 					&-list
 						background: var(--color-white)
@@ -1175,9 +1163,11 @@ body
 			a.label-3
 				font-size: gem(20)
 				line-height: gem(24.3)
-				font-weight: 700
+				font-weight: 500
 				color: var(--color-black)
 				margin-bottom: gem(10)
+				border-bottom: gem(1) solid var(--color-white)
+				transition: all 0.3s ease
 				&:hover, &-focus
 					border-bottom: gem(1) solid var(--color-black)
 			a.label-3:last-child
@@ -1216,7 +1206,7 @@ body
 				margin-bottom: gem(8)
 				font-size: gem(20)
 				line-height: gem(24)
-				font-weight: 700
+				font-weight: 500
 			.desc-3
 				font-size: gem(13)
 				line-height: gem(16)
@@ -1241,7 +1231,7 @@ body
 			margin-right: gem(102)
 			p
 				margin-bottom: gem(10)
-				font-weight: 700
+				font-weight: 500
 			.contentFooter
 				display: flex
 				flex-direction: column
@@ -1253,7 +1243,7 @@ body
 			display: flex
 			flex-direction: column
 			p
-				font-weight: 700
+				font-weight: 500
 			&-socials
 				display: flex
 				justify-content: center
