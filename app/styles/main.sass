@@ -1,9 +1,6 @@
 @import './common/vars.sass'
 @import './common/gem.scss'
-@import './common/button.sass'
-@import 'blocks/**/*'
 @import './common/magnific-popup.css'
-
 *
 	box-sizing: border-box
 
@@ -28,9 +25,7 @@ body
 	-moz-osx-font-smoothing: grayscale
 	text-rendering: optimizeLegibility
 	overflow: hidden
-	// display: none
 	&.loaded2
-		// display: none
 		overflow: unset
 		overflow-x: hidden
 		.preloader
@@ -40,9 +35,6 @@ body
 		overflow: hidden
 	&.modal-active
 		overflow: hidden
-		.background-body
-			opacity: 1
-			pointer-events: unset
 a
 	text-decoration: none
 	outline: none
@@ -50,18 +42,19 @@ a
 img
 	max-width: 100%
 	height: auto
+
 .preloader
 	position: fixed
 	width: 100%
 	height: 100vh
 	z-index: 999
 	transition: all 0.3s ease
+
 section
 	position: relative
 	background-repeat: no-repeat
 	background-position: center
 	background-size: cover
-	// visibility: hidden
 .container
 	position: relative
 	width: var(--container-width)
@@ -77,8 +70,9 @@ input , textarea
 		&::placeholder
 			color: transparent
 
-button[type='submit']
+button
 	cursor: pointer
+
 
 //start here
 .desctop
@@ -88,9 +82,6 @@ button[type='submit']
 .tablet
 	display: none
 .home
-	// background: url(../images/dist/bgr-hero.svg) no-repeat
-	// background-size: contain
-	// background-position: 0 gem(52)
 	.desctop-line
 		margin-left: gem(-30)
 		margin-top: gem(52)
@@ -141,962 +132,13 @@ body
 	transition: all 1s ease
 	&.inactive
 		opacity: 0
-.header
-	position: absolute
-	top: 0
-	width: 100%
-	z-index: 9
-	padding-top: gem(50)
-	.right-part
-		display: flex
-		justify-content: center
-		align-items: center
-		&-contact
-			display: flex
-			margin-right: gem(30)
-			font-size: gem(20)
-			line-height: gem(20)
-			letter-spacing: gem(1)
-			color: var(--color-white)
-			font-weight: 400
-		img
-			position: relative
-			z-index: 2
-		.basket
-			position: relative
-			cursor: pointer
-		&-element
-			display: flex
-			justify-content: center
-			align-items: center
-			img
-				width: gem(30)
-				height: gem(30)
-				margin-right: gem(20)
-			span.label-3
-				color: var(--color-white)
-				font-size: gem(20)
-				line-height: gem(12)
-		&-element:first-child
-			margin-right: gem(50)
-	&-contains
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-		align-items: center
-		.logo
-			display: flex
-			img
-				width: gem(150)
-		.link
-			display: flex
-			margin-right: 0
-			font-weight: 600
-			justify-content: center
-			align-items: center
-			background: linear-gradient(90.34deg, #FEBD2F 0.33%, #F95721 25.43%, #FC1370 51.09%, #BA2DB2 68.14%, #8342E9 78.65%, #3F89FC 97.57%)
-			padding: gem(8) gem(11)
-			position: relative
-			&:before
-				display: block
-				content: ''
-				width: calc(100% + 4px)
-				height: calc(100% + 4px)
-				background: #111111
-				position: absolute
-				top: -2px
-				left: -2px
-				z-index: 2
-				opacity: 1
-				transition: all 0.3s ease
-			&:after
-				display: flex
-				justify-content: center
-				align-items: center
-				content: 'LET ME IN'
-				width: calc(100% - 4px)
-				height: calc(100% - 4px)
-				background: #111111
-				position: absolute
-				top: 2px
-				left: 2px
-				z-index: 3
-			&:hover
-				&:before
-					opacity: 0
-			&:nth-child(1)
-				margin-right: gem(10)
-				&:after
-					content: 'CONTACT US'
-.hero
-	margin-bottom: gem(150)
-
-	&-section
-		display: flex
-		flex-direction: column
-		align-items: flex-start
-		h1
-			margin-top: gem(268)
-			position: relative
-			&:before
-				display: block
-				content: ''
-				width: 75%
-				z-index: -1
-				height: 100%
-				position: absolute
-				top: gem(-25)
-				left: gem(-37)
-				border-radius: 100%
-				background: rgba(17, 17, 17, 0.8)
-				filter: blur(16px)
-		p
-			max-width: gem(435)
-			margin-top: gem(24)
-		.button-wrapper
-			width: gem(200)
-			margin-top: gem(60)
-			&::after
-				// content: '<lottie-player src="images/dist/preloader.json" background="#111111" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>'
-				display: flex
-				width: 100%
-				height: 100%
-				position: absolute
-				z-index: 2
-				opacity: 0.7
-		&-video
-			position: relative
-			margin: auto
-			margin-top: gem(175)
-			width: gem(800)
-			height: gem(551)
-			z-index: 4
-			video
-				width: 100%
-				height: 100%
-				background: #111111
-			.play
-				position: absolute
-				left: gem(350)
-				top: gem(233)
-				z-index: 5
-				cursor: pointer
-	.bacground-item
-		top: gem(0)
-
-
-.advantages
-	padding-bottom: gem(200)
-	background: linear-gradient(0deg, #111111 0%, #111111 90%, rgba(0,0,0,0) 100%)
-	&-section
-		display: flex
-		flex-direction: column
-		&-title
-			margin-bottom: gem(125)
-			h2
-				text-align: center
-		&-main
-			display: flex
-			flex-direction: column
-			.advantages-section-text
-				p
-					margin-top: gem(49)
-			&-question
-				display: flex
-				justify-content: space-between
-				margin-top: gem(63)
-				.advantages-section-text
-					max-width: gem(592)
-					h2
-						max-width: gem(568)
-				.advantages-section-pics
-					width: gem(600)
-					position: relative
-					margin-top: gem(-10)
-					display: flex
-					justify-content: center
-					align-items: center
-					img
-						width: gem(220)
-						height: auto
-						position: absolute
-						opacity: 0
-						transform: scale(1.2)
-						transition: all 0.6s ease
-						
-					img:nth-child(2)
-						position: absolute
-						width: gem(220)
-						opacity: 1
-						z-index: 9
-
-					&.visible
-						img
-							&:nth-child(1), &:nth-child(3)
-								transform: scale(1)
-								opacity: 1
-							&:nth-child(3)
-								transform: scale(1) translateX(gem(160))
-							&:nth-child(1)
-								transform: scale(1) translateX(gem(-160))
-			&-spaceman
-				display: flex
-				margin-top: gem(133)
-				.advantages-section-pics
-					width: gem(802)
-					position: relative
-					img
-						&:first-child
-							width: gem(460)
-						&:last-child
-							width: gem(448)
-							position: absolute
-							right: gem(10)
-							top: gem(160)
-							animation: spaceman 4s infinite ease-in-out
-							transform-origin: center
-				.advantages-section-text
-					display: flex
-					flex-direction: column
-					margin-top: gem(62)
-					max-width: gem(530)
-					h3
-						text-align: right
-					p
-						text-align: right
-						max-width: gem(519)
-						margin-top: gem(62)
-			&-monitor
-				display: flex
-				justify-content: space-between
-				margin-top: gem(160)
-				.advantages-section-text
-					margin-top: gem(60)
-					max-width: gem(680)
-					h3
-						text-align: left
-						margin-left: gem(10)
-					p
-						text-align: left
-						margin-top: gem(57)
-						max-width: gem(536)
-						margin-left: gem(10)
-				.animationWrapper
-					width: gem(505)
-					margin-left: gem(28)
-					height: gem(294)
-					position: relative
-					overflow: hidden
-					img
-						width: gem(60)
-						position: absolute
-						z-index: 5
-						bottom: 200%
-						transition: all 2s ease-in
-				.monitor-div
-					width: gem(594)
-					padding-top: gem(44)
-					height: gem(538)
-					margin-right: gem(10)
-					position: relative
-					lottie-player
-						transform: scale(1.7)
-
-					.youtube-icon
-						position: absolute
-						width: gem(115)
-						z-index: 9
-						left: gem(54)
-						top: gem(58)
-
-		&-text
-			display: flex
-			flex-direction: column
-.lesson
-	padding-bottom: gem(200)
-	background: var(--color-black)
-	&-section
-		display: flex
-		flex-direction: column
-		justify-content: center
-		&-title
-			margin-bottom: gem(103)
-			h2
-				text-align: center
-				margin: auto
-				width: gem(1114)
-				padding-right: gem(8)
-		&-content
-			display: flex
-			flex-direction: row
-			justify-content: space-between
-			width: 100%
-		&-title-small
-			display: flex
-			flex-direction: column
-			justify-content: flex-start
-
-		&-main
-			display: flex
-			flex-direction: column
-			&-element
-				display: flex
-				flex-direction: column
-				justify-content: center
-				align-items: flex-start
-				// margin-right: gem(100)
-				height: gem(402)
-				opacity: 0
-				// pointer-events: none
-				transition: all 1s ease
-				transform: translateY(gem(25))
-				position: relative
-				&.visible
-					opacity: 1
-					transform: translateY(0)
-				p.desc-1
-					max-width: gem(660)
-				h3
-					margin-top: gem(19)
-					margin-bottom: gem(22)
-					max-width: gem(660)
-				h3.title-h4
-					line-height: 120%
-				&.active
-					
-		&-video
-
-			top: gem(50)
-			right: 0
-			width: gem(550)
-			position: absolute	
-			height: auto
-			z-index: 4
-			video
-				width: 100%
-				height: auto
-			.play
-				position: absolute
-				left: gem(220)
-				top: gem(95)
-				z-index: 5
-				width: gem(100)
-				cursor: pointer
-		.button-wrapper
-			height: gem(66)
-			width: gem(236)
-			margin: auto
-			z-index: 4
-			cursor: pointer
-			span
-				z-index: 5
-		.button-wrapper:before
-			opacity: 0.85
-		.contentMore.active
-			.lesson-section-main-element:nth-child(1n+3)
-				display: flex
-#small-dialog
-	background: #111111
-	padding: gem(40) gem(30)
-	overflow: hidden
-	text-align: left
-	max-width: 95%
-	margin: gem(20) auto
-	position: relative
-	pointer-events: unset
-	.button-wrapper
-		width: gem(200)
-		margin: auto
-		margin-top: gem(50)
-	.lesson-section-main-element
-		transform: none
-		opacity: 1
-.features
-	
-	// background: var(--color-black)
-	.backgroun-item
-		top: gem(-15)
-	&-section
-		display: flex
-		flex-direction: column
-		justify-content: center
-		&-title
-			margin-bottom: gem(87)
-			h2
-				text-align: center
-				max-width: gem(920)
-				margin: auto
-				margin-top: gem(5)
-		&-main
-			display: flex
-			flex-direction: column
-			&-element
-				display: flex
-				flex-direction: column
-				margin-bottom: gem(106)
-				width: 50%
-				justify-content: center
-				align-items: center
-				h3
-					margin-bottom: gem(20)
-				p.desc-1
-					line-height: 108%
-					text-align: center
-					
-				&:nth-child(even)
-					margin-left: 50%
-				&:last-child
-					margin-bottom: 0
-				&:nth-child(1)	
-					display: flex
-					align-items: flex-start
-					justify-content: flex-start
-					position: relative
-					// transition: all 0.3s ease
-					// transform: translate3d(40%, 0px, 0px)
-
-				&:nth-child(2)
-					margin-bottom: gem(90)
-					align-items: flex-start
-					justify-content: flex-start
-					// transform: translate3d(-40%, 0px, 0px)
-					h3
-						margin-bottom: gem(26)
-					p
-						max-width: gem(620)
-						text-align: left
-				&:nth-child(3)
-					// transform: translate3d(40%, 0px, 0px)
-					align-items: flex-start
-					justify-content: flex-start
-					margin-bottom: gem(104)
-					h3.title-h4
-						
-						margin-bottom: gem(25)
-					p
-						max-width: gem(500)
-						text-align: left
-				&:nth-child(4)
-					align-items: flex-start
-					justify-content: flex-start
-					// transform: translate3d(-40%, 0px, 0px)
-					h3.title-h4
-						
-						margin-bottom: gem(25)
-					p   
-						max-width: gem(470)
-						margin-left: gem(8)
-						text-align: left
-
-			&-bottom
-				display: flex
-				width: 100%
-				justify-content: center
-				margin-top: gem(20)
-.story
-	padding-top: gem(210)
-	background: var(--color-black)
-	&-section
-		display: flex
-		flex-direction: column
-		&-pics
-			width: 100%
-			height: auto
-			z-index: 1
-			img
-				width: 100%
-		&-text
-			display: flex
-			flex-direction: column
-			align-items: flex-end
-			position: relative
-			top: gem(-140)
-			h3, p
-				max-width: gem(630)
-			h3
-				margin-bottom: gem(10)
-				z-index: 2
-			p:last-child
-				margin-top: gem(30)
-			.roll-block
-				transform: translateY(gem(-15))
-				opacity: 0
-				transition: all 1s ease
-				p
-					margin-bottom: gem(15)
-				&.visible
-					opacity: 1
-					transform: translateY(gem(20))
-	.social
-		display: flex
-		flex-direction: row
-		justify-content: flex-start
-		align-items: center
-		margin-top: gem(20)
-		img
-			width: gem(50)
-			height: 100%
-		a
-			display: flex
-			margin-right: gem(18)	
-.price
-	padding-bottom: gem(200)
-	padding-top: gem(60)
-	background: var(--color-black)
-	h2
-		padding-left: gem(30)
-	&-section
-		display: flex
-		flex-direction: column
-		&-title
-			margin-bottom: gem(109)
-			h2
-				text-align: center
-		&-main
-			display: flex
-			justify-content: space-between
-			padding-left: gem(5)
-			&-element
-				display: flex
-				justify-content: center
-				align-items: center
-				background: linear-gradient(17.57deg, #febd2f .33%,#f95721 25.43%,#fc1370 51.09%,#ba2db2 68.14%,#8342e9 78.65%,#3f89fc 97.57%)
-				width: gem(400)
-				height: gem(696)
-				border-radius: gem(10)
-				&-content
-					display: flex
-					position: relative
-					flex-direction: column
-					background: var(--color-black)
-					width: calc(100% - 4px)
-					height: calc(100% - 4px)
-					border-radius: gem(10)
-					transition: 0.3s all ease
-					.popular
-						display: flex
-						position: relative
-						top: gem(-50)
-						justify-content: center
-						align-items: center
-						width: gem(235)
-						height: gem(75)
-						background: linear-gradient(90.34deg, #febd2f .33%,#f95721 25.43%,#fc1370 51.09%,#ba2db2 68.14%,#8342e9 78.65%,#3f89fc 97.57%)
-						border-radius: gem(10)
-						margin: 0 auto
-						&-main
-							display: flex
-							justify-content: center
-							align-items: center
-							width: gem(233)
-							height: gem(73)
-							border-radius: gem(10)
-							background: var(--color-black)
-							opacity: 0.8
-					.title-h7
-						margin-top: gem(48)
-						margin-left: gem(30)
-						margin-bottom: gem(25)
-						letter-spacing: 1px
-						font-weight: 500
-					&-list
-						display: flex
-						flex-direction: column
-						margin-left: gem(30)
-						margin-right: gem(20)
-						li
-							display: flex
-							align-items: flex-start
-							margin-bottom: gem(25)
-							img
-								width: gem(13)
-								margin-right: gem(12)
-								margin-top: gem(6)
-					&-bottom
-						display: flex
-						align-items: center
-						justify-content: space-between
-						position: absolute
-						left: gem(27)
-						bottom: gem(44)
-						width: gem(358)
-						.button-wrapper
-							width: gem(172)
-							height: gem(54)
-							margin-right: gem(20)
-			&-element:hover
-				.price-section-main-element-content
-					background: rgba(0,0,0,0.85)
-					transition: 0.3s all ease
-			&-element:nth-child(2)
-				position: relative
-				top: gem(-36)
-				width: gem(434)
-				height: gem(625)
-				background: linear-gradient(90deg, #febd2f .33%,#f95721 25.43%,#fc1370 51.09%,#ba2db2 68.14%,#8342e9 78.65%,#3f89fc 97.57%)
-				.price-section-main-element-content
-					width: calc(100% - 4px)
-					height: calc(100% - 4px)
-					.title-h7
-						margin-top: gem(-10)
-					&-bottom
-						width: auto
-						bottom: gem(67)
-						span
-							margin-left: gem(23)
-						.button-wrapper
-							position: relative
-							top: gem(5)
-							margin-left: gem(29)
-
-					&-list
-						margin-right: gem(50)
-						li
-							margin-bottom: gem(40)
-							&:nth-child(2)
-								margin-bottom: gem(25)
-							&:nth-child(3)
-								margin-bottom: gem(25)
-			&-element:nth-child(3)
-				// margin-left: gem(2)
-				position: relative  
-				right: gem(-15)
-				.price-section-main-element-content
-					.title-h7
-						margin-top: gem(87)
-						margin-left: gem(20)
-					&-list
-						margin-left: gem(22)
-						margin-right: gem(20)
-					&-bottom
-						width: auto
-						span
-							margin-right: gem(26)
-
-
-.need
-	padding-bottom: gem(158)
-	background: var(--color-black)
-	&-section
-		display: flex
-		flex-direction: column
-		&-title
-			margin-bottom: gem(20)
-			h2.title-h2
-				font-size: gem(70)
-				line-height: gem(70)
-		&-main
-			display: flex
-			justify-content: space-between
-			align-items: flex-start
-		&-pics
-			width: gem(613)
-			margin-left: gem(6)
-			margin-top: gem(60)
-		&-text
-			display: flex
-			flex-direction: column
-			margin-top: gem(4)
-			margin-right: gem(10)
-			&-element
-				display: flex
-				flex-direction: column
-				margin-bottom: gem(40)
-				position: relative
-				&:last-child
-					margin-top: gem(-25)
-				p.title-h4
-					margin-bottom: gem(25)
-				a
-					text-decoration: underline
-				.os
-					display: flex
-					margin-top: gem(12)
-					margin-bottom: gem(27)
-					span
-						border-bottom: gem(1) var(--color-grey) solid
-						cursor: pointer
-						margin-right: gem(15)
-						&:hover
-							border-bottom: gem(1) #111111 solid			  
-						&.active
-							border-bottom: gem(1) #111111 solid
-							font-weight: 500
-
-					&-list
-						background: var(--color-white)
-						width: gem(526)
-						height: auto
-						padding: gem(68) 0
-						display: none
-						justify-content: center
-						align-items: center
-						position: relative
-						top: 0
-						transition: all 1s ease
-						.close
-							width: gem(30)
-							height: gem(30)
-							position: absolute
-							right: gem(20)
-							top: gem(20)
-							// background: #111111
-							display: flex
-							align-items: center
-							justify-content: center
-							cursor: pointer
-							span
-								display: block
-								content: ''
-								top: gem(15)
-								background: #111111
-								width: 70%
-								height: gem(2)
-								transform: rotate(45deg)
-								position: absolute		
-								&:nth-child(1)
-									transform: rotate(-45deg)
-						ul
-							width: gem(418)
-							height: auto
-						li
-							margin-bottom: gem(17)
-							margin-left: gem(16)
-							position: relative
-							&::before
-								content: ""
-								position: absolute
-								left: gem(-16)
-								top: gem(10)
-								width: gem(10)
-								height: gem(3)
-								background: var(--color-black)
-							&:last-child
-								margin-bottom: 0
-						&.active
-							display: flex
-							pointer-events: auto
-.details
-	padding-bottom: gem(193)
-	background: var(--color-black)
-	&-section
-		&-title
-			margin-bottom: gem(121)
-			h2
-				text-align: center
-				padding-left: gem(35)
-		&-pics
-			height: gem(160)
-		&-text
-			margin-top: gem(4)
-			p.title-h9
-				letter-spacing: 1px
-				font-weight: 500
-				margin-bottom: gem(16)
-				&.sub
-					letter-spacing: normal
-					font-weight: 400
-					font-family: var(--main-font)
-		&-main
-			display: flex
-			justify-content: center
-			flex-wrap: wrap
-
-			&-element
-				display: flex
-				align-items: center
-				flex-direction: column
-				max-width: gem(320)
-				// margin: gem(0) gem(80)
-				margin-right: gem(180)
-				&:nth-child(1)
-					img
-						width: gem(141)
-				&:nth-child(2)
-					img
-						width: gem(200)
-						margin-top: gem(2)
-						margin-left: gem(10)
-					.details-section-text
-						margin-top: gem(10)
-				&:nth-child(3)
-					position: relative
-					// right: gem(-9)
-					margin-right: gem(0)
-					img
-						width: gem(144)
-						margin-top: gem(10)
-						margin-left: gem(20)
-					.details-section-text
-						margin-top: gem(15)
-				&:nth-child(4)
-					margin-left: gem(20)
-					margin-top: gem(25)
-					margin-right: gem(360)
-					img
-						width: gem(141)
-				&:nth-child(5)
-					margin-right: 0
-					margin-top: gem(5)
-					margin-left: gem(-50)
-
-					img
-						width: gem(181)
-					.details-section-text
-						margin-top: gem(40)
-						width: 100%
-						.title-h9
-							width: gem(390)
-							&.sub
-								width: 100%
-.free
-	background: #111111
-	padding-bottom: gem(200)
-	h2
-		margin-bottom: gem(85)
-	h3
-		margin-bottom: gem(69)
-	&-contains
-
-		display: flex
-		flex-direction: column
-		align-items: center
-		justify-content: flex-start
-	&-mark
-		background: linear-gradient(90.34deg, #FEBD2F 0.33%, #F95721 25.43%, #FC1370 51.09%, #BA2DB2 68.14%, #8342E9 78.65%, #3F89FC 97.57%)
-		backdrop-filter: blur(10px)
-		border-radius: 100%
-		width: gem(150)
-		height: gem(150)
-		padding: gem(2)
-		position: absolute
-		top: gem(-39)
-		left: gem(-26)
-		&-inner
-			display: flex
-			flex-direction: column
-			justify-content: center
-			align-items: center
-			border-radius: 100%
-			height: 100%
-			width: 100%
-			background: rgba(0,0,0,0.7)
-		span
-			font-size: gem(20)
-			font-family: var(--sub-font)
-			font-weight: 500
-			line-height: 120%
-			color: #ffffff
-	&-wrapper
-		display: flex
-		flex-direction: row
-		align-items: flex-start
-		justify-content: center
-	&-left
-		position: relative
-		
-		img
-			width: gem(600)
-	&-right
-		display: flex
-		flex-direction: column
-		align-items: flex-start
-		width: gem(666)
-		margin-top: gem(92)
-		margin-left: gem(44)
-		h4
-			margin-bottom: gem(23)
-		p
-			margin-bottom: gem(52)
-			color: #B3B2B8
-
-		.button-wrapper
-			width: gem(191)
-			a
-				font-size: gem(20)
-				line-height: gem(22)
-			
-.questions
-	padding-top: gem(140)
-	padding-bottom: gem(128)
-	background: var(--color-white)
-	&-section
-		&-title
-			margin-bottom: gem(117)
-			h2
-				text-align: center
-				white-space: nowrap
-		&-main
-			display: flex
-			justify-content: center
-		&-list
-			display: flex
-			flex-direction: column
-			max-width: gem(770)
-			margin-left: gem(-35)
-			&-element
-				display: flex
-				flex-direction: column
-				position: relative
-				margin-bottom: gem(33)
-				width: gem(770)
-				.openQuestion
-					padding-left: gem(35)
-					cursor: pointer
-					letter-spacing: normal
-					line-height: gem(30)
-					&::before
-						content: ""
-						position: absolute
-						left: 0
-						top: gem(13)
-						width: gem(14)
-						height: gem(1)
-						background: var(--color-black)
-						transition: 0.3s all ease
-					&::after
-						content: ""
-						position: absolute
-						left: 0
-						top: gem(13)
-						width: gem(14)
-						height: gem(1)
-						background: var(--color-black)
-						transform: rotate(90deg)
-						transition: 0.3s all ease
-				.openQuestion.active
-					&::after
-						transform: rotate(180deg)
-						transition: 0.3s all ease
-					&::before
-						transform: rotate(180deg)
-						transition: 0.3s all ease
-				.contentQuestion
-					margin-top: gem(10)
-					margin-left: gem(35)
-					position: relative
-					display: none
-					a
-						display: inline
-				.contentQuestion.active
-					display: flex
-					flex-direction: column
-					ul
-						list-style: disc  
-						padding-left: gem(20)
-						margin-top: gem(20)
-					p
-						margin-top: gem(20)
-				p.contentQuestion.active
-					display: inline
-			&-element:last-child
-				margin-bottom: 0
 
 // refactor
 
-.label-2.popup-with-move-anim.access_product
-	font-size: gem(15)
-	line-height: gem(16.5)
+.button-wrapper 
+	a.access_product
+		font-size: gem(15)
+		line-height: gem(16.5)
 .popup_registration
 	display: flex
 	flex-direction: column
@@ -1131,6 +173,7 @@ body
 		justify-content: center
 		p.title-h1
 			margin-bottom: gem(28)
+			
 // account_dropdown
 .logon_main .header-contains 
 	.right-part
@@ -1172,92 +215,6 @@ body
 					border-bottom: gem(1) solid var(--color-black)
 			a.label-3:last-child
 				margin-bottom: 0
-
-
-.footer
-	display: flex
-	flex-direction: column
-	padding: gem(60) 0
-	overflow-x: hidden
-	padding-bottom: gem(60)
-	&-top
-		display: flex
-		justify-content: space-between
-		margin-bottom: gem(38)
-		img
-			width: gem(200)
-			height: gem(44)
-		form
-			display: flex
-			align-items: center
-			.input
-				width: gem(400)
-				height: gem(54)
-				border-radius: gem(2) gem(0) gem(0) gem(2)
-			button
-				width: gem(144)
-				height: gem(54)
-				border-radius: gem(0) gem(2) gem(2) gem(0)
-		&-stuff
-			display: flex
-			flex-direction: column
-			width: gem(393)
-			.title-h10
-				margin-bottom: gem(8)
-				font-size: gem(20)
-				line-height: gem(24)
-				font-weight: 500
-			.desc-3
-				font-size: gem(13)
-				line-height: gem(16)
-			a.desc-3
-				position: relative
-				border-bottom: gem(1) solid #F4F5F6
-				&:hover, &:focus
-					border-bottom: none
-				// &::before
-				// 	content: ''
-				// 	width: 100%
-				// 	position: absolute
-				// 	bottom: gem(1)
-				// 	border-bottom: gem(1) solid #F4F5F6	
-	&-bottom
-		display: flex
-		margin-bottom: gem(38)
-		&-policies
-			display: flex
-			flex-direction: column
-			width: gem(185)
-			margin-right: gem(102)
-			p
-				margin-bottom: gem(10)
-				font-weight: 500
-			.contentFooter
-				display: flex
-				flex-direction: column
-				a
-					margin-bottom: gem(20)
-				a:last-child
-					margin-right: 0
-		&-contacts
-			display: flex
-			flex-direction: column
-			p
-				font-weight: 500
-			&-socials
-				display: flex
-				justify-content: center
-				margin-top: gem(13)
-				a
-					margin-right: gem(13)
-					display: flex
-					img
-						display: flex
-				a:last-child
-					margin-right: 0
-	span:last-child
-		text-align: right
-		color: #B2B2B2
 .empty_page
 	display: flex
 	width: 100% !important
@@ -1288,28 +245,33 @@ body
 	opacity: 0
 	pointer-events: none
 	transition: all 0.3s ease
-@keyframes spaceman 
-	0%
-		transform: translateY(gem(20)) rotate(-5deg)
-	50%
-		transform: translateY(gem(-20)) rotate(5deg)
-	100%
-		transform: translateY(gem(20)) rotate(-5deg)
 
-@import 'responsive.sass'
+@import 'main-responsive.sass'
+//main pages
+@import 'stan.sass'
+@import 'stan-responsive.sass'
 @import 'trial.sass'
-// @import 'info.sass'
-// @import 'payment.sass'
-// @import 'cart.sass'
-@import 'tnx.sass'
-// @import 'trial-popup.sass'
+@import 'trial-responsive.sass'
 @import 'edm.sass'
+@import 'dance.sass'
+@import 'tnx.sass'
+@import 'registration.sass'
+//account interface pages
+@import 'account.sass'
+//что это
+@import 'info.sass'
+@import 'lesson-menu.sass'
+// до сюда
+//terms, privacy...
 @import 'terms.sass'
 @import 'privacy.sass'
 @import 'cookies.sass'
-@import 'payment.sass'
-@import 'info.sass'
-@import 'registration.sass'
-@import 'logon.sass'
-@import 'lesson-menu.sass'
-@import 'dance.sass'
+//all blocks
+@import 'blocks/**/*'
+
+// @import 'payment.sass'
+// @import 'info.sass'
+// @import 'payment.sass'
+// @import 'cart.sass'
+// @import 'trial-popup.sass'
+// @import 'logon.sass'

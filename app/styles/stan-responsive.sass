@@ -1,33 +1,4 @@
-@media screen and (max-height: 700px) and (min-width: 1024px)
-	.hero-section h1
-		margin-top: gem(228)
 @media all and (max-width: 1024px)
-	main
-		// background: var(--color-black)
-	.label-2.popup-with-move-anim.access_product
-		font-size: gem(8) !important
-		line-height: gem(12) !important
-	.tablet-lines
-		display: block
-		position: absolute
-		margin-top: gem(114)
-		width: 100%
-	.button-wrapper a
-		font-size: gem(25)
-		line-height: 110%
-	.header
-		padding-top: gem(30)
-		&-contains
-			.logo
-				width: gem(76)
-			.link
-				margin-right: 0
-				margin-top: 0
-		.right-part-contact
-			margin-right: gem(20)
-			font-size: gem(12)
-			line-height: gem(17)
-			letter-spacing: unset
 	.hero
 		margin-bottom: gem(35)
 		&-section
@@ -246,6 +217,10 @@
 					margin-top: gem(30)
 				.roll-block.visible
 					transform: translateY(0)
+				.roll-block
+					p
+						font-size: gem(15)
+						line-height: gem(24)
 			&-pics
 				width: 100%
 				height: gem(461)
@@ -355,7 +330,7 @@
 				margin-left: gem(0)
 				margin-top: gem(75)
 			&-text
-				max-width: gem(330)
+				max-width: 100%
 				margin-right: gem(0)
 				&-element
 					margin-bottom: gem(30)
@@ -375,7 +350,7 @@
 							font-size: gem(15)
 							line-height: 126%
 						&-list
-							width: gem(330)
+							width: 100%
 							padding: gem(32) gem(32)
 							li
 								margin-bottom: gem(20)
@@ -481,39 +456,7 @@
 	.price-section-main-element:nth-child(3) .price-section-main-element-content-list
 		margin-left: gem(12)
 		margin-right: gem(10)
-	.footer
-		margin-top: 0
-		margin-bottom: 0
-		padding: gem(40) 0
-		&-top
-			img
-				width: gem(90)
-				height: gem(20)
-			&-stuff
-				width: gem(203)
-				.title-h10
-					margin-bottom: gem(4)
-					font-size: gem(17)
-					line-height: gem(24)
-				.desc-3
-					font-size: gem(11)
-					line-height: gem(16)
-			form .input
-				width: gem(228)
-			
-		&-bottom
-			margin-top: gem(50)
-			&-policies, &-contacts
-				width: unset
-				margin-right: gem(50)
-				a
-					font-size: gem(15)
-					line-height: gem(21)
-			&-contacts
-				margin-right: 0
-		span:last-child
-			font-size: gem(15)
-			line-height: gem(15)
+	
 	.advantages-section-main-monitor .monitor-div .youtube-icon
 		width: gem(48)
 		top: gem(24)
@@ -555,31 +498,8 @@
 			span
 				font-size: gem(13)
 				line-height: gem(16)
-.empty_page
-	p.desc-1
-		font-size: gem(30)
-		line-height: gem(42)
-		color: var(--color-black)
-		max-width: gem(500)	
+	
 @media all and (max-width: 480px)
-	.label-2.popup-with-move-anim.access_product
-		font-size: gem(10) !important
-		line-height: gem(12) !important
-	.mobile-lines
-		display: block
-		width: 100%
-		position: absolute
-		margin-top: gem(76)
-	.tablet-lines
-		display: none
-	.header
-		&-contains
-			.link
-				margin-top: gem(0)
-		.right-part-contact
-			margin-right: gem(15)
-			font-size: gem(15)
-			line-height: gem(24)
 	.hero
 		margin-bottom: gem(15)
 		&-section
@@ -601,7 +521,7 @@
 					filter: blur(16px)
 			.button-wrapper
 				margin-top: gem(47)
-				width: gem(100)
+				width: gem(120)
 				height: gem(40)
 				a
 					font-size: gem(12)
@@ -619,9 +539,11 @@
 					height: auto
 					left: gem(140)
 					top: gem(60)
+					
 	#small-dialog
 		.button-wrapper
 			height: gem(40)
+
 	.advantages
 		margin-bottom: gem(100)
 		padding-bottom: 0
@@ -709,6 +631,7 @@
 							width: gem(195)
 							height: gem(113)
 							// margin: 0
+
 	.lesson
 		margin-bottom: gem(80)
 		padding-bottom: 0
@@ -745,6 +668,7 @@
 				margin-top: gem(2)
 				span
 					font-size: gem(15)
+
 	.features
 		margin-bottom: gem(74)
 		.mobile-lines
@@ -796,6 +720,7 @@
 						margin-left: 0
 				&-bottom
 					margin-top: gem(36)
+
 	.story
 		margin-bottom: 0
 		overflow: hidden
@@ -813,6 +738,7 @@
 					margin-top: gem(24)
 		.social
 			justify-content: center
+
 	.price
 		margin-top: gem(-168)
 		margin-bottom: gem(79)
@@ -926,9 +852,11 @@
 							margin-top: gem(49)
 					.price-section-main-element-content-bottom span
 						margin-right: 0
+
 	.details-section-main
 		flex-direction: column
 		align-items: center
+
 	.need
 		margin-bottom: gem(52)
 		&-section
@@ -956,6 +884,7 @@
 				&-element:nth-child(2)
 					// margin-bottom: gem(19)
 					margin-top: gem(0)
+
 	.free 
 		padding-bottom: gem(80)
 		h2.title-h1
@@ -996,6 +925,7 @@
 				line-height: gem(48)
 			.button-wrapper
 				align-self: center
+
 	.details
 		margin-bottom: gem(62)
 		&-section
@@ -1053,6 +983,7 @@
 					margin-bottom: gem(18)
 				p.title-h9.sub
 					text-align: left !important
+
 	.questions
 		padding-top: gem(23)
 		padding-bottom: gem(54)
@@ -1079,113 +1010,4 @@
 							width: gem(20)
 					.contentQuestion.active
 						margin-left: 0
-	.footer
-		margin-top: gem(0)
-		padding-top: gem(40)
-		padding-bottom: gem(20)
-		&-top
-			flex-direction: column
-			margin-bottom: gem(32)
-			img
-				width: gem(68)
-				height: gem(15)
-				margin-bottom: gem(32)
-			&-stuff
-				width: unset
-				margin-bottom: gem(20)
-				.title-h10
-					font-size: gem(15)
-					line-height: gem(21)
-					// margin-left: gem(-5)
-					margin-bottom: gem(8)
-				.desc-3
-					font-size: gem(12)
-					line-height: gem(17)
-			form
-				display: flex
-				flex-direction: column
-				align-items: center
-				.input
-					width: 100%
-					margin-bottom: gem(11)
-				button
-					width: 100%
-					p
-						font-size: gem(15)
-						line-height: gem(21)
-			
-		&-logo
-			width: gem(68)
-			margin-bottom: gem(33)
-		&-bottom
-			flex-direction: column
-			margin-top: 0
-			&-policies
-				margin: 0
-				p
-					line-height: gem(21)
-					margin-bottom: gem(21)
-				.contentFooter
-					display: none
-				.contentFooter.active
-					display: flex
-				.openFooter
-					cursor: pointer
-					position: relative
-					&::before
-						content: ""
-						position: absolute
-						right: 0
-						top: gem(10.5)
-						width: gem(14)
-						height: gem(2)
-						background: var(--color-white)
-						transition: 0.3s all ease
-					&::after
-						content: ""
-						position: absolute
-						right: 0
-						top: gem(10.5)
-						width: gem(14)
-						height: gem(2)
-						background: var(--color-white)
-						transform: rotate(90deg)
-						transition: 0.3s all ease
-				.openFooter.active
-					&::after
-						transform: rotate(180deg)
-						transition: 0.3s all ease
-					&::before
-						transform: rotate(180deg)
-						transition: 0.3s all ease
-			&-contacts
-				p
-					line-height: gem(21)
-					margin-bottom: gem(21)
-				&-socials
-					justify-content: unset
-					margin-top: gem(15)
-	.empty_page
-		p.desc-1
-			font-size: gem(30)
-			line-height: gem(42)
-			color: var(--color-black)
-			max-width: gem(325)	
-	.price-section-main-element:nth-child(3) .price-section-main-element-content-list
-		margin-left: gem(23)
-		margin-right: gem(22)
-	.need-section-text-element .os-list .close
-		top: gem(10)
-		right: gem(10)
-		width: gem(20)
-		height: gem(20)
-		span
-			top: gem(7)
-	#small-dialog
-		.lesson-section-main-element
-			height: auto
-			margin-bottom: gem(30)
-		.button-wrapper
-			margin-top: gem(20)
-	.advantages-section-main-monitor .monitor-div lottie-player
-		transform: scale(2) translateX(gem(-20))
+	

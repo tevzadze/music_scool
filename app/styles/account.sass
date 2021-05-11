@@ -1,0 +1,631 @@
+#wrapper
+    display: flex
+    flex-direction: column
+    background: #fafafa
+    min-height: 100vh
+.account-header
+    position: relative
+    padding: gem(30) gem(53)
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    &.course
+        padding: 0
+        align-items: center
+        padding-left: gem(56)
+        height: gem(70)
+    .logo
+        img
+            width: gem(123)
+    a
+        display: flex
+        align-items: center 
+        font-family: var(--main-font)
+        font-size: gem(20)
+        line-height: gem(24)
+        color: #fff
+        font-weight: 400
+        &:not(:last-child)
+            margin-right: gem(50)
+    .go-back
+        background: #F4F5F6
+        width: gem(30)
+        height: gem(30)
+        border-radius: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            width: gem(12)
+            height: auto
+            margin-left: gem(-2)
+            // path
+                // width: auto
+                // fill: #111
+.h-left
+    display: flex
+    flex-direction: row
+    align-items: center
+.h-right
+    display: flex
+    flex-direction: row
+    align-items: stretch
+    height: 100%
+    a
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100%
+        width: gem(535)
+        font-size: gem(25)
+        line-height: gem(30)
+        font-weight: 700
+        margin-right: 0 !important
+        img
+            width: gem(27)
+    .next
+        background: #BA2DB2
+        flex-direction: row-reverse
+        transition: all 0.3s ease
+        &:hover
+            background: #BD39B6
+        img
+            margin-left: gem(40)
+            transform: rotate(180deg)
+    .prev
+        img
+            margin-right: gem(40)
+
+.h-menu
+    display: flex
+    position: relative
+.hm-inner
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    &-icon
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+        img
+            width: gem(30)
+            margin-right: gem(17)
+.courses-sidebar-toggler
+    display: none
+    position: relative
+    outline: none
+    background: none
+    border: 0
+    background: none
+    padding: 0
+    margin-left: gem(20)
+    &.active
+        span
+            background:#ba2db2
+            &::after, &::before
+                background:#ba2db2
+    span
+        width: gem(40)
+        height: gem(2)
+        background: #fff
+        transition: all 0.3s ease
+        &::before, &::after
+            content: ''
+            display: block
+            background: #fff
+            width: 100%
+            height: gem(2)
+            position: absolute
+            top: gem(-10)
+            transition: all 0.3s ease
+        &::after
+            top: gem(10)
+.account_dropdown
+    display: flex
+    flex-direction: column
+    position: absolute
+    top: gem(50)
+    right: 0
+    background: #fff
+    padding: gem(13) gem(20)
+    border-radius: gem(2)
+    box-shadow: 0 gem(4) gem(50) 0 #00000025
+    opacity: 0
+    pointer-events: none
+    transition: all 0.3s ease
+    &.active
+        pointer-events: unset
+        opacity: 1
+    &::before
+        content: ''
+        display: block
+        background: #fff
+        width: gem(20)
+        height: gem(20)
+        position: absolute
+        transform: rotate(45deg)
+        margin-top: gem(-20)
+        margin-left: gem(25)
+    a
+        font-family: var(--main-font)
+        font-weight: 700
+        font-size: gem(20)
+        line-height: gem(24)
+        color: #111111
+        &:not(:last-child)
+            margin-bottom: gem(10)
+            margin-right: 0
+        &:hover
+            text-decoration: underline
+//account main content
+.courses-list
+    flex: 1 1 auto
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    flex-wrap: wrap
+    margin: gem(70) gem(80)
+    .course-item
+        width: gem(320)
+        margin: gem(0) gem(50) gem(50) gem(50)
+.course-item
+    display: flex
+    flex-direction: column
+    border-radius: gem(10)
+    overflow: hidden
+    transition: all 0.3s ease
+    &:hover
+        box-shadow: 0px 4px 30px 0px #00000040
+.ci-cover
+    width: gem(320)
+    height: gem(180)
+    img
+        object-fit: cover
+        width: 100%
+        height: 100%
+.ci-data
+    background: #fff
+    padding: gem(10)
+    .ci-title
+        font-family: var(--accent-font)
+        font-weight: 700
+        color: #111
+        font-size: gem(20)
+        line-height: gem(24)
+    .ci-progress
+        width: 100%
+        height: gem(10)
+        background: #D8D8D8
+        border-radius: gem(30)
+        margin-top: gem(28)
+        overflow: hidden
+        div
+            height: gem(10)
+            width: 0
+            background: #BA2DB2
+            border-radius: gem(30)
+    .ci-author-percent
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-end
+        font-family: var(--main-font)
+        font-size: gem(18)
+        line-height: gem(18)
+        margin-top: gem(14)
+        margin-bottom: gem(28)
+        .ci-author
+            color: #979797
+        .ci-percent
+            font-size: gem(20)
+            font-weight: 700
+            text-align: right
+            color: #BA2DB2
+            div
+                font-size: gem(18)
+                font-weight: normal
+//settings
+.settings-main
+    flex: 1 1 auto  
+    display: flex
+    align-items: center
+    justify-content: center
+.reg-wrapper
+    margin: gem(20) 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    .c-input-group
+        display: flex
+        align-items: center
+        justify-content: center
+    h1
+        font-family: var(--accent-font)
+        font-size: gem(45)
+        line-height: gem(58)
+        color: #111111
+        margin-bottom: gem(30)
+    input
+        width: gem(545)
+        height: gem(65)
+        border: 0
+        outline: 0
+        background: #E9E9E9
+        border-radius: gem(4)
+        padding: gem(20) gem(24)
+        font-family: var(--main-font)
+        font-size: gem(23)
+        line-height: gem(28)
+        margin-bottom: gem(20)
+        &:focus, &:not(:placeholder-shown)
+            background: #D0D1D1
+    button
+        outline: none
+        border: none
+        border-radius: gem(4)
+        background: #111111
+        width: gem(374)
+        height: gem(80)
+        display: flex
+        align-items: center
+        justify-content: center
+        font-family: var(--accent-font)
+        font-size: gem(25)
+        line-height: gem(32)
+        color: #fff
+        transition: all 0.3s ease
+        margin-top: gem(10)
+        &:hover
+            background: #979797
+//course page
+.course
+    &-main
+        flex: 1 1 auto  
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &-left
+        display: flex
+        flex-direction: column
+        width: gem(345)
+        box-shadow: 0 gem(4) gem(30) 0 #00000040
+        background: #F7F7F7
+        padding: gem(12)
+        .cl-cover
+            display: flex
+            width: 100%
+            height: gem(180)
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        .cl-title
+            font-family: var(--accent-font)
+            font-size: gem(20)
+            line-height: gem(24)
+            color: #111
+            margin-top: gem(15)
+        .cl-author
+            font-family: var(--main-font)
+            font-size: gem(15)
+            line-height: gem(18)
+            color: #979797
+            margin-top: gem(8)
+        .cl-progress
+            align-self: center
+            width: 98%
+            height: gem(10)
+            background: #D8D8D8
+            border-radius: gem(30)
+            margin-top: gem(18)
+            overflow: hidden
+            div
+                height: gem(10)
+                width: 0
+                background: #BA2DB2
+                border-radius: gem(30)
+        .cl-percent
+            font-size: gem(20)
+            font-weight: 700
+            text-align: center
+            color: #BA2DB2
+            margin-top: gem(21)
+            div
+                font-size: gem(18)
+                font-weight: normal
+        &.lesson-left
+            padding: 0
+            .cl-data
+                padding: 0 gem(18)
+            .cl-title
+                margin-top: gem(44)
+            .course-section
+                margin-top: gem(15)
+            .cs-item
+                font-size: gem(18)
+                line-height: gem(21)
+    &-right
+        margin: gem(53) gem(43) gem(80) gem(43)
+        width: gem(1000)
+        .course-next
+            background: #EDD1EC
+            height: gem(50)
+            width: 100%
+            border-radius: gem(30)
+            display: flex
+            align-items: flex-start
+            a
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 100%
+                background: #BA2DB2
+                border-radius: gem(30)
+                font-family: var(--main-font)
+                font-weight: 700
+                font-size: gem(20)
+                line-height: gem(18)
+                color: #fff
+                padding: 0 gem(54) 0 gem(32)
+                img
+                    width: gem(12)
+                    margin-left: gem(30)
+                    transform: rotate(180deg)
+.course-section
+    display: flex
+    flex-direction: column
+    width: 100%
+    background: #F0F0F0
+    border-radius: gem(3)
+    margin-top: gem(43)
+.cs-item
+    display: flex
+    align-items: center
+    width: 100%
+    font-family: var(--main-font)
+    font-size: gem(25)
+    line-height: gem(25)
+    color: #111
+    font-weight: 700
+    padding: gem(21) 0
+    border-bottom: gem(2) #FAFAFA solid
+    position: relative
+    &::before
+        content: ''
+        width: gem(30)
+        height: gem(30)
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 100%
+        border: gem(1) solid #BA2DB2
+        position: absolute
+        transition: all 0.3s ease
+        left: gem(21)
+    &.complete
+        &::before
+            background: #BA2DB2
+    &.current
+        img
+            opacity: 1
+    img
+        width: gem(14)
+        margin-left: gem(32)
+        margin-right: gem(25)
+        opacity: 0
+        transition: all 0.3s ease
+    &:hover
+        img
+            opacity: 1
+.lecture-title
+    font-family: var(--main-font)
+    font-size: gem(45)
+    line-height: gem(45)
+    font-weight: 700
+    color: #111
+    margin-top: gem(35)
+    margin-bottom: gem(26)
+.lesson-video
+    width: 100%
+    height: auto
+    display: flex
+    min-height: gem(568)
+.download
+    &-title
+        font-family: var(--main-font)
+        font-size: gem(45)
+        line-height: gem(45)
+        color: #111
+        font-weight: 700
+        margin-top: gem(59)
+    &-text
+        font-family: var(--main-font)
+        font-size: gem(20)
+        line-height: gem(28)
+        color: #111
+        margin-top: gem(20)
+    &-wrapper
+        width: 100%
+        background: #F0F0F0
+        border-radius: gem(3)
+        margin-top: gem(30)
+        span, a
+            font-family: var(--main-font)
+            font-weight: 700
+            font-size: gem(20)
+            line-height: gem(20)
+            color: #111
+            padding: gem(15)
+            border-bottom: gem(1) #FAFAFA  solid
+            display: flex
+            align-items: center
+            img
+                width: gem(23)
+                margin-right: gem(10)
+        a
+            &:hover
+                text-decoration: underline
+
+
+//footer    
+.account-footer
+    padding: gem(38) gem(59)
+.copyrights
+    font-family: var(--main-font)
+    font-size: gem(20)
+    line-height: gem(24)
+    color: #979797
+@media all and (max-width: 1024px)
+    .account-header
+        padding: gem(20) gem(30) gem(20) gem(30)
+    .h-right 
+        .next, .prev
+            width: gem(250)
+            span
+                display: none
+            img
+                margin: 0
+    .courses-sidebar-toggler
+        display: flex
+    .courses-list
+        margin: gem(70) gem(30)
+        .course-item
+            margin: gem(0) gem(17) gem(40) gem(17)
+    .course
+        &-main
+            flex-direction: column
+            align-items: center
+        &-left
+            width: gem(653)
+            margin-top: gem(30)
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            padding: gem(20)
+            .cl-cover
+                width: gem(274)
+            .cl-data
+                width: gem(300)
+        &-right
+            margin: 0
+            width: 100%
+            padding: gem(30) gem(57) gem(40) gem(57)
+            .course-section
+                margin-top: gem(20)
+    .course-left.lesson-left
+        position: absolute
+        top: gem(70)
+        margin-top: 0
+        left: -100%
+        flex-direction: column
+        justify-content: flex-start
+        width: gem(345)
+        padding-bottom: gem(90)
+        height: 100vh
+        overflow-y: auto
+        transition: all 0.3s ease
+        &.active
+            left: 0
+    .lesson-video
+        min-height: gem(360)
+    .download-title
+        margin-top: gem(40)
+@media all and (max-width: 480px)
+    .account-header
+        padding: gem(17) gem(14)
+        a
+            line-height: gem(12)
+            &:not(:last-child)
+                margin-right: gem(20)
+        .logo
+            img
+                width: gem(61)
+        &.course
+            padding-left: gem(17)
+            height: gem(60)
+    .courses-sidebar-toggler
+        margin-left: gem(32)
+        span
+            width: gem(30)
+    .h-right 
+        .next, .prev
+            width: gem(110)
+        .prev
+            border-left: gem(2) #fff solid
+    .account_dropdown 
+        a
+            line-height: gem(24)
+            &:not(:last-child)
+                margin-right: 0
+    .hm-inner-icon 
+        img
+            margin-right: gem(10)
+    .courses-list
+        flex-direction: column
+        align-items: center
+        margin: 0
+        padding: gem(40) gem(28)
+        .course-item
+            width: 100%
+            margin: unset
+            margin-bottom: gem(40)
+    .reg-wrapper
+        margin: gem(20) gem(0) gem(30) 0
+        h1
+            font-size: gem(30)    
+            line-height: gem(39)
+        input
+            width: gem(350)
+        button
+            width: gem(210)
+            height: gem(60)
+            font-size: gem(20)
+            line-height: gem(27)
+    .account-footer
+        padding: gem(19) gem(14)    
+    .course
+        &-left
+            display: none
+        &-right
+            padding: gem(30) gem(12)
+            .cs-item
+                font-size: gem(18)
+                line-height: gem(18)
+            .course-next
+                a
+                    padding: gem(0) gem(20)
+                    img
+                        margin-left: gem(10)
+    .course-left.lesson-left
+        display: flex
+        width: 100%
+        box-shadow: unset
+        top: gem(60)
+        background: #fff
+        padding: gem(15)
+        padding-bottom: gem(100)
+        .cl-data
+            width: 100%
+            padding: 0 gem(8)
+        .cl-title
+            font-size: gem(25)
+            margin-top: gem(17)
+            line-height: gem(27)
+        .cl-percent
+            margin-top: gem(10)
+    .lecture-title
+        margin-top: 0
+        font-size: gem(30)
+        line-height: gem(30)
+    .lesson-video
+        min-height: gem(200)
+    .download-title
+        margin-top: gem(30)
+        font-size: gem(35)
+        line-height: gem(35)
+    .download-text
+        margin-top: gem(18)
+    .download-wrapper
+        margin-top: gem(20)

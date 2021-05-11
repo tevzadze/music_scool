@@ -1,47 +1,62 @@
 <!--#set var="title" value="Music scool" -->
 <!--#include virtual="/parts/head.html" -->
-<main class="logon_main">
-    <header class="header">
-        <div class="container">
-            <div class="header-contains">
-                <a href="/index.html" class="logo">
-                    <img src="images/dist/logo.svg" alt="logo">
-                </a>
-                <div class="right-part">
-                    <a href="/account.html" class="right-part-element">
-                        <span class="label-3">My courses</span>
-                    </a>
-                    <a href="#" class="right-part-element">
+
+<body>
+    <div id="wrapper" class="authorized">
+        <header class="account-header">
+            <a href="/" class="logo" title="school">
+                <img src="images/dist/logo.svg" alt="">
+            </a>
+            <div class="h-menu">
+                <nav class="hm-inner">
+                    <a href="/account.html" class="mycourses-link">My Courses</a>
+                    <a href="#" class="hm-inner-icon">
                         <img src="images/dist/logon.svg" alt="logon">
-                        <span class="label-3">Stan</span>
+                        Stan
                     </a>
-                    <div class="account_dropdown">
-                        <div class="account_dropdown-triangle"></div>
-                        <a href="#" class="label-3">Admin</a>
-                        <a href="/settings.html" class="label-3">Settings</a>
-                        <a href="#" class="label-3">Log out</a>
-                    </div>
+                </nav>
+                <div class="account_dropdown">
+                    <a href="#">Admin</a>
+                    <a href="/settings.html">Settings</a>
+                    <a href="#">Log out</a>
                 </div>
             </div>
-        </div>
-    </header>
-    <section>
-        <div class="settings">
-            <p class="title-h4">Profile settings</p>
-            <form action="">
-                <input type="text" placeholder="Stan">
-                <input type="text" placeholder="stankuch@gmail.com">
-                <input type="text" placeholder="*********">
-                <input type="text" placeholder="Password">
-                <input type="text" placeholder="Confirm Password">
-                <button>
-                    <span class="title-h4">Confirm</span>
-                </button>
+        </header>
+        <main class="main settings-main">
+            <form method="post" name="userinfo" id="userinfo" enctype="multipart/form-data"
+                action="https://music.school/user/47/">
+                <div class="reg-wrapper">
+                    <h1>Profile settings</h1>
+                    <div class="c-input-group">
+                        <input placeholder="Fullname" name="fullname" type="text" value="Davyd Tevzadze">
+                    </div>
+                    <div class="c-input-group">
+                        <input placeholder="Email" type="email" name="email" id="email" value="pawtod22@gmail.com" required>
+                    </div>
+                    <div class="c-input-group">
+                        <input placeholder="Old password" type="password" name="altpass">
+                    </div>
+                    <div class="c-input-group">
+                        <input placeholder="Password" type="password" name="password1">
+                    </div>
+                    <div class="c-input-group">
+                        <input placeholder="Confirm password" type="password" name="password2">
+                    </div>
+                    <div class="c-submit-group">
+                        <input name="submit" type="hidden" id="submit" value="submit">
+                        <button class="fullwidth" name="submit" type="submit">Confirm</button>
+                    </div>
+                </div>
+                <input type="hidden" name="doaction" value="adduserinfo" />
+                <input type="hidden" name="id" value="47" />
+                <input type="hidden" name="dle_allow_hash" value="4db1194e6e5d3a7943d3c8fc6b78dca79981ad46" />
             </form>
-        </div>
-    </section>
-    <!--#include virtual="/parts/account-footer.html" -->
-</main>
+        </main>
+        <footer class="account-footer">
+            <div class="copyrights">&copy;&nbsp;2021 Music School</div>
+        </footer>
+    </div>
+</body>
 <!-- End here -->
 
 <!--#include virtual="/parts/foot.html" -->

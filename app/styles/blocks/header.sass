@@ -1,0 +1,111 @@
+.header
+	position: absolute
+	top: 0
+	width: 100%
+	z-index: 9
+	padding-top: gem(50)
+	.right-part
+		display: flex
+		justify-content: center
+		align-items: center
+		&-contact
+			display: flex
+			margin-right: gem(30)
+			font-size: gem(20)
+			line-height: gem(20)
+			letter-spacing: gem(1)
+			color: var(--color-white)
+			font-weight: 400
+		img
+			position: relative
+			z-index: 2
+		.basket
+			position: relative
+			cursor: pointer
+		&-element
+			display: flex
+			justify-content: center
+			align-items: center
+			img
+				width: gem(30)
+				height: gem(30)
+				margin-right: gem(20)
+			span.label-3
+				color: var(--color-white)
+				font-size: gem(20)
+				line-height: gem(12)
+		&-element:first-child
+			margin-right: gem(50)
+	&-contains
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		.logo
+			display: flex
+			img
+				width: gem(150)
+		.link
+			display: flex
+			margin-right: 0
+			font-weight: 600
+			justify-content: center
+			align-items: center
+			background: linear-gradient(90.34deg, #FEBD2F 0.33%, #F95721 25.43%, #FC1370 51.09%, #BA2DB2 68.14%, #8342E9 78.65%, #3F89FC 97.57%)
+			padding: gem(8) gem(11)
+			position: relative
+			&:before
+				display: block
+				content: ''
+				width: calc(100% + 4px)
+				height: calc(100% + 4px)
+				background: #111111
+				position: absolute
+				top: -2px
+				left: -2px
+				z-index: 2
+				opacity: 1
+				transition: all 0.3s ease
+			&:after
+				display: flex
+				justify-content: center
+				align-items: center
+				content: 'LET ME IN'
+				width: calc(100% - 4px)
+				height: calc(100% - 4px)
+				background: #111111
+				position: absolute
+				top: 2px
+				left: 2px
+				z-index: 3
+			&:hover
+				&:before
+					opacity: 0
+			&:nth-child(1)
+				margin-right: gem(10)
+				&:after
+					content: 'CONTACT US'
+
+@media all and (max-width: 1024px)
+	.header
+		padding-top: gem(30)
+		&-contains
+			.logo
+				width: gem(76)
+			.link
+				margin-right: 0
+				margin-top: 0
+		.right-part-contact
+			margin-right: gem(20)
+			font-size: gem(12)
+			line-height: gem(17)
+			letter-spacing: unset
+@media all and (max-width: 480px)
+	.header
+		&-contains
+			.link
+				margin-top: gem(0)
+		.right-part-contact
+			margin-right: gem(15)
+			font-size: gem(15)
+			line-height: gem(24)

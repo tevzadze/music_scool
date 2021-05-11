@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		emptyBlock.classList.remove('active')
 	}
 	//accoun dropdown
-	let accountIcon = document.querySelector('.right-part-element:nth-child(2)')
+	let accountIcon = document.querySelector('.hm-inner-icon')
 	let dropdown = document.querySelector('.account_dropdown')
 	if (accountIcon != null ) {
 		accountIcon.addEventListener('click', function (e) {
@@ -31,7 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			dropdown.classList.toggle('active')
 
 		})
-	}
+		$(document).bind('click', function(e){
+			if (! $(e.target).parents().hasClass('hm-inner') && dropdown.classList.contains('active')) {
+				dropdown.classList.remove('active')
+			};
+		});
+	}	
 	
 	//preloader function
 	let preloader = document.querySelector('.preloader')
@@ -225,6 +230,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		// preventDefault();
 		$.magnificPopup.close();
 	});
+
+	//lesson page, all cours show
+
+	let courseButton = document.querySelector('.courses-sidebar-toggler')
+	let courseList = document.querySelector('.lesson-left')
+
+	if(courseButton != null) {
+		courseButton.addEventListener('click', () => {
+			courseList.classList.toggle('active')
+			courseButton.classList.toggle('active')
+			document.body.classList.toggle('modal-active');
+		})
+	}
+	
 
 })
 
