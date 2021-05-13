@@ -280,7 +280,7 @@
 							li
 								margin-bottom: gem(17)
 								span.desc-2
-									line-height: gem(17)
+									line-height: gem(15)
 						&-bottom
 							width: gem(195)
 							left: gem(10)
@@ -292,10 +292,15 @@
 								a
 									font-size: gem(9)
 									line-height: 110%
-							span.title-h4
-								font-size: gem(20)
-								line-height: gem(22)
-								margin-left: 0
+							&-text
+								span:first-child
+									font-size: gem(10)
+									line-height: gem(11)
+									margin-left: 0
+								span:last-child
+									font-size: gem(20)
+									line-height: gem(22)
+									margin-left: 0
 						.popular
 							width: gem(134)
 							height: gem(37)
@@ -317,6 +322,7 @@
 								height: unset
 								left: gem(10)
 								bottom: gem(0)
+								margin-top: gem(28) !important
 	.need
 		margin-bottom: gem(87)
 		padding-bottom: 0
@@ -792,9 +798,15 @@
 							width: gem(259) !important
 							justify-content: space-between
 							span.title-h4
+								margin-right: 0
+							span:first-child
+								font-size: gem(15)
+								line-height: gem(16.5)
+								margin-left: 0
+							span:last-child
 								font-size: gem(30)
 								line-height: gem(33)
-								margin-right: 0
+								margin-left: 0
 							.button-wrapper
 								width: gem(127)
 								height: gem(40)
@@ -805,12 +817,14 @@
 					left: unset
 				&-element:nth-child(2)
 					top: unset
-					margin-top: gem(87)
+					margin-top: gem(86)
 					width: gem(322)
 					height: gem(480)
 					.price-section-main-element-content
 						width: calc(100% - 4px)
 						height: calc(100% - 4px)
+						&-bottom
+							bottom: gem(-19) !important
 						.popular
 							width: gem(206)
 							height: gem(56)
@@ -844,9 +858,6 @@
 							margin-top: gem(5)
 							bottom: gem(-58)
 							width: gem(263)
-							span.title-h4
-								font-size: gem(30)
-								line-height: gem(33)
 							.button-wrapper
 								width: gem(127)
 								height: gem(40)
