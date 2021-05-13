@@ -6,8 +6,9 @@
 		flex-direction: column
 		align-items: flex-start
 		h1
-			margin-top: gem(268)
+			margin-top: gem(252)
 			position: relative
+			line-height: gem(105)
 			&:before
 				display: block
 				content: ''
@@ -21,11 +22,13 @@
 				background: rgba(17, 17, 17, 0.8)
 				filter: blur(16px)
 		p
-			max-width: gem(435)
-			margin-top: gem(24)
+			font-size: gem(35)
+			line-height: gem(38)
+			max-width: gem(735)
+			margin-top: gem(7)
 		.button-wrapper
 			width: gem(200)
-			margin-top: gem(60)
+			margin-top: gem(54)
 			&::after
 				display: flex
 				width: 100%
@@ -38,7 +41,7 @@
 			margin: auto
 			margin-top: gem(175)
 			width: gem(800)
-			height: gem(551)
+			height: unset
 			z-index: 4
 			video
 				width: 100%
@@ -47,7 +50,7 @@
 			.play
 				position: absolute
 				left: gem(350)
-				top: gem(233)
+				top: gem(173)
 				z-index: 5
 				cursor: pointer
 	.bacground-item
@@ -348,7 +351,6 @@
 						margin-bottom: gem(25)
 					p   
 						max-width: gem(470)
-						margin-left: gem(8)
 						text-align: left
 
 			&-bottom

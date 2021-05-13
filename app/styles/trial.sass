@@ -48,7 +48,7 @@ header, footer
 					content: ''
 					width: calc(100% - 4px)
 					height: calc(100% - 4px)
-					position: absolute
+					position: relative
 					background: var(--color-black)
 					border-radius: 100%
 					opacity: 0.8
@@ -116,11 +116,11 @@ header, footer
 							display: block
 							position: absolute
 							content: ''
-							width: calc(100% - 4px)
-							height: calc(100% - 4px)
+							width: calc(100% - 6px)
+							height: calc(100% - 6px)
 							border-radius: gem(4)
-							top: 2px
-							left: 2px
+							top: 3px
+							left: 3px
 							background: var(--color-black)
 							z-index: -1
 						span
@@ -166,24 +166,48 @@ header, footer
 			width: gem(816)
 			h3
 				font-weight: 500
-				line-height: gem(77)
+				font-size: gem(45)
+				line-height: gem(63)
 				margin-bottom: gem(33)
 			p
 				line-height: gem(32)
-				margin-bottom: gem(31)
+				// margin-bottom: gem(31)
 				max-width: gem(600)
-			p:nth-child(3)
-				margin-bottom: gem(39)
+				&:last-of-type
+					margin-bottom: gem(40)
 			&-bottom
 				display: flex
 				.social
 					display: flex
 					flex-direction: row
 					a
+						display: flex
 						margin-right: gem(18)
+
 .more
 	margin-bottom: gem(100)
 	z-index: 2
+	overflow: hidden
+	&-sticker
+		position: absolute
+		top: gem(71)
+		right: gem(-27)
+		width: gem(185)
+		height: gem(185)
+		background: url('../images/dist/free-master-sticker.png')
+		background-size: cover
+		background-repeat: no-repeat
+		color: #fff
+		font-family: var(--accent-font)
+		font-size: gem(23)
+		line-height: gem(27)
+		font-weight: 400
+		display: flex
+		align-items: center
+		justify-content: center
+		text-align: center
+		border-radius: 100%
+		backdrop-filter: blur(10px)
 	.bacground-item
 		margin-top: gem(-170)
 		z-index: -1
@@ -195,7 +219,7 @@ header, footer
 		align-items: center
 		margin-bottom: gem(40)
 		&-title
-			margin-bottom: gem(115)
+			margin-bottom: gem(140)
 			margin-left: gem(72)
 			h2
 				font-size: gem(68)
@@ -203,13 +227,13 @@ header, footer
 		&-text
 			display: flex
 			flex-direction: column
-			max-width: gem(614)
-			margin-left: gem(114)
+			max-width: gem(870)
+			margin-left: gem(150)
 			h3
 				font-weight: 500
-				font-size: gem(70)
+				font-size: gem(60)
 				line-height: gem(80)
-				margin-bottom: gem(10)
+				margin-bottom: gem(0)
 				position: relative
 				&:before
 					display: block
@@ -225,10 +249,14 @@ header, footer
 					filter: blur(16px)
 			p
 				font-size: gem(20)
-				line-height: gem(32)
-				margin-top: gem(52)
-				margin-bottom: gem(33)
+				line-height: gem(28)
+				margin-top: gem(20)
+				margin-bottom: gem(18)
 				max-width: gem(503)
+			span
+				font-size: gem(25)
+				line-height: gem(32)
+				color: #979797
 			&-bottom
 				display: flex
 				.button-wrapper

@@ -129,7 +129,16 @@ document.addEventListener('DOMContentLoaded', () => {
 			videos[i].play()
 			playButton[i].classList.add('inactive')
 		})
+		videos[i].onended = () => {
+			// console.log('finish')
+			videos[i].load()
+			videos[i].removeAttribute("controls", "controls")
+			playButton[i].classList.remove('inactive')
+		}
 	}
+
+	
+	
 
 	//video scale
 	let heroVideo = document.querySelector('.hero-section-video')
