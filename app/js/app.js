@@ -16,7 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
 
 	// Custom JS
-	//ampty account
+	//empty account
 	let coursesCards = document.querySelectorAll('.logon_card')
 	let emptyBlock = document.querySelector('.empty')
 	if (coursesCards.length > 0) {
