@@ -13,7 +13,7 @@ main
 canvas
 	display: block
 	position: fixed
-	z-index: 100 // put it to background
+	z-index: -1// put it to background
 	left: 0 // position it to fill the whole screen
 	top: 0 // position it to fill the whole screen
 
@@ -28,6 +28,8 @@ body
 	&.loaded2
 		overflow: unset
 		overflow-x: hidden
+		.js-image, .bacground-item
+			opacity: 0
 		.preloader
 			opacity: 0
 			pointer-events: unset
@@ -79,6 +81,15 @@ button
 
 
 //start here
+.item
+	width: 100%
+	height: 100vh
+	&__image
+		width: 100%
+		height: 100vh
+	img
+		width: 100%
+		height: 100vh
 .desctop
 	display: flex
 .mobile
@@ -88,7 +99,8 @@ button
 .home
 	.desctop-line
 		margin-left: gem(-30)
-		margin-top: gem(52)
+		margin-top: gem(-89)
+		opacity: 0
 	.desctop-line-course
 		margin-top: gem(325)
 	.header	
@@ -100,7 +112,7 @@ button
 @media all and (max-width: 1024px)
 	.home
 		.tablet-line
-			margin-top:  gem(120)
+			margin-top:  gem(-1)
 		.tablet-line-course
 			margin-top: gem(200)
 	.desctop
@@ -110,7 +122,7 @@ button
 @media all and (max-width: 480px)
 	.home
 		.mobile-line
-			margin-top: gem(76)
+			margin-top: gem(-39)
 		.mobile-line-course
 			margin-top: gem(39)
 	.desctop

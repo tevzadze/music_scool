@@ -1,0 +1,27 @@
+.info-wrapper
+    padding: gem(30) 0
+    .info-title
+        @include title-h3
+        text-align: center
+    .info-desc-container
+        padding-top: gem(40)
+        text-align: center
+        ul, p, li
+            @include desc-1
+            list-style: none
+        a.desc-1
+            color: transparent
+            background-clip: text
+            background-image: linear-gradient(90deg,#e91a82 25.6%,#e51b87 32.6%,#da2091 37.6%,#d22399 15.6%,#c727a5 64.6%,#a534c7 86.6%)
+        .button-wrapper
+            width: gem(288)
+            height: gem(60)
+            margin: gem(30) auto
+            a
+                font-size: gem(20)
+                line-height: gem(22)
+                font-weight: 500
+@media all and (max-width: 480px)
+    .info-wrapper
+        .info-desc-container
+            padding-top: gem(20)

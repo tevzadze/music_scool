@@ -1,0 +1,30 @@
+.info-modal
+    display: flex
+    flex-direction: column
+    align-items: center
+    background: var(--color-black)
+    width: gem(470)
+    padding: gem(70) gem(48)
+    margin: auto
+    position: relative
+    .popup-title
+        @include title-h4
+        text-align: center
+    .info-desc-container
+        padding-top: gem(40)
+        ul, p, li
+            @include desc-1
+            list-style: none
+        a.desc-1
+            color: transparent
+            background-clip: text
+            background-image: linear-gradient(90deg,#e91a82 25.6%,#e51b87 32.6%,#da2091 37.6%,#d22399 15.6%,#c727a5 64.6%,#a534c7 86.6%)
+@media all and (max-width: 480px)
+    .info-modal
+        width: 100%
+        padding: gem(70) gem(23)
+        min-height: 100vh
+        justify-content: center
+        .info-desc-container
+            padding-top: gem(20)
+        

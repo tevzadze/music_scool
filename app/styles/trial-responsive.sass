@@ -10,7 +10,7 @@
 	.bacground-item
 		display: none
 	.dive
-		margin-top: gem(117)
+		margin-top: gem(-3.8)
 		margin-bottom: gem(265)
 		padding-bottom: 0
 		&-section
@@ -27,6 +27,8 @@
 					line-height: gem(30)
 				.button-wrapper
 					width: gem(220)
+					&.access-wrapper
+						width: gem(260)
 					.button
 						font-size: gem(20)
 						line-height: gem(22)
@@ -97,6 +99,8 @@
 						.button-wrapper
 							margin-left: 0
 							width: gem(220)
+							&.access-wrapper
+								width: gem(260)
 							.button
 								font-size: gem(20)
 								line-height: gem(22)
@@ -175,7 +179,7 @@
 							line-height: gem(22)
 @media all and (max-width: 480px)
 	.dive
-		margin-top: gem(108)
+		margin-top: gem(-7)
 		margin-bottom: 0
 		&-section
 			flex-direction: column-reverse
@@ -272,8 +276,11 @@
 							width: gem(179)
 					&-button
 						.button-wrapper
-							width: gem(200)
+							width: gem(300)
 							height: gem(40)
+							&.access-wrapper
+								height: gem(40)
+								width: gem(200)
 							.button
 								font-size: gem(12)
 								line-height: gem(13.2)

@@ -8,6 +8,7 @@
     padding: gem(30) gem(53)
     display: flex
     flex-direction: row
+    background: var(--color-black)
     justify-content: space-between
     &.course
         padding: 0
@@ -135,6 +136,8 @@
     opacity: 0
     pointer-events: none
     transition: all 0.3s ease
+    .d-t-hidden
+        display: none
     &.active
         pointer-events: unset
         opacity: 1
@@ -343,9 +346,17 @@
                 margin-top: gem(44)
             .course-section
                 margin-top: gem(15)
+                .cs-title
+                    font-size: gem(22)
+                    line-height: gem(26)
+                    font-weight: bold
+                    border-bottom: gem(2) #fafafa solid;
+                    padding: gem(20) gem(25)
+                    color: var(--color-black)
             .cs-item
                 font-size: gem(18)
                 line-height: gem(21)
+                padding-right: gem(21)
     &-right
         margin: gem(53) gem(43) gem(80) gem(43)
         width: gem(1000)
@@ -356,6 +367,12 @@
             border-radius: gem(30)
             display: flex
             align-items: flex-start
+            div
+                font-size: gem(20)
+                line-height: gem(18)
+                padding: gem(0) gem(32)
+                align-self: center
+                font-weight: bold
             a
                 display: flex
                 align-items: center
@@ -380,6 +397,12 @@
     background: #F0F0F0
     border-radius: gem(3)
     margin-top: gem(43)
+    .cs-title
+        font-size: gem(34)
+        line-height: gem(38)
+        border-bottom: gem(2) #FAFAFA solid
+        font-weight: bold
+        padding: gem(26) gem(34)
 .cs-item
     display: flex
     align-items: center
@@ -389,7 +412,7 @@
     line-height: gem(25)
     color: #111
     font-weight: 700
-    padding: gem(21) 0
+    padding: gem(21) gem(22) gem(21) 0
     border-bottom: gem(2) #FAFAFA solid
     position: relative
     &::before
@@ -451,6 +474,8 @@
         background: #F0F0F0
         border-radius: gem(3)
         margin-top: gem(30)
+        &.download-item
+            margin-top: 0
         span, a
             font-family: var(--main-font)
             font-weight: 700
@@ -468,15 +493,83 @@
             &:hover
                 text-decoration: underline
 
+.account-error
+    background: var(--color-grey)
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .title-h4
+        color: var(--color-black)
+        margin-bottom: gem(30)
+    .desc-1
+        color: var(--color-black)
+        a.desc-1
+            color: transparent
+            background-clip: text
+            background-image: linear-gradient(90deg,#e91a82 25.6%,#e51b87 32.6%,#da2091 37.6%,#d22399 15.6%,#c727a5 64.6%,#a534c7 86.6%)
 
 //footer    
 .account-footer
     padding: gem(38) gem(59)
+    background: var(--color-black)
 .copyrights
     font-family: var(--main-font)
     font-size: gem(20)
     line-height: gem(24)
     color: #979797
+
+.course-content
+    font-family: var(--main-font)
+    color: var(--color-black)
+    font-size: gem(20)
+    line-height: gem(28)
+    h1
+        font-size: gem(30)
+        line-height: gem(42)
+        font-weight: bold
+        margin-bottom: gem(20)
+    h2
+        font-size: gem(28)
+        line-height: gem(39)
+        font-weight: bold
+        margin-bottom: gem(18)
+    h3
+        font-size: gem(26)
+        line-height: gem(36)
+        font-weight: bold
+        margin-bottom: gem(16)
+    h4, h5, h6
+        font-size: gem(24)
+        line-height: gem(33)
+        font-weight: bold
+        margin-bottom: gem(14)
+    p, ul, ol
+        margin-bottom: gem(12)
+        li
+            padding-bottom: gem(10)
+    a
+        color: #ba2db2
+    ul
+        list-style: disc
+        padding-left: gem(30)
+        text-indent: gem(10)
+    ol
+        list-style: decimal
+        padding-left: gem(30)
+        text-indent: gem(10)
+.yt-wrapper
+    position: relative;
+    width: 100%
+    height: 0
+    padding-bottom: 56.25%
+    iframe
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
 @media all and (max-width: 1024px)
     .account-header
         padding: gem(20) gem(30) gem(20) gem(30)
@@ -554,7 +647,9 @@
             width: gem(110)
         .prev
             border-left: gem(2) #fff solid
-    .account_dropdown 
+    .account_dropdown
+        .d-t-hidden
+            display: block
         a
             line-height: gem(24)
             &:not(:last-child)
@@ -595,7 +690,6 @@
                 line-height: gem(18)
             .course-next
                 a
-                    padding: gem(0) gem(20)
                     img
                         margin-left: gem(10)
     .course-left.lesson-left

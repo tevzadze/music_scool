@@ -1,9 +1,10 @@
+.enrolled-wrapper
+	.header
+		background: var(--color-black)
 .header
-	position: absolute
-	top: 0
-	width: 100%
-	z-index: 9
-	padding-top: gem(50)
+	padding: gem(50) 0
+	position: relative
+	z-index: 10
 	.right-part
 		display: flex
 		justify-content: center
@@ -33,7 +34,12 @@
 			span.label-3
 				color: var(--color-white)
 				font-size: gem(20)
-				line-height: gem(12)
+				line-height: 1
+			&.hm-inner-icon
+				span.label-3
+					max-width: 200px
+					overflow: hidden
+					text-overflow: ellipsis
 		&-element:first-child
 			margin-right: gem(50)
 	&-contains
@@ -82,4 +88,14 @@
 					margin-right: gem(22)
 		.right-part-contact
 			margin-right: gem(15)
+		.right-part-element
+			span.label-3
+				line-height: 1.1
+				text-align: center
+			&.hm-inner-icon
+				span.label-3
+					max-width: 150px
+			&:first-child
+				display: none
+
 			

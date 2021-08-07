@@ -8,7 +8,12 @@
 		display: flex
 		justify-content: space-between
 		margin-bottom: gem(38)
+		a.logo
+			display: block
+			width: gem(200)
+			height: gem(44)
 		img
+			display: block
 			width: gem(200)
 			height: gem(44)
 		form
@@ -18,6 +23,8 @@
 				width: gem(400)
 				height: gem(54)
 				border-radius: gem(2) gem(0) gem(0) gem(2)
+				input
+					font-size: gem(16)
 			button
 				width: gem(144)
 				height: gem(54)
@@ -86,6 +93,9 @@
 		margin-bottom: 0
 		padding: gem(40) 0
 		&-top
+			a.logo
+				width: gem(90)
+				height: gem(20)
 			img
 				width: gem(90)
 				height: gem(20)
@@ -100,6 +110,8 @@
 					line-height: gem(16)
 			form .input
 				width: gem(228)
+				input
+					font-size: gem(13)
 			
 		&-bottom
 			margin-top: gem(50)
@@ -122,10 +134,13 @@
 		&-top
 			flex-direction: column
 			margin-bottom: gem(32)
-			img
+			a.logo
 				width: gem(68)
 				height: gem(15)
 				margin-bottom: gem(32)
+			img
+				width: gem(68)
+				height: gem(15)
 			&-stuff
 				width: unset
 				margin-bottom: gem(20)
@@ -144,8 +159,11 @@
 				.input
 					width: 100%
 					margin-bottom: gem(11)
+					input
+						font-size: gem(16)
 				button
-					width: 100%
+					// width: 100%
+					width: gem(234.39)
 					p
 						font-size: gem(15)
 						line-height: gem(21)
