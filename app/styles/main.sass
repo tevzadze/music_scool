@@ -13,7 +13,7 @@ main
 canvas
 	display: block
 	position: fixed
-	z-index: -1// put it to background
+	z-index: 100 // put it to background
 	left: 0 // position it to fill the whole screen
 	top: 0 // position it to fill the whole screen
 
@@ -28,8 +28,6 @@ body
 	&.loaded2
 		overflow: unset
 		overflow-x: hidden
-		.js-image, .bacground-item
-			opacity: 0
 		.preloader
 			opacity: 0
 			pointer-events: unset
@@ -81,65 +79,47 @@ button
 
 
 //start here
-.item
-	width: 100%
-	height: 100vh
-	&__image
-		width: 100%
-		height: 100vh
-	img
-		width: 100%
-		height: 100vh
-.desctop
-	display: flex
-.mobile
-	display: none
-.tablet
-	display: none
-.home
-	.desctop-line
-		margin-left: gem(-30)
-		margin-top: gem(-89)
-		opacity: 0
-	.desctop-line-course
-		margin-top: gem(325)
-	.header	
-		background: none
-	.desctop, .mobile, .tablet
-		z-index: -2
-		position: absolute
-		width: 100%
-@media all and (max-width: 1024px)
-	.home
-		.tablet-line
-			margin-top:  gem(-1)
-		.tablet-line-course
-			margin-top: gem(200)
-	.desctop
-		display: none
-	.tablet
-		display: flex
-@media all and (max-width: 480px)
-	.home
-		.mobile-line
-			margin-top: gem(-39)
-		.mobile-line-course
-			margin-top: gem(39)
-	.desctop
-		display: none
-	.mobile
-		display: flex
-	.tablet
-		display: none
-.section.spaced
-	width: 100%
-	position: absolute
-	.item__image
-		img
-			opacity: 0
-			width: 100%
-.scroll-div
-	overflow: hidden
+// .desctop
+// 	display: flex
+// .mobile
+// 	display: none
+// .tablet
+// 	display: none
+// .home
+// 	.desctop-line
+// 		margin-left: gem(-30)
+// 		margin-top: gem(-89)
+// 	.desctop-line-course
+// 		margin-top: gem(325)
+// 	.header	
+// 		background: none
+// 	.desctop, .mobile, .tablet
+// 		z-index: -2
+// 		position: absolute
+// 		width: 100%
+// @media all and (max-width: 1024px)
+// 	.home
+// 		.tablet-line
+// 			margin-top:  gem(-1)
+// 		.tablet-line-course
+// 			margin-top: gem(200)
+// 	.desctop
+// 		display: none
+// 	.tablet
+// 		display: flex
+// @media all and (max-width: 480px)
+// 	.home
+// 		.mobile-line
+// 			margin-top: gem(-39)
+// 		.mobile-line-course
+// 			margin-top: gem(39)
+// 	.desctop
+// 		display: none
+// 	.mobile
+// 		display: flex
+// 	.tablet
+// 		display: none
+
 
 body
 	background: var(--color-black)
@@ -155,6 +135,24 @@ body
 	a.access_product
 		font-size: gem(15)
 		line-height: gem(16.5)
+	&.access_course
+		width: gem(315)
+		height: gem(60)
+		margin-top: gem(35)
+		margin-bottom: gem(35)
+		a
+			font-size: gem(20)
+			line-height: gem(22)
+			font-weight: 500
+	&.return_home
+		margin-top: gem(35)
+		margin-bottom: gem(35)
+		width: gem(288)
+		height: gem(60)
+		a
+			font-size: gem(20)
+			line-height: gem(22)
+			font-weight: 500
 .popup_registration
 	display: flex
 	flex-direction: column
@@ -261,6 +259,8 @@ body
 	opacity: 0
 	pointer-events: none
 	transition: all 0.3s ease
+.grecaptcha-badge
+	font-size: 14px
 
 @import 'main-responsive.sass'
 //main pages
