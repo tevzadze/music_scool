@@ -20,6 +20,7 @@
 		&-list
 			display: flex
 			flex-direction: column
+			align-items: center
 			margin-bottom: gem(35)
 			&-element
 				display: flex
@@ -63,7 +64,7 @@
 							line-height: gem(20)
 		&-subtotal
 			display: flex
-			width: gem(873)
+			width: gem(290)
 			flex-direction: column
 			align-items: flex-end
 			margin-bottom: gem(46)
@@ -161,11 +162,40 @@
 					align-items: center
 					justify-content: center
 					height: 100%
+	&-main
+		display: flex
+		flex-direction: row
+		align-items: flex-start
+		justify-content: center
+		flex-wrap: wrap		
+		width: gem(873)
+		.guarantee
+			display: flex
+			align-items: center
+			margin-right: gem(100)
+			img
+				width: gem(70)
+				margin-right: gem(26)
+			&-text
+				display: flex
+				flex-direction: column
+				max-width: gem(378)
+			h3
+				font-family: var(--accent-font)
+				font-size: gem(18)
+				line-height: gem(30)
+				color: #fff
+				margin-bottom: gem(7)
+			p
+				font-family: var(--main-font)
+				font-size: gem(15)
+				line-height: gem(21)
+				color: #F4F5F6
 			
 @media all and (max-width: 1024px)
 	.cart
 		width: gem(585)
-		height: gem(710)
+		height: gem(774)
 		&-all
 			margin-top: gem(85)
 			margin-bottom: gem(122)
@@ -233,6 +263,11 @@
 					height: gem(60)
 					a
 						font-size: gem(30)
+		&-main
+			.guarantee
+				order: 3
+				margin-right: 0
+				margin-top: gem(32)
 @media all and (max-width: 480px)
 	.cart
 		width: gem(365)
@@ -320,3 +355,24 @@
 				&-button
 					width: gem(310)
 					height: gem(49)
+		&-main
+			flex-direction: column
+			width: auto
+			align-items: center
+			.guarantee
+				position: relative
+				img
+					width: gem(53)
+					margin-right: gem(17)
+				&-text
+					width: gem(218)
+				h3
+					font-size: gem(15)
+					line-height: gem(23)
+				p
+					position: absolute
+					width: gem(300)
+					font-size: gem(12)
+					line-height: gem(17)
+					left: 0
+					margin-top: gem(60)

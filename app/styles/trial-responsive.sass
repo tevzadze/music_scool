@@ -25,6 +25,7 @@
 					margin-bottom: gem(44)
 					font-size: gem(25)
 					line-height: gem(30)
+					z-index: 2
 				.button-wrapper
 					width: gem(220)
 					&.access-wrapper
@@ -42,7 +43,7 @@
 							font-size: gem(20)
 							line-height: gem(24)
 		.dive-img
-			width: gem(678)
+			width: 100%
 			top: gem(2)
 			right: gem(-94)
 	.masterclass
@@ -135,6 +136,8 @@
 				top: gem(73)
 	.more
 		margin-bottom: gem(70)
+		// background-image: url(../images/dist/rainbow-tablet.svg)
+		background-position-y: gem(-60)
 		&-section
 			&-title
 				margin-left: 0
@@ -177,6 +180,45 @@
 						.button
 							font-size: gem(20)
 							line-height: gem(22)
+	.more
+		&-section
+			h2
+				font-size: gem(33)
+				line-height: gem(47)
+				margin-bottom: gem(32)
+			.button-wrapper
+				margin: auto
+		&-left
+			width: gem(330)
+			p
+				font-size: gem(18)
+				line-height: gem(26)
+				width: gem(270)
+				left: gem(30)
+				top: gem(70)
+		&-right
+			width: gem(370)
+			p
+				&:first-child
+					margin-top: 0
+					margin-bottom: gem(20)
+					font-size: gem(20)
+					line-height: gem(28)
+				&:last-child
+					position: absolute
+					width: gem(580)
+					left: gem(60)
+			ul
+				padding-left: gem(35)
+				li
+					font-size: gem(18)
+					line-height: gem(21)
+					margin-bottom: gem(10)
+					&::before
+						top: gem(2)
+						width: gem(15)
+						height: gem(15)
+						left: gem(-25)
 @media all and (max-width: 480px)
 	.dive
 		margin-top: gem(-7)
@@ -222,7 +264,7 @@
 		.dive-img
 			top: 0
 			right: gem(-1)
-			width: gem(406)
+			width: gem(526)
 			max-width: unset
 	.masterclass
 		margin-bottom: gem(62)
@@ -319,65 +361,39 @@
 				z-index: 4
 				margin-top: gem(120)
 	.more
-		margin-bottom: gem(58)
-		&-sticker
-			width: gem(105)
-			height: gem(105)
-			font-size: gem(13)
-			line-height: gem(15)
-			right: gem(-10)
+		flex-direction: column
+		margin-bottom: gem(30)
 		&-section
-			&-title
-				h2
-					font-size: gem(35)
-					line-height: gem(38.5)
+			h2
+				font-size: gem(30)
+				line-height: gem(42)
+				margin-bottom: gem(52)
+		&-left
+			width: 100%
+			p
+				top: gem(55)
+				left: gem(16)
+				font-size: gem(21)
+				line-height: gem(30)
+				width: gem(320)
+		&-right
+			width: 100%
+			p
+				&:first-child
+					font-size: gem(23)
+					line-height: gem(32)
+					margin-top: gem(34)
+					margin-bottom: gem(30)
+				&:last-child
+					position: relative
+					left: unset
+					top: unset
+					width: 100%
 					text-align: center
-			&-text
-				margin-left: 0
-				position: relative
-				h3
-					font-size: gem(25)
-					line-height: gem(30)
-					margin-left: gem(84)
-					margin-bottom: gem(81)
-					z-index: 5
-				span
-					display: none
-				p
-					font-size: gem(20)
-					line-height: gem(30)
-					margin-bottom: gem(44)
-					z-index: 5
-				.rainbow-tablet
-					display: none
-				.rainbow-mobile
-					display: flex
-					width: 110%
-					height: auto
-					position: absolute
-					top: gem(-30)
-					left: gem(-20)
-					max-width: unset
-					z-index: -2
-				&-bottom
-					justify-content: center
-					.button-wrapper
-							width: gem(200)
-							height: gem(40)
-							.button
-								font-size: gem(12)
-								line-height: gem(13.2)
-	.footer
-		&-main
-			&-stuff
-				.title-h10
-					margin-bottom: gem(37)
-		&-bottom
-			&-copyright
-				flex-direction: column
-				align-items: flex-start
-		&-logo
-			&-mob
-				margin-top: gem(45)
-				width: gem(68)
-				height: gem(15)
+			ul
+				li
+					font-size: gem(23)
+					line-height: gem(27)
+					margin-bottom: gem(30)
+					&:last-child
+						margin-bottom: gem(25)

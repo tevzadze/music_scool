@@ -45,22 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}, 1200);
 	}
 
-
-	//offset from bottom of viewport
-	function inViewport(item, min, max) {
-		let y = item.getBoundingClientRect().top
-		let itemHeight = item.getBoundingClientRect().height
-		let wh = window.innerHeight
-		let bot = (-(y - wh)) - itemHeight / 2
-		let top = y + itemHeight / 2
-
-		if (bot > min & top > max) {
-			return true
-		} else {
-			return false
-		}
-	}
-
 	//faq function
 
 
@@ -105,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 	openOsChars()
-	
+
 	let questions = document.querySelectorAll('.openQuestion')
 	let answers = document.querySelectorAll('.contentQuestion')
 
@@ -124,12 +108,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	for (let i = 0; i < playButton.length; i++) {
 		playButton[i].addEventListener('click', function () {
-			videos[i].setAttribute("controls", "controls")
-			videos[i].play()
+			let parenDiv = playButton[i].parentElement
+			
+			let videoDiv = parenDiv.querySelector('video')
+			console.log(videoDiv)
+			videoDiv.setAttribute("controls", "controls")
+			videoDiv.play()
 			playButton[i].classList.add('inactive')
 		})
 		videos[i].onended = () => {
-			// console.log('finish')
 			videos[i].load()
 			videos[i].removeAttribute("controls", "controls")
 			playButton[i].classList.remove('inactive')
@@ -154,48 +141,21 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 
+	// about video
+	let video = document.querySelector('.video-popup video')
+	let watchWideo = document.querySelector('.watch-video')
 
-	//inview animations
-	let marks = document.querySelector('.advantages-section-pics')
-	let nameIsStan = document.querySelector('.story-section-text')
-	let myStory = document.querySelector('.roll-block')
-	let cariculum = document.querySelectorAll('.lesson-section-main-element')
-
-	window.addEventListener('scroll', function () {
-		//cariculum animation 
-		if (!document.querySelector('main').classList.contains('home')) {
-			return;
-		}
-		for (let i = 0; i < 2; i++) {
-
-			if (inViewport(cariculum[i], -200, -200)) {
-				cariculum[i].classList.add('visible')
-			} else if (cariculum[i].classList.contains('visible')) {
-				cariculum[i].classList.remove('visible')
+	if(watchWideo) {
+		watchWideo.addEventListener('click', () => {
+			video.play()
+			if (window.innerWidth < 480) {
+				video.webkitEnterFullscreen()
 			}
-		}
-		// my name is..
-		if (inViewport(nameIsStan, -200, -200) && !myStory.classList.contains('visible')) {
-			myStory.classList.add('visible')
-			// console.log('adddded')
-		} else if (!inViewport(nameIsStan, -220, -220) && myStory.classList.contains('visible')) {
-			myStory.classList.remove('visible')
-		}
+		})
+	}
 
-		//Big marks
-		// if (inViewport(marks, 100, 100) && !marks.classList.contains('visible')) {
-		// 	marks.classList.add('visible')
-		// 	// console.log('marks move')
-		// } else if (!inViewport(marks, 100, 100) && marks.classList.contains('visible')) {
-		// 	marks.classList.remove('visible')
-		// 	// console.log('marks reset')
-		// }
-	})
 
 	//popup function
-
-
-
 	if ($('.popup-with-move-anim').length > 0) {
 		$('.popup-with-move-anim').magnificPopup({
 			type: 'inline',
@@ -210,7 +170,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			midClick: true,
 			removalDelay: 300,
-			mainClass: 'my-mfp-slide-bottom'
+			mainClass: 'my-mfp-slide-bottom',
+			callbacks: {
+				close: function () {
+					if(video) {
+						video.pause()
+					}
+				}
+				// e.t.c.
+			}
 		});
 	}
 
