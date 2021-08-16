@@ -74,6 +74,8 @@
 						&-element
 							height: gem(50)
 							margin-right: 0
+							padding-right: gem(18)
+							margin-left: gem(18)
 							span
 								margin-top: gem(8)
 								margin-left: gem(10)
@@ -85,15 +87,6 @@
 							span.desc-1
 								font-size: gem(20)
 								line-height: gem(24)
-						&-element:nth-child(1)
-							width: gem(153)
-							margin-right: gem(49)
-						&-element:nth-child(2)
-							width:	gem(382)
-							margin-top: gem(10)
-							order: 2
-						&-element:nth-child(3)
-							width: gem(179)
 					&-button
 						display: flex
 						justify-content: center
@@ -216,8 +209,8 @@
 					margin-bottom: gem(10)
 					&::before
 						top: gem(2)
-						width: gem(15)
-						height: gem(15)
+						width: gem(13)
+						height: gem(11)
 						left: gem(-25)
 @media all and (max-width: 480px)
 	.dive
@@ -291,31 +284,24 @@
 					font-size: gem(17)
 					line-height: gem(23.8)
 					margin-top: gem(27)
-					margin-bottom: gem(41)
+					margin-bottom: gem(20)
 				&-bottom
 					&-main
-						margin-bottom: gem(33)
+						margin-bottom: gem(45)
 						&-element
 							height: gem(80)
 							span.title-h7
 								margin-top: gem(16)
-								margin-left: gem(15)
+								margin-left: gem(0)
 								font-size: gem(15)
 								line-height: gem(18)
 							span.desc-1
 								margin-top: gem(10)
-								margin-left: gem(15)
+								margin-left: gem(0)
 								font-size: gem(20)
 								line-height: gem(24)
-						&-element:nth-child(1)
-							width: gem(152)
-							margin-right: gem(14)
-						&-element:nth-child(2)
-							width:	gem(382)
-							margin-top: gem(24)
-							order: 2
-						&-element:nth-child(3)
-							width: gem(179)
+							&:nth-child(3)
+								padding-right: 0
 					&-button
 						.button-wrapper
 							width: gem(300)
@@ -391,9 +377,13 @@
 					width: 100%
 					text-align: center
 			ul
+				padding-left: gem(25)
 				li
 					font-size: gem(23)
 					line-height: gem(27)
-					margin-bottom: gem(30)
+					margin-bottom: gem(20)
 					&:last-child
 						margin-bottom: gem(25)
+					&::before
+						top: gem(7)
+						
