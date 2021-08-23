@@ -1,23 +1,23 @@
 @import './variables'
 
 @mixin typography($color, $font-family, $font-size, $font-weight, $letter-spacing:0, $line-height: normal)
-	color: $color
-	font-family: $font-family
-	font-size: $font-size
-	font-weight: $font-weight
-	letter-spacing: $letter-spacing
-	line-height: $line-height
+    color: $color
+    font-family: $font-family
+    font-size: $font-size
+    font-weight: $font-weight
+    letter-spacing: $letter-spacing
+    line-height: $line-height
 
 @mixin mixed-lbl($args...)
-	@include typography($args...)
+    @include typography($args...)
 
 // title h1
 @mixin title-h1
-	@include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h1), var(--fw-5), var(--letter-spacing), var(--line-height-h1))
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h1), var(--fw-5), var(--letter-spacing), var(--line-height-h1))
 
 // title h2
 @mixin title-h2
-	@include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h2), var(--fw-5), var(--letter-spacing), var(--line-height-h2))
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-h2), var(--fw-5), var(--letter-spacing), var(--line-height-h2))
 
 // title h3
 @mixin title-h3
@@ -57,7 +57,7 @@
 
 // label1
 @mixin label-1
-	@include mixed-lbl(var(--color-white), var(--main-font), var(--font-size-label1), var(--fw-4), var(--letter-spacing), var(--line-height-label-1))
+    @include mixed-lbl(var(--color-white), var(--main-font), var(--font-size-label1), var(--fw-4), var(--letter-spacing), var(--line-height-label-1))
 
 // label2
 @mixin label-2
@@ -69,7 +69,7 @@
 
 //desc-1
 @mixin desc-1
-	@include mixed-lbl(var(--color-white), var(--main-font), var(--font-size-desc1), var(--fw-4), var(--letter-spacing), var(--line-height-desc1))
+    @include mixed-lbl(var(--color-white), var(--main-font), var(--font-size-desc1), var(--fw-4), var(--letter-spacing), var(--line-height-desc1))
 
 //desc-2
 @mixin desc-2
@@ -181,4 +181,3 @@ article, footer, header, nav, section, input, textarea, button
     &.link
         @include link
         text-transform: uppercase
-        
