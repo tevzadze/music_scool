@@ -149,12 +149,20 @@
 			justify-content: space-between
 			align-items: center
 			margin-top: gem(38)
-			span
-				font-family: var(--sub-font)
-				color: #fff
-				font-size: gem(80)
-				line-height: gem(88)
-				margin-right: gem(54)
+			.price-container
+				span
+					display: block
+					font-family: var(--sub-font)
+					font-size: gem(80)
+					line-height: gem(88)
+					margin-right: gem(54)
+					color: #fc1370
+					&.fullprice
+						font-size: gem(40)
+						text-align: center
+						color: rgba(255, 255, 255, .5)
+						line-height: 1.2
+						text-decoration: line-through
 			.button-wrapper
 				width: gem(292)
 				height: gem(80)
@@ -353,12 +361,20 @@
 			position: relative
 			margin-bottom: gem(65)
 			margin-top: gem(45)
-			span
-				font-family: var(--accent-font)
-				font-size: gem(40)
-				line-height: gem(44)
-				color: #F4F5F6
-				margin-right: gem(39)
+			.price-container
+				span
+					display: block
+					font-family: var(--accent-font)
+					font-size: gem(40)
+					line-height: gem(44)
+					color: #fc1370
+					margin-right: gem(39)
+					&.fullprice
+						font-size: gem(20)
+						text-align: center
+						color: rgba(255, 255, 255, .5)
+						line-height: 1.2
+						text-decoration: line-through
 			.button-wrapper
 				a
 					width: gem(176)

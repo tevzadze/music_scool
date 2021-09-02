@@ -81,10 +81,13 @@
 					bottom: gem(-40)
 			&-right
 				margin-top: gem(70)
-				span
-					font-size: gem(35)
-					line-height: gem(38)
-					margin-right: gem(30)
+				.price-container
+					span
+						font-size: gem(35)
+						line-height: gem(38)
+						margin-right: gem(30)
+						&.fullprice
+							font-size: gem(17)
 				.button-wrapper
 					width: gem(235)
 					height: gem(50)
@@ -455,10 +458,13 @@
 					width: gem(75)
 			&-right
 				margin-top: gem(120)
-				span
-					font-size: gem(40)
-					line-height: gem(44)
-					margin-right: gem(17)
+				.price-container
+					span
+						font-size: gem(40)
+						line-height: gem(44)
+						margin-right: gem(17)
+						&.fullprice
+							font-size: gem(20)
 				.button-wrapper
 					width: gem(193)
 					height: gem(50)
@@ -533,8 +539,9 @@
 			&-bottom
 				margin-top: gem(24)
 				margin-bottom: gem(47)
-				span
-					margin-right: gem(17)
+				.price-container
+					span
+						margin-right: gem(17)
 		&-mark
 			display: none
 		&-bottom
