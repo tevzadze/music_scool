@@ -9,11 +9,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger);
 
 
+require('~/app/js/jquery.malihu.PageScroll2id.min.js')
 
 document.addEventListener('DOMContentLoaded', () => {
 
 	// Custom JS
 
+	$("a[href*='#signup']").mPageScroll2id({
+		offset: 100
+	});
+	
 	// owl-carousel
 	$('.slick-carousel').slick({
 
