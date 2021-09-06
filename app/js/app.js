@@ -2,15 +2,23 @@ import $ from 'jquery'
 window.jQuery = $
 window.$ = $
 import 'magnific-popup'
+import 'slick-carousel'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger);
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
 
 	// Custom JS
+
+	// owl-carousel
+	$('.slick-carousel').slick({
+
+	});
+
 	//empty account
 	let coursesCards = document.querySelectorAll('.logon_card')
 	let emptyBlock = document.querySelector('.empty')

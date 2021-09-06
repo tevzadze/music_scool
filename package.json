@@ -13,6 +13,7 @@
 		"@johh/three-effectcomposer": "^0.0.7",
 		"ev-emitter": "^1.1.1",
 		"imagesloaded": "^4.1.4",
+		"owl.carousel": "^2.3.4",
 		"simple-input-events": "^1.0.1",
 		"three": ">=0.102.0",
 		"three-orbit-controls": "^82.1.0"
@@ -45,6 +46,8 @@
 		"gulp-stylus": "^2.7.0",
 		"jquery": "^3.6.0",
 		"magnific-popup": "^1.1.0",
+		"slick": "^1.12.2",
+		"slick-carousel": "^1.8.1",
 		"webpack-glsl-loader": "^1.0.1",
 		"webpack-stream": "^6.1.2"
 	}

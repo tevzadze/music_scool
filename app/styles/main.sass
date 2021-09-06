@@ -293,3 +293,472 @@ body
 // @import 'cart.sass'
 // @import 'trial-popup.sass'
 // @import 'logon.sass'
+
+
+
+// последние правки
+// страница index.html
+
+//prices
+	// цена
+
+.stan-about-bottom-right
+	align-items: flex-end
+	justify-content: flex-start
+	.price-container
+		display: flex
+		margin-right: gem(38)
+		span
+			color: #fc1370
+			display: block
+			font-family: var(--sub-font)
+			font-size: gem(70)
+			line-height: gem(62)
+			margin: 0
+		span.fullprice
+			color: hsla(0,0%,100%,.5)
+			font-size: gem(20)
+			line-height: gem(28)
+			text-align: center
+			align-self: flex-end
+			text-decoration: line-through
+			margin-left: gem(13)
+@media all and (max-width: 1024px)
+	.stan-about-main-right
+		p
+			margin-bottom: 0
+		.stan-about-bottom-left
+			max-width: gem(290)
+			position: absolute
+			bottom: gem(29)
+			left: 0
+		.stan-about-bottom-right
+			margin-top: gem(20)
+			.price-container
+				flex-direction: column-reverse
+				span
+					font-size: gem(40)
+					line-height: gem(44)
+				span.fullprice
+					font-size: gem(20)
+					line-height: gem(22)
+					align-self: unset
+					margin-left: 0
+					margin-bottom: gem(10)
+@media all and (max-width: 480px)
+	.stan-about-main-right
+		p
+			margin-bottom: 0
+		.stan-about-bottom-left
+			max-width: unset
+			bottom: gem(-123)
+			left: unset
+		.stan-about-bottom-right
+			margin-top: gem(25)
+			.price-container
+				flex-direction: column-reverse
+				span.fullprice
+					margin-bottom: 0
+					font-size: gem(18)
+					line-height: gem(20)
+
+	// цена 2 случай
+
+.price-section
+	.price-right-bottom
+		align-items: center
+		span
+			color: #F4F5F6
+			font-family: var(--sub-font)
+			font-size: gem(40)
+			line-height: gem(44)
+			margin-right: gem(39)
+
+@media all and (max-width: 480px)
+	.price-section
+		.price-right-bottom
+			span
+				font-size: gem(35)
+				line-height: gem(38.5)
+				margin-right: gem(16)
+
+
+//hero-section-buttons
+	// кнопки на первом экране
+
+.hero-section-buttons	
+	display: flex
+	div.button-wrapper:first-child
+		margin-right: gem(41)
+@media all and (max-width: 1024px)
+	.hero-section-buttons
+		margin-top: gem(19)
+		div.button-wrapper
+			width: gem(232)
+			height: gem(40)
+			margin-top: 0
+			margin-right: gem(22)
+			border-radius: gem(5)
+			&::before
+				border-radius: gem(5)
+			a
+				font-size: gem(20)
+				line-height: gem(22)
+		div.button-wrapper.white
+			margin: 0
+@media all and (max-width: 480px)
+	.hero-section-buttons
+		flex-direction: column
+		margin-top: gem(20)
+		div.button-wrapper
+			width: gem(214)
+    		height: gem(45)
+			margin-bottom: gem(14)
+
+// sale
+	// розовой беннер вверху
+
+main.home
+	position: relative
+.sale
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	padding: gem(33) gem(33) gem(15) gem(33)
+	background: #FC1370
+	z-index: 100
+	p
+		font-size: gem(30)
+		line-height: gem(42)
+		margin-bottom: gem(15)
+		text-align: center
+	a
+		font-size: gem(25)
+		line-height: gem(35)
+		position: relative
+		&::before
+			position: absolute
+			content: ''
+			bottom: gem(4)
+			background: #FFFFFF
+			width: 100%
+			height: gem(1)
+			transition: 0.3s all ease
+	a:hover
+		&::before
+			opacity: 0
+
+// sale responsive
+
+@media all and (max-width: 1024px)
+	.sale
+		padding: gem(25) gem(25) gem(17) gem(25)
+		p
+			font-size: gem(22)
+			line-height: gem(31)
+			margin-bottom: gem(8)
+		a
+			font-size: gem(18)
+			line-height: gem(25)
+
+@media all and (max-width: 480px)
+	.sale
+		padding: gem(17) gem(13) gem(10) gem(13)
+		p
+			font-size: gem(20)
+			line-height: gem(28)
+			margin-bottom: gem(13)
+
+// students
+	// слайдер
+.slick-list.draggable
+	height: 100%
+.slick-prev.slick-arrow
+	display: none !important
+.slick-next.slick-arrow
+	position: absolute
+	bottom: gem(30)
+	right: gem(40)
+	width: gem(160)
+	height: gem(35)
+	z-index: 5
+	opacity: 0
+.students
+	margin-top: gem(191)
+	&-main
+		display: flex
+		flex-direction: column
+		align-items: center
+		h2
+			text-align: center
+			font-size: gem(78)
+			line-height: gem(109)
+			font-weight: 400
+			margin-bottom: gem(109)
+		&-review-bgr
+			display: flex
+			justify-content: center
+			align-items: center
+			background: linear-gradient(90.34deg, #FEBD2F 0.33%, #F95721 25.43%, #FC1370 51.09%, #BA2DB2 68.14%, #8342E9 78.65%, #3F89FC 97.57%)
+			width: 100%
+			height: gem(643)
+		&-review-slider
+			display: flex
+			justify-content: center
+			align-items: center
+			width: calc( 100% - 2px )
+			height: calc( 100% - 2px )
+			background: #404040
+			padding: 0 gem(55)
+			position: relative
+		&-review
+			display: flex
+			flex-direction: column
+			&-content
+				display: flex
+				justify-content: space-between
+				align-items: center
+				padding-top: gem(105)
+				&-img
+					display: flex
+					flex-direction: column
+					align-items: center
+					width: gem(350)
+					img
+						width: gem(350)
+						height: auto
+					span
+						margin-top: gem(24)
+						font-size: gem(40)
+						line-height: gem(56)
+						font-weight: 700
+				&-text
+					display: flex
+					width: gem(812)
+					p
+						font-size: gem(40)
+						line-height: gem(56)
+						font-weight: 400
+						color: #D8D8D8
+			&-bottom
+				display: flex
+				justify-content: center
+				align-items: center
+				position: absolute
+				bottom: gem(30)
+				right: gem(40)
+				width: gem(160)
+				z-index: 4
+				&-switch
+					display: flex
+					cursor: pointer
+					img
+						width: gem(60)
+						height: auto
+					span
+						font-size: gem(25)
+						line-height: gem(35)
+						font-weight: 400
+						margin-right: gem(21)
+						color: #D8D8D8
+
+// students responsive
+@media all and (max-width: 1024px)
+	.slick-next.slick-arrow
+		width: gem(160)
+		height: gem(35)
+		z-index: 5
+		right: gem(30)
+		bottom: gem(50)
+	.students
+		margin-top: gem(138)
+		&-main
+			h2
+				font-size: gem(35)
+				line-height: gem(48)
+				font-weight: 700
+				margin-bottom: gem(62)
+			&-review-bgr
+				height: gem(581)
+			&-review-slider
+				padding: 0 gem(25)
+				justify-content: space-between
+			&-review
+				&-content
+					flex-direction: column
+					justify-content: unset
+					align-items: center
+					padding-top: gem(27)
+					&-img
+						width: gem(150)
+						img
+							width: gem(150)
+						span
+							margin-top: 0
+					&-text
+						width: gem(650)
+						margin-top: gem(30)
+						p
+							font-size: gem(25)
+							line-height: gem(35)
+				&-bottom
+					right: gem(30)
+					bottom: gem(50)
+					
+@media all and (max-width: 480px)
+	.slick-next.slick-arrow
+		width: gem(133)
+		height: gem(28)
+		z-index: 5
+		bottom: gem(30)
+		right: gem(37)
+	.students
+		margin-top: gem(388)
+		&-main
+			h2
+				line-height: gem(49)
+				font-weight: 400
+				margin-bottom: gem(22)
+			&-review-bgr
+				height: gem(529)
+				border-radius: gem(10)
+			&-review-slider
+				border-radius: gem(10)
+			&-review
+				&-content
+					flex-direction: column
+					justify-content: unset
+					align-items: center
+					padding-top: gem(27)
+					&-img
+						width: gem(150)
+						img
+							width: gem(150)
+						span
+							font-size: gem(30)
+							line-height: gem(42)
+							margin-top: gem(10)
+					&-text
+						width: gem(300)
+						margin-top: gem(27)
+						p
+							font-size: gem(18)
+							line-height: gem(25)
+							color: #FAFAFA
+				&-bottom
+					bottom: gem(30)
+					right: gem(37)
+					width: gem(133)
+					span
+						font-size: gem(20)
+						line-height: gem(28)
+						img
+							width: gem(50)
+
+
+// страница lesson.html
+	
+// маска блокировки видео
+
+.course-main
+	.course-right
+		.course-content
+			position: relative
+.blocking_mask
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-items: center
+	position: absolute
+	width: 100%
+	height: 100%
+	background: rgba(97, 97, 97, 0.6)
+	backdrop-filter: blur(20px)
+	padding: gem(80) gem(30) gem(30) gem(30)
+	img
+		width: gem(200)
+		height: auto
+		margin-bottom: gem(27)
+	p, span
+		text-align: center
+		font-family: var(--main-font)
+		color: #F2F2F2
+	p:nth-child(2)
+		font-size: gem(40)
+		line-height: gem(44)
+		margin-bottom: gem(20)
+		font-weight: 700
+	p:nth-child(3)
+		font-size: gem(25)
+		line-height: gem(27.5)
+		margin-bottom: gem(30)
+	a
+		display: flex
+		align-items: center
+		justify-content: center
+		width: gem(275)
+		height: gem(60)
+		background: #FAFAFA
+		border-radius: gem(5)
+		span
+			font-size: gem(23)
+			line-height: gem(25)
+			color: #000000
+			font-weight: 700
+
+@media all and (max-width: 1024px)
+	.blocking_mask
+		padding: gem(45) gem(30) gem(30) gem(30)
+		img
+			width: gem(130)
+			height: auto
+			margin-bottom: gem(17.5)
+		p, span
+			text-align: center
+			font-family: var(--main-font)
+			color: #F2F2F2
+		p:nth-child(2)
+			font-size: gem(26)
+			line-height: gem(28.5)
+			margin-bottom: gem(13)
+		p:nth-child(3)
+			font-size: gem(16)
+			line-height: gem(18)
+			margin-bottom: gem(19.5)
+		a
+			width: gem(178.5)
+			height: gem(39)
+			border-radius: gem(3)
+			span
+				font-size: gem(15)
+				line-height: gem(16.4)
+
+@media all and (max-width: 480px)
+	.blocking_mask
+		padding: gem(17)
+		img
+			width: gem(38)
+			height: auto
+			margin-bottom: gem(5)
+		p, span
+			text-align: center
+			font-family: var(--main-font)
+			color: #F2F2F2
+		p:nth-child(2)
+			font-size: gem(15)
+			line-height: gem(16.5)
+			margin-bottom: gem(9)
+			max-width: gem(257)
+			order: -1
+		p:nth-child(3)
+			font-size: gem(12)
+			line-height: gem(13)
+			margin-bottom: gem(14)
+		a
+			width: gem(150)
+			height: gem(40)
+			border-radius: gem(3)
+			span
+				font-size: gem(15)
+				line-height: gem(16.5)
