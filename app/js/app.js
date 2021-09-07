@@ -21,7 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	// owl-carousel
 	$('.slick-carousel').slick({
-
+		infinite: false,
+		prevArrow: `<div class="students-main-review-content-text-bottom-switch_prev">
+						<img src="images/dist/students-arrow.svg" alt="arrow">
+						<span class="subtitle-1">Previous</span>
+					</div>`,
+		nextArrow: `<div class="students-main-review-content-text-bottom-switch_next">
+						<span class="subtitle-1">Next</span>
+						<img src="images/dist/students-arrow.svg" alt="arrow">
+					</div>`
 	});
 
 	//empty account

@@ -36,7 +36,9 @@
 					z-index: 5
 			.button-wrapper:before
 				opacity: 0.85
+		// удалить \/ \/ \/
 		&-pics
+			display: none
 			&-circle
 				display: flex
 				position: relative
@@ -141,10 +143,19 @@
 				.button-wrapper
 					height: gem(60)
 					width: gem(229)
-					margin-left: gem(6)
+					margin-left: gem(77)
+					margin-right: 0
 					&.access-wrapper
 						height: gem(62)
 						width: gem(320)
+.masterclass-section-text-bottom-button
+	display: flex
+	align-items: center
+	span
+		font-family: var(--sub-font)
+		font-size: gem(60)
+		line-height: gem(66)
+		color: #ffff
 .teaching
 	background: #111111
 	margin-bottom: gem(123)

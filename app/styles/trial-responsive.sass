@@ -33,6 +33,7 @@
 					.button
 						font-size: gem(20)
 						line-height: gem(22)
+			// удалить \/ \/ \/
 			&-pics
 				margin-right: gem(-21)
 				&-circle
@@ -91,7 +92,7 @@
 						display: flex
 						justify-content: center
 						.button-wrapper
-							margin-left: 0
+							margin: 0
 							width: gem(220)
 							&.access-wrapper
 								width: gem(260)
@@ -101,6 +102,11 @@
 			&-pics
 				width: gem(300)
 				height: gem(300)
+	.masterclass-section-text-bottom-button
+		justify-content: space-between
+		span
+			font-size: gem(40)
+			line-height: gem(44)
 	.teaching
 		margin-bottom: gem(109)
 		margin-top: 0
@@ -218,8 +224,9 @@
 		margin-bottom: 0
 		&-section
 			flex-direction: column-reverse
+			// удалить \/ \/ \/
 			&-pics
-				display: flex
+				display: none
 				width: 100%
 				justify-content: flex-end
 				&-circle
@@ -306,7 +313,7 @@
 								padding-right: 0
 					&-button
 						.button-wrapper
-							width: gem(300)
+							width: gem(204)
 							height: gem(40)
 							&.access-wrapper
 								height: gem(40)

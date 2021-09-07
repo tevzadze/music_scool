@@ -495,8 +495,16 @@
                 width: gem(23)
                 margin-right: gem(10)
         a
+            position: relative
+            pointer-events: none
             &:hover
                 text-decoration: underline
+            .locked_icon
+                position: absolute
+                right: 0
+                bottom: calc( 50% - 16.5px )
+                width: gem(33)
+                height: auto
 
 .account-error
     background: var(--color-grey)
