@@ -146,20 +146,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//enroll-sctoll-button
 
-	let enrollLink = document.querySelector('.enrollButton')
-	if (enrollLink) {
-		enrollLink.addEventListener("click", clickHandler);
-	}
-	function clickHandler(e) {
-		e.preventDefault();
-		const href = this.getAttribute("href");
-		const offsetTop = document.querySelector(href).offsetTop;
+	// let enrollLink = document.querySelector('.enrollButton')
+	// if (enrollLink) {
+	// 	enrollLink.addEventListener("click", clickHandler);
+	// }
+	// function clickHandler(e) {
+	// 	e.preventDefault();
+	// 	const href = this.getAttribute("href");
+	// 	const offsetTop = document.querySelector(href).offsetTop;
 
-		scroll({
-			top: offsetTop,
-			behavior: "smooth"
-		});
-	}
+	// 	scroll({
+	// 		top: offsetTop,
+	// 		behavior: "smooth"
+	// 	});
+	// }
 
 
 	// about video

@@ -365,22 +365,38 @@ body
 	// цена 2 случай
 
 .price-section
-	.price-right-bottom
-		align-items: center
+	.price-container
+		display: flex
+		margin-right: gem(38)
 		span
-			color: #F4F5F6
+			color: #fc1370
+			display: block
 			font-family: var(--sub-font)
-			font-size: gem(40)
-			line-height: gem(44)
-			margin-right: gem(39)
+			font-size: gem(70)
+			line-height: gem(62)
+			margin: 0
+		span.fullprice
+			color: hsla(0,0%,100%,.5)
+			font-size: gem(20)
+			line-height: gem(28)
+			text-align: center
+			align-self: flex-end
+			text-decoration: line-through
+			margin-left: gem(13)
 
 @media all and (max-width: 480px)
 	.price-section
-		.price-right-bottom
+		.price-container
+			flex-direction: column-reverse
+			align-items: center
 			span
-				font-size: gem(35)
-				line-height: gem(38.5)
-				margin-right: gem(16)
+				font-size: gem(40)
+				line-height: gem(44)
+			span.fullprice
+				margin: 0
+				font-size: gem(18)
+				line-height: gem(20)
+				align-self: unset
 
 
 //hero-section-buttons
@@ -390,6 +406,9 @@ body
 	display: flex
 	div.button-wrapper:first-child
 		margin-right: gem(41)
+
+		&::before
+			
 @media all and (max-width: 1024px)
 	.hero-section-buttons
 		margin-top: gem(19)
@@ -398,9 +417,6 @@ body
 			height: gem(40)
 			margin-top: 0
 			margin-right: gem(22)
-			border-radius: gem(5)
-			&::before
-				border-radius: gem(5)
 			a
 				font-size: gem(20)
 				line-height: gem(22)
@@ -569,6 +585,7 @@ main.home
 	align-items: center
 	bottom: gem(30)
 	z-index: 10
+	cursor: pointer
 	img
 		width: gem(60)
 		height: gem(25)
@@ -643,7 +660,7 @@ main.home
 		bottom: gem(30)
 		right: gem(37)
 	.students
-		margin-top: gem(388)
+		margin-top: gem(280)
 		&-main
 			h2
 				line-height: gem(49)
@@ -847,3 +864,96 @@ main.home
 		line-height: gem(25)
 	.need
 		margin-bottom: gem(72)
+
+
+@media all and (max-width: 480px)
+	.stan-about-section
+		h2.title-h3
+			margin-top: gem(119)
+.dive-img-mob
+	display: none
+@media all and (max-width: 480px)
+	.dive
+		padding-top: gem(40)
+	.dive-img
+		display: none
+	.dive-img-mob
+		display: flex
+		position: absolute
+		height: gem(295.5)
+		top: 0
+		right: 0
+		width: 100%
+		max-width: unset
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+		background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 100%)
+		div
+			display: flex
+			position: absolute
+			width: 100%
+			height: gem(295.5)
+			top: 0
+			right: 0
+			z-index: 5
+			background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 100%)
+		img
+			width: 100%
+			height: auto
+			z-index: 4
+	.dive-section-text p
+		margin-top: gem(36)
+
+.course-main
+	.course-right
+		.download-wrapper, .download-title, .download-text
+			display: none
+
+.price-section
+	.price
+		.price-left
+			div
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				z-index: 4
+				background: rgba(17, 17, 17, 0.4)
+				filter: blur(20px)
+			img
+				z-index: 3
+			p
+				z-index: 5
+@media all and (max-width: 480px)
+	.more-right
+		p:first-child
+			font-size: gem(20)
+			line-height: gem(28)
+		ul
+			li
+				font-size: gem(20)
+				line-height: gem(24)
+.more-section
+	.more
+		.more-left
+			div
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				z-index: 4
+				background: rgba(17, 17, 17, 0.4)
+				filter: blur(20px)
+			img
+				z-index: 3
+			p
+				z-index: 5
+				top: gem(69)
+
+@media all and (max-width: 480px)
+	.lesson
+		margin-top: gem(80)
+@media all and (max-width: 480px)
+	.price-right-bottom
+		margin-bottom: 0
