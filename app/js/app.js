@@ -21,7 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	// owl-carousel
 	$('.slick-carousel').slick({
-		infinite: false,
+		infinite: true,
+		autoplay: true,
+  		autoplaySpeed: 3500,
 		prevArrow: `<div class="students-main-review-content-text-bottom-switch_prev">
 						<img src="images/dist/students-arrow.svg" alt="arrow">
 						<span class="subtitle-1">Previous</span>
