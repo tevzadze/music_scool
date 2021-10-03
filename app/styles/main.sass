@@ -70,7 +70,7 @@ section
 input , textarea
 	&::-webkit-input-placeholder,
 	&::placeholder
-	transition: all .3s
+		transition: all .3s
 	&:focus
 		&::-webkit-input-placeholder,
 		&::placeholder
@@ -78,7 +78,6 @@ input , textarea
 
 button
 	cursor: pointer
-
 
 //start here
 // .desctop
@@ -122,7 +121,6 @@ button
 // 	.tablet
 // 		display: none
 
-
 body
 	background: var(--color-black)
 .play
@@ -134,9 +132,6 @@ body
 // refactor
 
 .button-wrapper
-	&.white a.access_product
-		font-size: gem(20)
-		line-height: gem(16.5)
 	&.access_course
 		width: gem(315)
 		height: gem(60)
@@ -189,9 +184,9 @@ body
 		justify-content: center
 		p.title-h1
 			margin-bottom: gem(28)
-			
+
 // account_dropdown
-.logon_main .header-contains 
+.logon_main .header-contains
 	.right-part
 		position: relative
 		.account_dropdown
@@ -241,7 +236,7 @@ body
 		font-size: gem(30)
 		line-height: gem(42)
 		color: var(--color-black)
-		max-width: gem(900)		
+		max-width: gem(900)
 .logon_footer
 	display: flex
 	align-items: center
@@ -293,8 +288,6 @@ body
 // @import 'cart.sass'
 // @import 'trial-popup.sass'
 // @import 'logon.sass'
-
-
 
 // последние правки
 // страница index.html
@@ -398,17 +391,16 @@ body
 				line-height: gem(20)
 				align-self: unset
 
-
 //hero-section-buttons
 	// кнопки на первом экране
 
-.hero-section-buttons	
+.hero-section-buttons
 	display: flex
 	div.button-wrapper:first-child
 		margin-right: gem(41)
 
 		&::before
-			
+
 @media all and (max-width: 1024px)
 	.hero-section-buttons
 		margin-top: gem(19)
@@ -428,7 +420,7 @@ body
 		margin-top: gem(20)
 		div.button-wrapper
 			width: gem(214)
-    		height: gem(45)
+			height: gem(45)
 			margin-bottom: gem(14)
 	.hero-section-buttons div.button-wrapper
 		height: gem(45)
@@ -451,6 +443,8 @@ main.home
 		line-height: gem(42)
 		margin-bottom: gem(15)
 		text-align: center
+		b
+			font-weight: bold
 	a
 		font-size: gem(25)
 		line-height: gem(35)
@@ -590,10 +584,10 @@ main.home
 		width: gem(60)
 		height: gem(25)
 	span
-			font-size: gem(25)
-			line-height: gem(35)
-			font-weight: 400
-			color: #D8D8D8
+		font-size: gem(25)
+		line-height: gem(35)
+		font-weight: 400
+		color: #D8D8D8
 .students-main-review-content-text-bottom-switch_prev
 	left: gem(462)
 	width: gem(235)
@@ -651,7 +645,7 @@ main.home
 		left: gem(30)
 	.students-main-review-content-text-bottom-switch_next
 		right: gem(30)
-	
+
 @media all and (max-width: 480px)
 	.slick-next.slick-arrow
 		width: gem(133)
@@ -721,9 +715,8 @@ main.home
 			padding-right: gem(10)
 			background: #404040
 
-
 // страница lesson.html
-	
+
 // маска блокировки видео
 
 .course-main
@@ -864,7 +857,6 @@ main.home
 		line-height: gem(25)
 	.need
 		margin-bottom: gem(72)
-
 
 @media all and (max-width: 480px)
 	.stan-about-section

@@ -38,11 +38,15 @@
 
 		&::before
 			display: none
-		a
+		a,
+		button
+			border: none
 			font-size: gem(25)
 			line-height: gem(27)
 			background: none
 			color: #111
+			height: 100%
+			width: 100%
 
 .button-wrapper, .cart-all-pay-paypal , .cart-all-pay-button, button
 	&::after
@@ -73,7 +77,9 @@
 		pointer-events: none
 		cursor: unset
 		position: relative
-		a , p
+		a,
+		p,
+		button
 			color: rgba(255,255,255,0)
 			transform: all 0.3s ease
 		img
