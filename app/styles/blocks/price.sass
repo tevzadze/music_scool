@@ -1,0 +1,42 @@
+.price-wrapper
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	align-items: flex-end
+	margin-bottom: gem(-13)
+	&-sale
+		font-family: var(--accent-font)
+		font-size: gem(60)
+		line-height: gem(60)
+		color: #fff
+	&-full
+		font-family: var(--sub-font)
+		font-size: gem(30)
+		line-height: gem(33)
+		color: #979797
+		text-decoration: line-through
+		text-decoration-color: #fff
+		margin-left: gem(20)
+		margin-bottom: gem(5)
+		display: none
+	&.sale
+		background: none
+		z-index: unset
+		padding: unset
+		.price-wrapper
+			&-sale
+				color: #FC1370
+			&-full
+				display: flex
+@media all and (max-width: 1024px)
+	.price-wrapper
+		flex-direction: column-reverse
+		align-items: center
+		margin-bottom: 0
+		&-full
+			margin-left: 0
+			font-size: gem(18)
+			line-height: gem(20)
+		&-sale
+			font-size: gem(40)
+			line-height: gem(44)

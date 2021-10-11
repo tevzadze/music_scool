@@ -10,7 +10,6 @@ html, body
 	width: 100%
 
 body,
-main
 	overflow-x: hidden
 canvas
 	display: block
@@ -79,48 +78,6 @@ input , textarea
 button
 	cursor: pointer
 
-//start here
-// .desctop
-// 	display: flex
-// .mobile
-// 	display: none
-// .tablet
-// 	display: none
-// .home
-// 	.desctop-line
-// 		margin-left: gem(-30)
-// 		margin-top: gem(-89)
-// 	.desctop-line-course
-// 		margin-top: gem(325)
-// 	.header	
-// 		background: none
-// 	.desctop, .mobile, .tablet
-// 		z-index: -2
-// 		position: absolute
-// 		width: 100%
-// @media all and (max-width: 1024px)
-// 	.home
-// 		.tablet-line
-// 			margin-top:  gem(-1)
-// 		.tablet-line-course
-// 			margin-top: gem(200)
-// 	.desctop
-// 		display: none
-// 	.tablet
-// 		display: flex
-// @media all and (max-width: 480px)
-// 	.home
-// 		.mobile-line
-// 			margin-top: gem(-39)
-// 		.mobile-line-course
-// 			margin-top: gem(39)
-// 	.desctop
-// 		display: none
-// 	.mobile
-// 		display: flex
-// 	.tablet
-// 		display: none
-
 body
 	background: var(--color-black)
 .play
@@ -130,7 +87,6 @@ body
 		opacity: 0
 
 // refactor
-
 .button-wrapper
 	&.access_course
 		width: gem(315)
@@ -269,6 +225,7 @@ body
 @import 'dance.sass'
 @import 'tnx.sass'
 @import 'registration.sass'
+@import 'all-courses.sass'
 //account interface pages
 @import 'account.sass'
 //что это
@@ -291,199 +248,61 @@ body
 
 // последние правки
 // страница index.html
-
-//prices
-	// цена
-
-.stan-about-bottom-right
-	align-items: flex-end
-	justify-content: flex-start
-	.price-container
-		display: flex
-		margin-right: gem(38)
-		span
-			color: #fc1370
-			display: block
-			font-family: var(--sub-font)
-			font-size: gem(70)
-			line-height: gem(62)
-			margin: 0
-		span.fullprice
-			color: hsla(0,0%,100%,.5)
-			font-size: gem(20)
-			line-height: gem(28)
-			text-align: center
-			align-self: flex-end
-			text-decoration: line-through
-			margin-left: gem(13)
-@media all and (max-width: 1024px)
-	.stan-about-main-right
-		p
-			margin-bottom: 0
-		.stan-about-bottom-left
-			max-width: gem(290)
-			position: absolute
-			bottom: gem(29)
-			left: 0
-		.stan-about-bottom-right
-			margin-top: gem(20)
-			.price-container
-				flex-direction: column-reverse
-				span
-					font-size: gem(40)
-					line-height: gem(44)
-				span.fullprice
-					font-size: gem(20)
-					line-height: gem(22)
-					align-self: unset
-					margin-left: 0
-					margin-bottom: gem(10)
-@media all and (max-width: 480px)
-	.stan-about-main-right
-		p
-			margin-bottom: 0
-		.stan-about-bottom-left
-			max-width: unset
-			bottom: gem(-123)
-			left: unset
-		.stan-about-bottom-right
-			margin-top: gem(25)
-			.price-container
-				flex-direction: column-reverse
-				span.fullprice
-					margin-bottom: 0
-					font-size: gem(18)
-					line-height: gem(20)
-
-	// цена 2 случай
-
-.price-section
-	.price-container
-		display: flex
-		margin-right: gem(38)
-		span
-			color: #fc1370
-			display: block
-			font-family: var(--sub-font)
-			font-size: gem(70)
-			line-height: gem(62)
-			margin: 0
-		span.fullprice
-			color: hsla(0,0%,100%,.5)
-			font-size: gem(20)
-			line-height: gem(28)
-			text-align: center
-			align-self: flex-end
-			text-decoration: line-through
-			margin-left: gem(13)
-
-@media all and (max-width: 480px)
-	.price-section
-		.price-container
-			flex-direction: column-reverse
-			align-items: center
-			span
-				font-size: gem(40)
-				line-height: gem(44)
-			span.fullprice
-				margin: 0
-				font-size: gem(18)
-				line-height: gem(20)
-				align-self: unset
-
-//hero-section-buttons
-	// кнопки на первом экране
-
-.hero-section-buttons
+//more-courses
+.more-courses
 	display: flex
-	div.button-wrapper:first-child
-		margin-right: gem(41)
-
-		&::before
-
-@media all and (max-width: 1024px)
-	.hero-section-buttons
-		margin-top: gem(19)
-		div.button-wrapper
-			width: gem(232)
-			height: gem(40)
-			margin-top: 0
-			margin-right: gem(22)
-			a
-				font-size: gem(20)
-				line-height: gem(22)
-		div.button-wrapper.white
-			margin: 0
-@media all and (max-width: 480px)
-	.hero-section-buttons
-		flex-direction: column
-		margin-top: gem(20)
-		div.button-wrapper
-			width: gem(214)
-			height: gem(45)
-			margin-bottom: gem(14)
-	.hero-section-buttons div.button-wrapper
-		height: gem(45)
-
-// sale
-	// розовой беннер вверху
-
-main.home
-	position: relative
-.sale
-	display: flex
-	flex-direction: column
-	justify-content: center
+	flex-direction: row
 	align-items: center
-	padding: gem(33) gem(33) gem(15) gem(33)
-	background: #FC1370
-	z-index: 100
-	p
-		font-size: gem(30)
-		line-height: gem(42)
-		margin-bottom: gem(15)
-		text-align: center
-		b
-			font-weight: bold
-	a
-		font-size: gem(25)
-		line-height: gem(35)
+	justify-content: space-between
+	padding: 0 gem(52)
+	&-left
+		width: gem(332)
+		height: gem(332)
 		position: relative
-		&::before
-			position: absolute
-			content: ''
-			bottom: gem(4)
-			background: #FFFFFF
+		display: flex
+		justify-content: center
+		img
 			width: 100%
-			height: gem(1)
-			transition: 0.3s all ease
-	a:hover
-		&::before
-			opacity: 0
-
-// sale responsive
-
-@media all and (max-width: 1024px)
-	.sale
-		padding: gem(25) gem(25) gem(17) gem(25)
+			height: auto
+			position: absolute
+			top: 0
+			left: 0
+			z-index: -1
+		h2
+			font-family: var(--sub-font)
+			font-size: gem(31)
+			line-height: gem(38)
+			color: #fff
+	&-right
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-top: gem(26)
+		margin-right: gem(33)
 		p
-			font-size: gem(22)
-			line-height: gem(31)
-			margin-bottom: gem(8)
-		a
-			font-size: gem(18)
-			line-height: gem(25)
-
-@media all and (max-width: 480px)
-	.sale
-		padding: gem(17) gem(13) gem(10) gem(13)
-		p
-			font-size: gem(20)
-			line-height: gem(28)
-			margin-bottom: gem(13)
+			font-family: var(--accent-font)
+			font-size: gem(50)
+			line-height: gem(50)
+			color: #fff
+			margin-bottom: gem(70)
+		.button-wrapper
+			width: gem(340)
+			height: gem(69)
+			a
+				font-size: gem(23)
+				line-height: gem(23)
+	&-edm
+		h2
+			margin-top: gem(40)
+			margin-left: gem(60)
+	&-msa
+		h2
+			font-size: gem(24)
+			line-height: gem(40)
+			margin-top: gem(110)
+			margin-left: gem(10)
 
 // students
-	// слайдер
 .slick-list.draggable
 	height: 100%
 .slick-disabled
@@ -505,7 +324,7 @@ main.home
 	z-index: 5
 	opacity: 0
 .students
-	margin-top: gem(191)
+	margin-top: gem(211)
 	&-main
 		display: flex
 		flex-direction: column
@@ -515,7 +334,7 @@ main.home
 			font-size: gem(78)
 			line-height: gem(109)
 			font-weight: 400
-			margin-bottom: gem(109)
+			margin-bottom: gem(59)
 		&-review-bgr
 			display: flex
 			justify-content: center
@@ -527,8 +346,8 @@ main.home
 			display: flex
 			justify-content: center
 			align-items: center
-			width: calc( 100% - 2px )
-			height: calc( 100% - 2px )
+			width: calc( 100% - 4px )
+			height: calc( 100% - 4px )
 			background: #404040
 			padding: 0 gem(55)
 			position: relative
@@ -602,6 +421,39 @@ main.home
 
 // students responsive
 @media all and (max-width: 1024px)
+	.more-courses
+		padding: 0 gem(35)
+		&-left
+			width: gem(261)
+			height: gem(261)
+			img
+				height: auto
+			h2
+				font-size: gem(25)
+				line-height: gem(30)
+		&-right
+			margin-right: 0
+			p
+				font-size: gem(35)
+				line-height: gem(49)
+				text-align: center
+				width: gem(368)
+				margin-bottom: gem(28)
+			.button-wrapper
+				width: gem(250)
+				height: gem(40)
+				a
+					font-size: gem(20)
+					line-height: gem(20)
+		&-edm
+			h2
+				margin-top: gem(30)
+				margin-left: gem(50)
+		&-msa
+			h2
+				margin-top: gem(90)
+				font-size: gem(20)
+				line-height: gem(31)
 	.slick-next.slick-arrow
 		width: gem(160)
 		height: gem(35)
@@ -609,7 +461,7 @@ main.home
 		right: gem(30)
 		bottom: gem(50)
 	.students
-		margin-top: gem(138)
+		margin-top: gem(84)
 		&-main
 			h2
 				font-size: gem(35)
@@ -647,6 +499,30 @@ main.home
 		right: gem(30)
 
 @media all and (max-width: 480px)
+	.more-courses
+		flex-direction: column
+		padding: 0 gem(15)
+		&-left
+			width: gem(204)
+			height: gem(204)
+			h2
+				font-size: gem(18)
+				line-height: gem(21)
+		&-right
+			margin-top: gem(10)
+			p
+				width: 100%
+				font-size: gem(20)
+				line-height: gem(20)
+				margin-bottom: gem(24)
+		&-edm
+			h2
+				margin-top: gem(25)
+				margin-left: gem(45)
+		&-msa
+			h2
+				margin-top: gem(70)
+				font-size: gem(16)
 	.slick-next.slick-arrow
 		width: gem(133)
 		height: gem(28)
@@ -654,7 +530,7 @@ main.home
 		bottom: gem(30)
 		right: gem(37)
 	.students
-		margin-top: gem(280)
+		margin-top: gem(173)
 		&-main
 			h2
 				line-height: gem(49)
@@ -823,10 +699,6 @@ main.home
 
 .free-mark
 	display: none
-.free-right
-	h4.title-h5
-		font-size: gem(40)
-		line-height: gem(48)
 .free h2.title-h1
 	font-size: gem(80)
 	line-height: gem(80)
@@ -837,9 +709,6 @@ main.home
 	.free h3
 		font-size: gem(30)
 		line-height: gem(30)
-	.free-right h4.title-h5
-		font-size: gem(40)
-		line-height: gem(48)
 @media all and (max-width: 480px)
 	.free h2.title-h1
 		font-size: gem(30)
